@@ -19,6 +19,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
                        debug = FALSE){
 
   require(lucode)
+  require(ludata)
 
   umask <- Sys.umask("2")
   on.exit(Sys.umask(umask))
