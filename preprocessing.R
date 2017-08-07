@@ -5,11 +5,13 @@ start_preprocessing <- function(cfg){
   require(magclass)
   require(tools)
   require(moinput)
+  require(mrvalidation)
   require(ludata)
   
   cfg <- check_config(cfg, modulepath = NULL)
   
-  retrieveData(model="MAgPIE", regionmapping=cfg$regionmapping, rev=cfg$revision2)
+  retrieveData(model="MAgPIE",     regionmapping=cfg$regionmapping, rev=cfg$revision2)
+  retrieveData(model="Validation", regionmapping=cfg$regionmapping, rev=cfg$revision2)
   
   source_include <- TRUE
   
