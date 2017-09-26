@@ -31,7 +31,7 @@ for (select_resolution_x in select_resolution) {
             "glues2_sres","/",
             select_climatemodel_x,"/",
             select_climatescen_x,"/",
-            select_co2_x,"/"
+            select_co2_x
             
           )
           start_preprocessing(cfg)
@@ -62,7 +62,7 @@ for (select_resolution_x in select_resolution) {
             "isimip_rcp","/",
             select_climatemodel_x,"/",
             select_climatescen_x,"/",
-            select_co2_x,"/"
+            select_co2_x
           )
           start_preprocessing(cfg)
         }
