@@ -15,7 +15,7 @@ cfg$revision2 <- 2.2
 
 
 select_resolution = c("h200")
-select_regionmapping = c("h11")
+select_regionmapping = c("H11")
 select_climatescen = c("a2")
 select_climatemodel = c("miub_echo_g")
 
