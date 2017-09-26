@@ -10,7 +10,7 @@ source("config/default.cfg")
 #cellular data
 cfg$revision <- 24
 #regional data (moinput)
-cfg$revision2 <- 2.2
+cfg$revision2 <- 2.11
 
 cfg$regionmapping <- "config/regionmappingH11.csv"
 cfg$low_res <- "h200"
