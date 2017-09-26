@@ -14,10 +14,10 @@ cfg$revision <- 24
 cfg$revision2 <- 2.2
 
 
-select_resolution = c("h200")
+'select_resolution = c("h200")
 select_regionmapping = c("H11")
-select_climatescen = c("a2")
-select_climatemodel = c("miub_echo_g")
+select_climatescen = c("a1b","a2","b1")
+select_climatemodel = c("miub_echo_g","mpi_echam5","ukmo_hadcm3")
 
 for (select_resolution_x in select_resolution) {
   cfg$low_res <- select_resolution_x
@@ -39,14 +39,17 @@ for (select_resolution_x in select_resolution) {
       }
     }
   }
-}
+}'
 
 
 
+#select_resolution = c("h50","h200","h300")
 select_resolution = c("h200")
-select_regionmapping = c("AgMIP")
-select_climatescen = c("rcp2p6")
+select_regionmapping = c("H11","AgMIP")
+select_climatescen = c("rcp2p6","rcp4p5","rcp6p0","rcp8p5")
+#select_climatemodel = c("IPSL_CM5A_LR","GFDL_ESM2M","HadGEM2_ES","MIROC_ESM_CHEM","MIROC5","NorESM1_M")
 select_climatemodel = c("IPSL_CM5A_LR")
+
 
 for (select_resolution_x in select_resolution) {
   cfg$low_res <- select_resolution_x
