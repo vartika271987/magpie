@@ -57,8 +57,7 @@ for (select_resolution_x in select_resolution) {
     cfg$regionmapping <- paste0("config/regionmapping",select_regionmapping_x,".csv")
     for (select_climatescen_x in select_climatescen){
       for (select_climatemodel_x in select_climatemodel) {
-        for (select_co2_x in c("constant_co2","dynamic_co2")) {
-          
+        for (select_co2_x in c("noco2","co2")) {
           cfg$input <- paste0(
             "isimip_rcp","/",
             select_climatemodel_x,"/",
