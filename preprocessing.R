@@ -5,15 +5,18 @@ start_preprocessing <- function(cfg){
   require(magclass)
   require(tools)
   require(moinput)
+  require(mrvalidation)
   require(ludata)
   
   cfg <- check_config(cfg, modulepath = NULL)
   
-  retrieveData(model="MAgPIE", regionmapping=cfg$regionmapping, rev=cfg$revision2)
+  set_folder <- paste(gsub("/","-",cfg$input),"_rev",cfg$revision,sep="")
+  cat(paste0("Start preprocessing for ",set_folder))
+  
+  retrieveData(model="MAgPIE",     regionmapping=cfg$regionmapping, rev=cfg$revision2)
+  retrieveData(model="Validation", regionmapping=cfg$regionmapping, rev=cfg$revision2)
   
   source_include <- TRUE
-  
-  set_folder <- paste(gsub("/","-",cfg$input),"_rev",cfg$revision,sep="")
   
   if(!dir.exists(cfg$base_folder)) dir.create(cfg$base_folder, recursive = TRUE)
   

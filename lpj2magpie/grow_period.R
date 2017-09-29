@@ -1,6 +1,6 @@
 # (C) 2008-2016 Potsdam Institute for Climate Impact Research (PIK),
 # authors, and contributors see AUTHORS file
-# This file is part of MAgPIE and licensed under GNU AGPL Version 3 
+# This file is part of MAgPIE and licensed under GNU AGPL Version 3
 # or later. See LICENSE file or go to http://www.gnu.org/licenses/
 # Contact: magpie@pik-potsdam.de
 
@@ -18,14 +18,15 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
                         yield_ratio = 0.1, # threshold for cell yield over global average. crops in cells below threshold will be ignored
                         grday_file = "/iplex/01/landuse/data/input/raw_data/GLUES2-sresa2-constant_co2-miub_echo_g_rev16.895/0.5_set/mean_grdays_per_month_0.5.mz",
                         start_year  = 1901,                  #Start year of data set
-                        years = seq(1995,2005,by=10),        #Vector of years that should be exported          
-                        nbands = 24,                         # Number of bands in the .bin file  
+                        years = seq(1995,2005,by=10),        #Vector of years that should be exported
+                        nbands = 24,                         # Number of bands in the .bin file
                         avg_range = 8) {
   require(magclass)
   require(lpjclass)
   require(luscale)
   require(lucode)
-  
+  require(ludata)
+
   ####################################################################################
   #Goal: calculate mean sowing date and growing period
   #Step 1 Take care of inconsistencies (harvest date or sowing date ==0 etc)and convert to magpie cfts.
@@ -36,8 +37,8 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   #Step 6 Calculate mean sowing date
   #Step 7 Set the sowd to 1 and growing period to 365 where dams are present and where they are NA (reflecting that all crops have been eliminated)
   #Step 8 Calculate the growing days per month for each cell and each year
-  
-  
+
+
   ####################################################################################
   #Useful functions
   ####################################################################################
@@ -52,12 +53,12 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
     (rowSums(x^2, na.rm, dims) - rowSums(x, na.rm, dims)^2/N) / Nm1
   }
   ####################################################################################
-  
+
   ####################################################################################
   #Read sowing and harvest date input for the correct LAImaxinput
   ####################################################################################
   bad_crops<-vector()
-  
+
   sowd<-readLPJ(sowd_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=nbands,soilcells=TRUE,datatype=integer(),bytes=2, ncells=67420)
   sowd<-as.magpie(sowd)[,,"rainfed"]
   getNames(sowd) <- sub("\\.rainfed","",getNames(sowd))
@@ -65,7 +66,7 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   bad_crops<-c(bad_crops,as.vector(ludata$cftrel$magpie[which(!ludata$cftrel$lpj%in%dimnames(sowd)[[3]])]))
   sowd<-suppressWarnings(cft.transform(as.magpie(sowd)))
   sowd<-sowd[,,good_crops]
-  
+
   hard<-readLPJ(hard_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=nbands,soilcells=TRUE,datatype=integer(),bytes=2, ncells=67420)
   hard<-as.magpie(hard)[,,"rainfed"]
   getNames(hard) <- sub("\\.rainfed","",getNames(hard))
@@ -73,15 +74,15 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   bad_crops<-c(bad_crops,as.vector(ludata$cftrel$magpie[which(!ludata$cftrel$lpj%in%dimnames(hard)[[3]])]))
   hard<-suppressWarnings(cft.transform(as.magpie(hard)))
   hard<-hard[,,good_crops]
-  
+
   sowd<-ceiling(sowd)
   hard<-ceiling(hard)
   gc()
   if(length(bad_crops)>0) warning("No information on the growing period found for those crops: ",paste(unique(bad_crops),collapse=", "))
-  
-  
+
+
   #####################################################################################
-  
+
   ####################################################################################
   #Step 1 Take care of inconsistencies (hard==0 etc)#Read input
   ####################################################################################
@@ -100,9 +101,9 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   hard<-as.magpie(tmp_hard)
   rm(tmp_sowd,tmp_hard)
   gc()
-  
+
   ####################################################################################
-  
+
   ####################################################################################
   #Step 2 remove wintercrops from both calculations for the northern hemisphere: sowd>180, hard>365
   ####################################################################################
@@ -115,7 +116,7 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   rm(cells_northern_hemisphere)
   gc()
   ####################################################################################
-  # 
+  #
   # ####################################################################################
   # #Step 3 remove crops that have an irrigated yield below 10% of global average (total cell area as aggregation weight)
   # ####################################################################################
@@ -146,7 +147,7 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   rm(cell_yield_ratio_ir)
   gc()
   # ####################################################################################
-  # 
+  #
   # ####################################################################################
   # #Step 4 Calculate mean growing period with the remaining crops
   # ####################################################################################
@@ -165,7 +166,7 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   mean_grper<-rowMeans(grow_per*rm_wintercrops*rm_lowyield,na.rm=T,dims=2)
   sd_grper<-sqrt(rowVars(as.array(grow_per*rm_wintercrops*rm_lowyield),na.rm=T,dims=2))
   ####################################################################################
-  
+
   ####################################################################################
   #Step 5 remove sowd1 for sowing date calculation
   ####################################################################################
@@ -174,14 +175,14 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   rm_sowd1[sowd==1]<-NA
   n_sowd1<-ndata(sowd)-rowSums(rm_sowd1,dims=2,na.rm=T)
   ####################################################################################
-  
+
   ####################################################################################
   #Step 6 Calculate mean sowing date
   ####################################################################################
   mean_sowd<-rowMeans(sowd*rm_wintercrops*rm_lowyield*rm_sowd1,na.rm=T,dims=2)
   sd_sowd<-sqrt(rowVars(as.array(sowd*rm_wintercrops*rm_lowyield*rm_sowd1),na.rm=T,dims=2))
   ####################################################################################
-  
+
   ####################################################################################
   #Step 7 Set the sowd to 1 and growing period to 365 where dams are present and where they are NA (reflecting that all crops have been eliminated).
   ####################################################################################
@@ -195,14 +196,14 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   mean_sowd<-round(as.magpie(mean_sowd))
   mean_grper<-round(as.magpie(mean_grper))
   ####################################################################################
-  
+
   ####################################################################################
   #Step 8 Calculate the growing days per month for each cell and each year
   ####################################################################################
   months<-c("jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec")
   month_length<-c(31,28,31,30,31,30,31,31,30,31,30,31)
   names(month_length)<-months
-  
+
   #Determine which day belongs to which month
   days_months<-1:365
   names(days_months)<-1:365
@@ -213,20 +214,20 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
     before<-before+month_length[i]
   }
   rm(before)
-  
-  #Array for the growing days per month 
+
+  #Array for the growing days per month
   grow_days_per_month<-new.magpie(dimnames(mean_sowd)[[1]],dimnames(mean_sowd)[[2]],months)
   grow_days_per_month[,,]<-0
-  
+
   #determine the harvest day, take care if it is greater than 365
   mean_hard<-mean_sowd+mean_grper-1
   mean_hard<-mean_hard%%365
-  
+
   mean_hard<-as.array(mean_hard)
   mean_sowd<-as.array(mean_sowd)
-  
+
   mean_hard[mean_hard==0]<-365
-  
+
   #Loop over the months to set the number of days that the growing period lasts in each month
   for(t in getYears(mean_sowd)){
     #goodcells are cells in which harvest date is after sowing date, i.e. the cropping period does not cross the beginning of the year
@@ -252,14 +253,12 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
       grow_days_per_month[,t,month]<-days_in_this_month_goodcells+days_in_this_month_badcells
     }
   }
-  
+
   ####################################################################################
   comment <- c(paste("sowd_file: ", sowd_file),
                paste("hard_file: ", hard_file),
                paste("yield_file: ", yield_file),
                paste("creation date:",date()))
-  
+
   write.magpie(grow_days_per_month,grday_file, comment=comment)
 }
-
-

@@ -1,6 +1,6 @@
 # (C) 2008-2016 Potsdam Institute for Climate Impact Research (PIK),
 # authors, and contributors see AUTHORS file
-# This file is part of MAgPIE and licensed under GNU AGPL Version 3 
+# This file is part of MAgPIE and licensed under GNU AGPL Version 3
 # or later. See LICENSE file or go to http://www.gnu.org/licenses/
 # Contact: magpie@pik-potsdam.de
 
@@ -14,15 +14,16 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
                        rev = 22,
                        sLAI = 4,        # LAImax for pasture, begr and betr
                        avg_range = 8,   # Number of years used for averaging
-                       lai_range = 1:7,   
+                       lai_range = 1:7,
                        years = seq(1995,2095,by=5),
-                       debug = FALSE){ 
+                       debug = FALSE){
 
   require(lucode)
-  
+  require(ludata)
+
   umask <- Sys.umask("2")
   on.exit(Sys.umask(umask))
-  
+
   #Determine the start year of LPJ simulations from the .out files
   getLPJstartYear <- function(input_folder) {
     out_files<-grep("*.\\.out",list.files(input_folder),value=TRUE)
@@ -41,16 +42,14 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     return(start_year)
   }
   start_year <- getLPJstartYear(input_folder)
-  
-  if(rev < 22) stop('Converter is only available for revisions > 22!')
-  if(rev < 23) stop('Converter is only available for revisions >= 23!')
-  
-  
+
+  if(rev < 24) stop('Converter is only available for revisions >= 24!')
+
   #create output folder
   output_folder <- paste0("tmp/lpj2magpie_",format(Sys.time(),"%Y%m%d%H%M%S"))
   dir.create(output_folder,recursive=TRUE)
   cat("Use temp dir ",output_folder,".\n")
-  
+
   writeInfo <- function(file_name,input_folder,input2_folder, rev) {
     functioncall <- paste(deparse(sys.call(-1)), collapse = "")
     info <- c('lpj2magpie settings:',
@@ -61,7 +60,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     cat(info,file=file_name,sep='\n')
   }
   writeInfo(file_name=path(output_folder,'info.txt'), input_folder=input_folder, input2_folder=input2_folder, rev=rev)
-  
+
   ### copy files from other input folder ###
   cat("copy files from additional input\n")
   copyOtherInputs <- function(input2_folder, output_folder) {
@@ -82,35 +81,36 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     files2copy["indc_ad_pol_0.5.mz"]        <- "indc_ad_pol_0.5.mz"
     files2copy["indc_aff_pol_0.5.mz"]       <- "indc_aff_pol_0.5.mz"
     files2copy["indc_emis_pol_0.5.mz"]      <- "indc_emis_pol_0.5.mz"
+    files2copy["f59_som_initialisation_pools_0.5.mz"]      <- "f59_som_initialisation_pools_0.5.mz"
     for(i in 1:length(files2copy)) file.copy(path(input2_folder,files2copy[i]),path(output_folder,names(files2copy[i])),copy.mode=FALSE)
   }
   copyOtherInputs(input2_folder, output_folder)
-  
+
   cat("calibrate LAI\n")
   source("calibrate_lai.R")
-  calibrate_lai(input_file = path(input_folder,'pft_harvest.pft'), 
+  calibrate_lai(input_file = path(input_folder,'pft_harvest.pft'),
                 area_file = path(input2_folder,'calibrated_area_0.5.mz'),
                 cntr_LAI_file = path(output_folder,"cntr.LAI.RData"),
-                start_year = 1901, 
-                nbands = 32, 
-                avg_range = avg_range, 
-                lai_range = lai_range) 
-  
-  
+                start_year = start_year,
+                nbands = 32,
+                avg_range = avg_range,
+                lai_range = lai_range)
+
+
   cat("yields\n")
   source("yields.R")
   yields(input_file =  path(input_folder,'pft_harvest.pft'),
          cntr_LAI_file = path(output_folder,"cntr.LAI.RData"),
          output_file = path(output_folder,'lpj_yields_0.5.mz'),
          ndigits = 2,                    # Number of digits in output file
-         start_year = 1950,              # Start year of data set
-         years = years,    # Vector of years that should be exported          
-         nbands = 32,                    # Number of bands in the .bin file  
+         start_year = start_year,              # Start year of data set
+         years = years,    # Vector of years that should be exported
+         nbands = 32,                    # Number of bands in the .bin file
          avg_range = avg_range,         # Number of years used for averaging
          lai_range = lai_range,                # possible LAImax values
          sLAI = sLAI)
-  
-  
+
+
   cat("growing period\n")
   source("grow_period.R")
   grow_period(sowd_file   = path(input_folder,'sdate.bin'),
@@ -120,11 +120,11 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
               damfile     = path(input2_folder,'dams_0.5.mz'),
               yield_ratio = 0.1, # threshold for cell yield over global average. crops in cells below threshold will be ignored
               grday_file  = path(output_folder,'mean_grdays_per_month_0.5.mz'),
-              start_year  = 1901,                  #Start year of data set
-              years       = years,        #Vector of years that should be exported          
-              nbands      = 24,                         # Number of bands in the .bin file  
+              start_year  = start_year,                  #Start year of data set
+              years       = years,        #Vector of years that should be exported
+              nbands      = 24,                         # Number of bands in the .bin file
               avg_range   = avg_range)
-  
+
   cat("water\n")
   source("water.R")
   water(discharge_file      = path(input_folder,'mdischarge_natveg.bin'),
@@ -144,12 +144,12 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
         HFR_LFR_20_30  = 0.07,  # High flow requirements in share of total water for cells with 20% < LFR < 30 % of total water
         HFR_LFR_more30 = 0.00,  # High flow requirements in share of total water for cells with LFR> 30 % of total water
         ndigits        = 0,                     #Number of digits in output file
-        start_year     = 1950,                  #Start year of data set
-        years          = years,          #Vector of years that should be exported          
-        nbands         = 1,                     # Number of bands in the .bin file  
+        start_year     = start_year,                  #Start year of data set
+        years          = years,          #Vector of years that should be exported
+        nbands         = 1,                     # Number of bands in the .bin file
         avg_range      = avg_range)
-  
-  
+
+
   cat("carbon\n")
   source("carbon.R")
   carbon(natveg_vegc_file       = path(input_folder,'vegc_natveg.bin'),
@@ -159,25 +159,25 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
          pastc_file             = path(input2_folder,'lpj_carbon_pasture_0.5.mz'),
          out_carbon_stocks_file = path(output_folder,'lpj_carbon_stocks_0.5.mz'),
          ndigits     = 2,                    # Number of digits in output file
-         start_year  = 1901,                 # Start year of data set
-         years       = years,         # Vector of years that should be exported          
+         start_year  = start_year,                 # Start year of data set
+         years       = years,         # Vector of years that should be exported
          nbands      = 1,                    # Number of bands in the .bin file
          avg_range   = avg_range)
-  
-  
+
+
   cat("irrigation\n")
   source("irrigation.R")
   irrigation(input_file    = path(input_folder,'pft_airrig.pft'),
              output_file   = path(output_folder,'lpj_airrig_0.5.mz'),
-             cntr_LAI_file = path(output_folder,"cntr.LAI.RData"),                        
+             cntr_LAI_file = path(output_folder,"cntr.LAI.RData"),
              ndigits     = 0,                     # Number of digits in output file
-             start_year  = 1950,                  # Start year of data set
-             years       = years,  # Vector of years that should be exported          
-             nbands      = 32,                    # Number of bands in the .bin file  
+             start_year  = start_year,                  # Start year of data set
+             years       = years,  # Vector of years that should be exported
+             nbands      = 32,                    # Number of bands in the .bin file
              avg_range   = avg_range,             # Number of years used for averaging
              lai_range   = lai_range,                   # possible LAImax values
              sLAI        = sLAI)
- 
+
   cwd <- getwd()
   setwd(output_folder)
   trash <- system("tar -czf data.tgz *", intern = TRUE)
@@ -186,4 +186,3 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
   file.rename(paste0(output_folder,"/data.tgz"),output_file)
   if(!debug) unlink(output_folder, recursive = TRUE, force = TRUE)
 }
-
