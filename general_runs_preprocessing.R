@@ -9,7 +9,7 @@ source("config/default.cfg")
 
 
 #cellular data
-cfg$revision <- 24
+cfg$revision <- 24.1
 #regional data (moinput)
 cfg$revision2 <- 2.2
 
