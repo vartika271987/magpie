@@ -10,7 +10,7 @@ source("config/default.cfg")
 #cellular data
 cfg$revision <- 24
 #regional data (moinput)
-cfg$revision2 <- 2.11
+cfg$revision2 <- 3.1
 
 cfg$regionmapping <- "config/regionmappingH11.csv"
 cfg$low_res <- "h200"
@@ -20,6 +20,9 @@ cfg$regionmapping <- "config/regionmappingH12.csv"
 start_preprocessing(cfg)
 
 cfg$regionmapping <- "config/regionmappingMAgPIE.csv"
+start_preprocessing(cfg)
+
+cfg$regionmapping <- "config/regionmappingBRA.csv"
 start_preprocessing(cfg)
 
 cfg$regionmapping <- "config/regionmappingH11.csv"
