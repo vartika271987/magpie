@@ -23,7 +23,7 @@ start_preprocessing <- function(cfg){
   wkey <- ifelse(is.null(cfg$cluster_weight), "", gsub(".","",paste0("_",names(cfg$cluster_weight),cfg$cluster_weight,collapse=""),fixed=TRUE))
 
   lpj2magpie_file <- paste0(cfg$base_folder,"/",set_folder,"_",cfg$high_res,".tgz")
-  aggregation_file <- paste0(cfg$base_folder,"/",set_folder,"_",cfg$low_res,"_",regionscode(cfg$regionmapping),wkey,".tgz")
+  aggregation_file <- paste0(cfg$base_folder,"/",set_folder,"_",cfg$low_res,wkey,"_",regionscode(cfg$regionmapping),".tgz")
 
   if(cfg$force_preprocessing | !file.exists(lpj2magpie_file)){
     cat("Data is converted first from LPJ output format to MAgPIE input format!\n")
