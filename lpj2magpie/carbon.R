@@ -55,7 +55,7 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
   # }
   
   ### LPJ Soil layers natveg ###
-  natveg_soilc_layer <- readLPJ(file_name=natveg_soilc_layer_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=5,soilcells=TRUE, ncells=67420)
+  natveg_soilc_layer <- readLPJ(file_name=natveg_soilc_layer_file,wyears=years,syear=1980,averaging_range=avg_range,bands=5,soilcells=TRUE, ncells=67420)
   natveg_soilc_layer <- as.magpie(natveg_soilc_layer)
   natveg_soilc_layer <- natveg_soilc_layer * unit_transform
   natveg_soilc <- natveg_soilc_layer[,,1] + 1/3 * natveg_soilc_layer[,,2]
