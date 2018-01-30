@@ -11,6 +11,7 @@
 
 carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_input/GLUES2/sresa2/constant_co2/miub_echo_g/vegc_natveg.bin",
                    natveg_soilc_file      = "/iplex/01/landuse/data/input/lpj_input/GLUES2/sresa2/constant_co2/miub_echo_g/soilc_natveg.bin",
+                   natveg_soilc_layer_file = "/iplex/01/landuse/data/input/lpj_input/GLUES2/sresa2/constant_co2/miub_echo_g/soilc_layer_natveg.bin",
                    natveg_litc_file       = "/iplex/01/landuse/data/input/lpj_input/GLUES2/sresa2/constant_co2/miub_echo_g/litc_natveg.bin",
                    c_share_released_file  = "/iplex/01/landuse/data/input/other/rev17/cshare_released_0.5.mz",
                    pastc_file             = "/iplex/01/landuse/data/input/other/rev17/lpj_carbon_pasture_0.5.mz",
@@ -43,11 +44,22 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
   }
   
   
-  ### LPJ nat_soilc ###
-  natveg_soilc<-readLPJ(file_name=natveg_soilc_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=nbands,soilcells=TRUE, ncells=67420)
-  natveg_soilc<-as.magpie(natveg_soilc)
-  getNames(natveg_soilc)<-"soilc"
-  natveg_soilc<-natveg_soilc*unit_transform
+  # ### LPJ nat_soilc ###
+  # natveg_soilc<-readLPJ(file_name=natveg_soilc_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=nbands,soilcells=TRUE, ncells=67420)
+  # natveg_soilc<-as.magpie(natveg_soilc)
+  # getNames(natveg_soilc)<-"soilc"
+  # natveg_soilc<-natveg_soilc*unit_transform
+  # if(any(natveg_soilc<0)){
+  #   natveg_soilc[natveg_soilc<0]<-0
+  #   warning("Some negative soilc values set to 0.")
+  # }
+  
+  ### LPJ Soil layers natveg ###
+  natveg_soilc_layer <- readLPJ(file_name=natveg_soilc_layer_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=5,soilcells=TRUE, ncells=67420)
+  natveg_soilc_layer <- as.magpie(natveg_soilc_layer)
+  natveg_soilc_layer <- natveg_soilc_layer * unit_transform
+  natveg_soilc <- natveg_soilc_layer[,,1] + 1/3 * natveg_soilc_layer[,,2]
+  getNames(natveg_soilc) <- "soilc"
   if(any(natveg_soilc<0)){
     natveg_soilc[natveg_soilc<0]<-0
     warning("Some negative soilc values set to 0.")
