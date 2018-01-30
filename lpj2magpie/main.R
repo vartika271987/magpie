@@ -157,6 +157,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
   source("carbon.R")
   carbon(natveg_vegc_file       = path(input_folder,'vegc_natveg.bin'),
          natveg_soilc_file      = path(input_folder,'soilc_natveg.bin'),
+         natveg_soilc_layer_file  = path(input_folder,'soilc_layer_natveg.bin'),
          natveg_litc_file       = path(input_folder,'litc_natveg.bin'),
          c_share_released_file  = path(input2_folder,'cshare_released_0.5.mz'),
          pastc_file             = path(input2_folder,'lpj_carbon_pasture_0.5.mz'),
