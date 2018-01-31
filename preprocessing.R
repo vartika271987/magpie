@@ -53,7 +53,7 @@ start_preprocessing <- function(cfg){
     cat("Data is now aggregated!\n")
     setwd("aggregation")
     source("main.R")
-    aggregation(input_file    = paste0(cfg$base_folder,"/",set_folder,"_",cfg$high_res,".tgz"),      # path to the data that should be used for aggregation
+    aggregation(input_file    = lpj2magpie_file,      # path to the data that should be used for aggregation
                 regionmapping = paste0("../",cfg$regionmapping), # path to regionmapping
                 output_file   = aggregation_file,       # file path to which the data should be written
                 rev           = cfg$revision,               # MAgPIE revision
