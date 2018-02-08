@@ -82,10 +82,9 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     files2copy["indc_aff_pol_0.5.mz"]       <- "indc_aff_pol_0.5.mz"
     files2copy["indc_emis_pol_0.5.mz"]      <- "indc_emis_pol_0.5.mz"
     files2copy["f59_som_initialisation_pools_0.5.mz"]      <- "f59_som_initialisation_pools_0.5.mz"
-    if (rev >= 24.3) {
+    if (rev >= 25) {
       files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
       files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
-      files2copy["luh2_potforest_0.5.mz"]     <- "luh2_potforest_0.5.mz"
     }
     for(i in 1:length(files2copy)) file.copy(path(input2_folder,files2copy[i]),path(output_folder,names(files2copy[i])),copy.mode=FALSE)
   }
