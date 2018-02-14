@@ -91,7 +91,7 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
   gc()
   
   #Cshare released (used to modify cropland soilc)
-  cshare_released<-read.magpie()
+  cshare_released<-read.magpie(c_share_released_file)
   
   #Carbon stocks of pasture under different management options
   past<-read.magpie(pastc_file)
