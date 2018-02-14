@@ -63,7 +63,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
 
   ### copy files from other input folder ###
   cat("copy files from additional input\n")
-  copyOtherInputs <- function(input2_folder, output_folder) {
+  copyOtherInputs <- function(input2_folder, output_folder,rev) {
     if(!dir.exists(input2_folder)) stop("Additional input folder for given revision does not exist! (",input2_folder,")")
     files2copy <- NULL
     # USAGE:
@@ -93,7 +93,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     }
     for(i in 1:length(files2copy)) file.copy(path(input2_folder,files2copy[i]),path(output_folder,names(files2copy[i])),copy.mode=FALSE)
   }
-  copyOtherInputs(input2_folder, output_folder)
+  copyOtherInputs(input2_folder, output_folder,rev)
 
   cat("calibrate LAI\n")
   source("calibrate_lai.R")
