@@ -159,10 +159,15 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   f["indc_ad_pol"]                  <- "sum"
   f["indc_aff_pol"]                 <- "sum"
   f["indc_emis_pol"]                <- "sum"
-  f["f59_som_initialisation_pools"]  <- "sum"
-  f["rr_layer"]                      <- "area_weighted_mean"
-  f["luh2_side_layers"]              <- "area_weighted_mean"
-  f["luh2_potforest"]                <- "area_weighted_mean"
+  
+  if (rev >= 25) {
+    f["rr_layer"]                      <- "area_weighted_mean"
+    f["luh2_side_layers"]              <- "area_weighted_mean"
+  } else if (rev >= 26) {
+    f["rr_layer"]                      <- "area_weighted_mean"
+    f["luh2_side_layers"]              <- "area_weighted_mean"
+    f["f59_som_initialisation_pools"]  <- "sum"
+  }
 
 
   for(n in names(f)) {

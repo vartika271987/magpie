@@ -63,7 +63,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
 
   ### copy files from other input folder ###
   cat("copy files from additional input\n")
-  copyOtherInputs <- function(input2_folder, output_folder) {
+  copyOtherInputs <- function(input2_folder, output_folder,rev) {
     if(!dir.exists(input2_folder)) stop("Additional input folder for given revision does not exist! (",input2_folder,")")
     files2copy <- NULL
     # USAGE:
@@ -82,12 +82,18 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     files2copy["indc_aff_pol_0.5.mz"]       <- "indc_aff_pol_0.5.mz"
     files2copy["indc_emis_pol_0.5.mz"]      <- "indc_emis_pol_0.5.mz"
     files2copy["f59_som_initialisation_pools_0.5.mz"]      <- "f59_som_initialisation_pools_0.5.mz"
-    files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
-    files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
-    files2copy["luh2_potforest_0.5.mz"]     <- "luh2_potforest_0.5.mz"
+    
+    if (rev >= 25) {
+      files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
+      files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
+    } else if (rev>=26) {
+      files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
+      files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
+      files2copy["f38_croparea_initialisation_0.5.mz"]      <- "f38_croparea_initialisation_0.5.mz"
+    }
     for(i in 1:length(files2copy)) file.copy(path(input2_folder,files2copy[i]),path(output_folder,names(files2copy[i])),copy.mode=FALSE)
   }
-  copyOtherInputs(input2_folder, output_folder)
+  copyOtherInputs(input2_folder, output_folder,rev)
 
   cat("calibrate LAI\n")
   source("calibrate_lai.R")
@@ -167,7 +173,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
          years       = years,         # Vector of years that should be exported
          nbands      = 1,                    # Number of bands in the .bin file
          avg_range   = avg_range,
-         rev         = 22)                 # Revision number to switch between versions
+         rev         = rev)                 # Revision number to switch between versions
 
 
   cat("irrigation\n")

@@ -9,9 +9,10 @@ source("config/default.cfg")
 
 
 #cellular data
-cfg$revision <- 24.1
+cfg$revision <- 26
 #regional data (moinput)
 cfg$revision2 <- 3.3
+
 
 
 'select_resolution = c("h200")
