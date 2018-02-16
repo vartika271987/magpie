@@ -172,10 +172,9 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
          start_year  = start_year,                 # Start year of data set
          years       = years,         # Vector of years that should be exported
          nbands      = 1,                    # Number of bands in the .bin file
-         avg_range   = avg_range,
-         rev         = rev)                 # Revision number to switch between versions
+         avg_range   = avg_range)         
 
-
+  
   cat("irrigation\n")
   source("irrigation.R")
   irrigation(input_file    = path(input_folder,'pft_airrig.pft'),

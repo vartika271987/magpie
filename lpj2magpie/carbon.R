@@ -20,8 +20,7 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
                    start_year  = 1901,                 # Start year of data set
                    years       = c(1995,2005),         # Vector of years that should be exported          
                    nbands      = 1,                    # Number of bands in the .bin file
-                   avg_range   = 8,
-                   rev         = 22){
+                   avg_range   = 8){
   require(lpjclass)
   require(magclass)
   require(lucode)
@@ -45,27 +44,13 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
   }
   
   
-  ### LPJ nat_soilc ###
-  natveg_soilc<-readLPJ(file_name=natveg_soilc_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=nbands,soilcells=TRUE, ncells=67420)
-  natveg_soilc<-as.magpie(natveg_soilc)
-  getNames(natveg_soilc)<-"soilc"
-  natveg_soilc<-natveg_soilc*unit_transform
-  if(any(natveg_soilc<0)){
-    natveg_soilc[natveg_soilc<0]<-0
-    warning("Some negative soilc values set to 0.")
-  }
-  
-  natveg<-mbind(natveg_vegc,natveg_soilc)
-  rm(natveg_vegc,natveg_soilc)
-  gc()
-  
-  if(rev>=27){
+  if(file.exists(natveg_soilc_layer_file)){
     ### LPJ Soil layers natveg ###
     natveg_soilc_layer <- readLPJ(file_name=natveg_soilc_layer_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=5,soilcells=TRUE, ncells=67420)
     natveg_soilc_layer <- as.magpie(natveg_soilc_layer)
     natveg_soilc_layer <- natveg_soilc_layer * unit_transform
     natveg_soilc_layer <- natveg_soilc_layer[,,1] + 1/3 * natveg_soilc_layer[,,2]
-    getNames(natveg_soilc_layer) <- "soilc_0-30"
+    getNames(natveg_soilc_layer) <- "soilc"
     if(any(natveg_soilc_layer<0)){
       natveg_soilc_layer[natveg_soilc_layer<0]<-0
       warning("Some negative soilc_layer values set to 0.")
@@ -74,7 +59,28 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
     natveg<-mbind(natveg,natveg_soilc_layer)
     rm(natveg_soilc_layer)
     gc()
+    
+    topsoil <- TRUE
+    
+  } else {
+    
+    ### LPJ nat_soilc ###
+    natveg_soilc<-readLPJ(file_name=natveg_soilc_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=nbands,soilcells=TRUE, ncells=67420)
+    natveg_soilc<-as.magpie(natveg_soilc)
+    getNames(natveg_soilc)<-"soilc"
+    natveg_soilc<-natveg_soilc*unit_transform
+    if(any(natveg_soilc<0)){
+      natveg_soilc[natveg_soilc<0]<-0
+      warning("Some negative soilc values set to 0.")
+    }
+    
+    natveg<-mbind(natveg_vegc,natveg_soilc)
+    rm(natveg_vegc,natveg_soilc)
+    gc()
+    
+    topsoil <- FALSE
   }
+  
   
   ###LPJ  nat_litc ###
   natveg_litc<-readLPJ(file_name=natveg_litc_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=nbands,soilcells=TRUE, ncells=67420)
@@ -108,8 +114,6 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
                             years=years,
                             names=c("vegc","soilc","litc"))
   
-  if(rev>=27){carbon_stocks <- add_columns(carbon_stocks, addnm = c("soilc_0-30"), dim = 3.1)}
-  
   carbon_stocks <- add_dimension(carbon_stocks, dim = 3.1, add = "landtype",
                                  nm = c("crop","past","forestry","primforest","secdforest", "urban", "other"))
   
@@ -130,21 +134,23 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
   carbon_stocks[,,"urban"]           <- 0
   carbon_stocks[,,"other"]           <- natveg
   
-  if(rev>=27){
-    carbon_stocks[,,"crop.soilc_0-30"] <- (1-cshare_released)*natveg[,,"soilc_0-30"]
-    carbon_stocks[,,"past.soilc_0-30"] <- natveg[,,"soilc_0-30"]
-  }
-  
   ####################################################
   #Write the output
   ####################################################
   
-  comment <- c(paste("natveg_vegc_file: ", natveg_vegc_file),
-               paste("natveg_soilc_file: ", natveg_soilc_file),
-               paste("natveg_litc_file: ", natveg_litc_file),
-               paste("creation date:",date()))
-  
-  if(rev>=27){comment <- append(comment, paste("natveg_soilc_layer_file: ", natveg_soilc_layer_file), after=2)}
+  if(topsoil){
+    
+    comment <- c(paste("natveg_vegc_file: ", natveg_vegc_file),
+                 paste("natveg_soilc_layer_file: ", natveg_soilc_layer_file),
+                 paste("natveg_litc_file: ", natveg_litc_file),
+                 paste("creation date:",date()))
+  } else {
+    
+    comment <- c(paste("natveg_vegc_file: ", natveg_vegc_file),
+                 paste("natveg_soilc_file: ", natveg_soilc_file),
+                 paste("natveg_litc_file: ", natveg_litc_file),
+                 paste("creation date:",date()))
+  }
   
   write.magpie(carbon_stocks,file_name=out_carbon_stocks_file, comment=comment)
 }
