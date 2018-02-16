@@ -86,6 +86,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     if (rev >= 25) {
       files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
       files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
+    }  
     if (rev >= 26) {
       files2copy["f38_croparea_initialisation_0.5.mz"]      <- "f38_croparea_initialisation_0.5.mz"
     }
