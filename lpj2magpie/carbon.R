@@ -56,8 +56,8 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
       warning("Some negative soilc_layer values set to 0.")
     }
     
-    natveg<-mbind(natveg,natveg_soilc_layer)
-    rm(natveg_soilc_layer)
+    natveg<-mbind(natveg_vegc,natveg_soilc_layer)
+    rm(natveg_vegc,natveg_soilc)
     gc()
     
     topsoil <- TRUE
