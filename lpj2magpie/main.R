@@ -190,7 +190,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     
     cat("topsoil\n")
     source("topsoil.R")
-    carbon(natveg_soilc_layer_file  = natveg_soilc_layer_file,
+    topsoil(natveg_soilc_layer_file  = natveg_soilc_layer_file,
            out_carbon_topsoil_file = path(output_folder,'lpj_carbon_topsoil_0.5.mz'),
            ndigits     = 2,                    # Number of digits in output file
            start_year  = start_year,           # Start year of data set
