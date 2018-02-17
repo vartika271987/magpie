@@ -45,18 +45,28 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
   
   
   if(file.exists(natveg_soilc_layer_file)){
+    
     ### LPJ Soil layers natveg ###
     natveg_soilc_layer <- readLPJ(file_name=natveg_soilc_layer_file,wyears=years,syear=start_year,averaging_range=avg_range,bands=5,soilcells=TRUE, ncells=67420)
     natveg_soilc_layer <- as.magpie(natveg_soilc_layer)
     natveg_soilc_layer <- natveg_soilc_layer * unit_transform
-    natveg_soilc_layer <- natveg_soilc_layer[,,1] + 1/3 * natveg_soilc_layer[,,2]
-    getNames(natveg_soilc_layer) <- "soilc"
+    natveg_soilc       <- dimSums(natveg_soilc_layer, dim=3)
+    getNames(natveg_soilc) <- "soilc"
+    if(any(natveg_soilc<0)){
+      natveg_soilc[natveg_soilc<0]<-0
+      warning("Some negative soilc values set to 0.")
+    }
+    
+    
+    natveg_soilc_layer <- collapseNames(natveg_soilc_layer[,,1] + 1/3 * natveg_soilc_layer[,,2])
+    natveg_soilc_layer <- mbind(natveg_soilc_layer, natveg_soilc - natveg_soilc_layer)
+    getNames(natveg_soilc_layer) <- c("soilc.top", "soilc.sub")
     if(any(natveg_soilc_layer<0)){
       natveg_soilc_layer[natveg_soilc_layer<0]<-0
       warning("Some negative soilc_layer values set to 0.")
     }
     
-    natveg<-mbind(natveg_vegc,natveg_soilc_layer)
+    natveg<-mbind(natveg_vegc,natveg_soilc)
     rm(natveg_vegc,natveg_soilc)
     gc()
     
@@ -124,7 +134,6 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
   #Factor 0.012 is based on the script subversion/svn/tools/carbon_cropland, executed at 30.07.2013
   carbon_stocks[,,"crop.vegc"]       <- 0.012*natveg[,,"vegc"]
   carbon_stocks[,,"crop.litc"]       <- 0
-  carbon_stocks[,,"crop.soilc"]      <- (1-cshare_released)*natveg[,,"soilc"]
   carbon_stocks[,,"past.vegc"]       <- setYears(past[,,"default.vegc"],NULL)
   carbon_stocks[,,"past.litc"]       <- setYears(past[,,"default.litc"],NULL)
   carbon_stocks[,,"past.soilc"]      <- natveg[,,"soilc"]
@@ -133,6 +142,12 @@ carbon <- function(natveg_vegc_file       = "/iplex/01/landuse/data/input/lpj_in
   carbon_stocks[,,"secdforest"]      <- natveg
   carbon_stocks[,,"urban"]           <- 0
   carbon_stocks[,,"other"]           <- natveg
+  
+  if(topsoil){
+    carbon_stocks[,,"crop.soilc"]      <- (1-cshare_released)*natveg_soilc_layer[,,"soilc.top"] + natveg_soilc_layer[,,"soilc.sub"]
+  } else{
+    carbon_stocks[,,"crop.soilc"]      <- (1-cshare_released)*natveg[,,"soilc"] 
+  }
   
   ####################################################
   #Write the output
