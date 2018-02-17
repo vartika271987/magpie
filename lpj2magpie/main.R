@@ -172,7 +172,33 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
          years       = years,         # Vector of years that should be exported
          nbands      = 1,                    # Number of bands in the .bin file
          avg_range   = avg_range)         
-
+  
+  
+  if(rev >= 27){
+    
+    if(!(file.exists(path(input_folder,'soilc_layer_natveg.bin')))){
+      
+      cat("No soilc-layer-data found in",input_folder,".\n",
+          "Using data from",input2_folder,"as default.\n",
+          "Look into README.txt of",input2_folder ,"for further information on default values.")
+      
+      natveg_soilc_layer_file <- path(input2_folder,'soilc_layer_natveg.bin')
+      
+    } else {
+      natveg_soilc_layer_file <- path(input_folder,'soilc_layer_natveg.bin')
+    }
+    
+    cat("topsoil\n")
+    source("topsoil.R")
+    carbon(natveg_soilc_layer_file  = natveg_soilc_layer_file,
+           out_carbon_topsoil_file = path(output_folder,'lpj_carbon_topsoil_0.5.mz'),
+           ndigits     = 2,                    # Number of digits in output file
+           start_year  = start_year,           # Start year of data set
+           years       = years,                # Vector of years that should be exported
+           nbands      = 5,                    # Number of bands in the .bin file
+           avg_range   = avg_range)    
+  }
+  
   
   cat("irrigation\n")
   source("irrigation.R")
