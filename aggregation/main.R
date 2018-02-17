@@ -168,6 +168,9 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 26) {
     f["f38_croparea_initialisation"]   <- "sum"
   }
+  if (rev >= 27) {
+    f["lpj_carbon_topsoil"]            <- "area_weighted_mean"
+  }
 
 
   for(n in names(f)) {
