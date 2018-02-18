@@ -176,6 +176,9 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
   
   if(rev >= 27){
     
+    cat("topsoil\n")
+    source("topsoil.R")
+    
     if(!(file.exists(path(input_folder,'soilc_layer_natveg.bin')))){
       
       cat("No soilc-layer-data found in",input_folder,".\n",
@@ -183,13 +186,12 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
           "Look into README.txt of",input2_folder ,"for further information on default values.")
       
       natveg_soilc_layer_file <- path(input2_folder,'soilc_layer_natveg.bin')
+      start_year  <- 1951
       
     } else {
       natveg_soilc_layer_file <- path(input_folder,'soilc_layer_natveg.bin')
     }
-    
-    cat("topsoil\n")
-    source("topsoil.R")
+  
     topsoil(natveg_soilc_layer_file  = natveg_soilc_layer_file,
            out_carbon_topsoil_file = path(output_folder,'lpj_carbon_topsoil_0.5.mz'),
            ndigits     = 2,                    # Number of digits in output file
