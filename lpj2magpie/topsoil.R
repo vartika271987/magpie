@@ -32,7 +32,7 @@ topsoil <- function(natveg_soilc_layer_file = "/iplex/01/landuse/data/input/lpj_
   natveg_soilc_layer <- as.magpie(natveg_soilc_layer)
   natveg_soilc_layer <- natveg_soilc_layer * unit_transform
   natveg_soilc_layer <- natveg_soilc_layer[,,1] + 1/3 * natveg_soilc_layer[,,2]
-  getNames(natveg_soilc_layer) <- "soilc_0-30"
+  getNames(natveg_soilc_layer) <- NULL
   if(any(natveg_soilc_layer<0)){
     natveg_soilc_layer[natveg_soilc_layer<0]<-0
     warning("Some negative soilc_layer values set to 0.")
