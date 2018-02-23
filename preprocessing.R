@@ -13,6 +13,8 @@ start_preprocessing <- function(cfg){
   set_folder <- paste(gsub("/","-",cfg$input),"_rev",cfg$revision,sep="")
   cat(paste0("Start preprocessing for ",set_folder))
 
+  madrat::setConfig(nocores=cfg$nocores)
+
   retrieveData(model="MAgPIE",     regionmapping=cfg$regionmapping, rev=cfg$revision2)
   retrieveData(model="Validation", regionmapping=cfg$regionmapping, rev=cfg$revision2)
 

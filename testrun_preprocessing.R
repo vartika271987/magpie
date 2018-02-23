@@ -7,10 +7,7 @@ source("preprocessing.R")
 #set defaults
 source("config/default.cfg")
 
-library(moinput)
-library(madrat)
-
-madrat::setConfig(nocores=10)
+cfg$nocores <- 10
 
 #cellular data
 cfg$revision <- 26.2
