@@ -8,9 +8,9 @@ source("preprocessing.R")
 source("config/default.cfg")
 
 #cellular data
-cfg$revision <- 24
+cfg$revision <- 26.2
 #regional data (moinput)
-cfg$revision2 <- 3.1
+cfg$revision2 <- 3.8
 
 cfg$regionmapping <- "config/regionmappingH11.csv"
 cfg$low_res <- "h200"
@@ -26,14 +26,8 @@ cfg$regionmapping <- "config/regionmappingBRA.csv"
 start_preprocessing(cfg)
 
 cfg$regionmapping <- "config/regionmappingH11.csv"
-cfg$low_res <- "n200"
-start_preprocessing(cfg)
 
-cfg$regionmapping <- "config/regionmappingH11.csv"
-cfg$low_res <- "n100"
-start_preprocessing(cfg)
-
-cfg$regionmapping <- "config/regionmappingH11.csv"
-cfg$low_res <- "h100"
-start_preprocessing(cfg)
-
+for(i in c("h100","h600","h1000","h2000","n200","n100")){
+  cfg$low_res <- i
+  start_preprocessing(cfg)
+}
