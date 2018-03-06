@@ -12,7 +12,7 @@ cfg$nocores <- 10
 #cellular data
 cfg$revision <- 26.2
 #regional data (moinput)
-cfg$revision2 <- 3.8
+cfg$revision2 <- 3.9
 
 cfg$regionmapping <- "config/regionmappingH11.csv"
 cfg$low_res <- "h200"
@@ -33,3 +33,8 @@ for(i in c("h100","h600","h1000","h2000","n200","n100")){
   cfg$low_res <- i
   start_preprocessing(cfg)
 }
+
+cfg$input <- "isimip_rcp/IPSL_CM5A_LR/rcp2p6/co2"
+start_preprocessing(cfg)
+
+
