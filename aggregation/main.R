@@ -156,9 +156,6 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   f["lpj_watavail_grper"]           <- "sum"
   f["lpj_envflow_grper"]            <- "sum"
   f["watdem_nonagr_grper"]          <- "sum"
-  f["indc_ad_pol"]                  <- "sum"
-  f["indc_aff_pol"]                 <- "sum"
-  f["indc_emis_pol"]                <- "sum"
   f["f59_som_initialisation_pools"]  <- "sum"
   
   if (rev >= 25) {
@@ -168,6 +165,15 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 26) {
     f["f38_croparea_initialisation"]   <- "sum"
   }
+	if (rev >= 28) {
+		f["npi_ndc_ad_pol"]               <- "sum"
+		f["npi_ndc_aff_pol"]              <- "sum"
+		f["npi_ndc_emis_pol"]             <- "sum"
+	} else {
+		f["indc_ad_pol"]                  <- "sum"
+		f["indc_aff_pol"]                 <- "sum"
+		f["indc_emis_pol"]                <- "sum"
+	}
 
 
   for(n in names(f)) {

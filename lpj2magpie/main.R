@@ -78,9 +78,6 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     files2copy["aff_noboreal_0.5.mz"]       <- "aff_noboreal_0.5.mz"
     files2copy["aff_onlytropical_0.5.mz"]   <- "aff_onlytropical_0.5.mz"
     files2copy["koeppen_geiger_0.5.mz"]     <- "koeppen_geiger_0.5.mz"
-    files2copy["indc_ad_pol_0.5.mz"]        <- "indc_ad_pol_0.5.mz"
-    files2copy["indc_aff_pol_0.5.mz"]       <- "indc_aff_pol_0.5.mz"
-    files2copy["indc_emis_pol_0.5.mz"]      <- "indc_emis_pol_0.5.mz"
     files2copy["f59_som_initialisation_pools_0.5.mz"]      <- "f59_som_initialisation_pools_0.5.mz"
     
     if (rev >= 25) {
@@ -90,6 +87,15 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     if (rev >= 26) {
       files2copy["f38_croparea_initialisation_0.5.mz"]      <- "f38_croparea_initialisation_0.5.mz"
     }
+		if (rev >= 28) {
+			files2copy["npi_ndc_ad_pol_0.5.mz"]        <- "npi_ndc_ad_pol_0.5.mz"
+			files2copy["npi_ndc_aff_pol_0.5.mz"]       <- "npi_ndc_aff_pol_0.5.mz"
+			files2copy["npi_ndc_emis_pol_0.5.mz"]      <- "npi_ndc_emis_pol_0.5.mz"
+		} else {
+			files2copy["indc_ad_pol_0.5.mz"]        <- "indc_ad_pol_0.5.mz"
+			files2copy["indc_aff_pol_0.5.mz"]       <- "indc_aff_pol_0.5.mz"
+			files2copy["indc_emis_pol_0.5.mz"]      <- "indc_emis_pol_0.5.mz"
+		}
     for(i in 1:length(files2copy)) file.copy(path(input2_folder,files2copy[i]),path(output_folder,names(files2copy[i])),copy.mode=FALSE)
   }
   copyOtherInputs(input2_folder, output_folder,rev)
