@@ -197,6 +197,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
   trash <- system("tar -czf data.tgz *", intern = TRUE)
   setwd(cwd)
   if(!dir.exists(dirname(output_file))) dir.create(dirname(output_file),recursive = TRUE)
-  file.rename(paste0(output_folder,"/data.tgz"),output_file)
+  file.copy(paste0(output_folder,"/data.tgz"),output_file)
+  unlink(paste0(output_folder,"/data.tgz"))
   if(!debug) unlink(output_folder, recursive = TRUE, force = TRUE)
 }

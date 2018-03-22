@@ -206,7 +206,8 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   setwd(cwd)
   # create output folder
   if(!dir.exists(dirname(output_file))) dir.create(dirname(output_file),recursive=TRUE)
-  file.rename(paste0(foutput,"/data.tgz"),output_file)
+  file.copy(paste0(foutput,"/data.tgz"),output_file)
+  unlink(paste0(foutput,"/data.tgz"))
 
   if(!debug) {
     unlink(finput, recursive = TRUE)
