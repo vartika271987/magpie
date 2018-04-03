@@ -10,9 +10,9 @@ source("config/default.cfg")
 cfg$nocores <- 10
 
 #cellular data
-cfg$revision <- 26.2
+cfg$revision <- 29
 #regional data (moinput)
-cfg$revision2 <- 3.9
+cfg$revision2 <- 3.13
 
 cfg$regionmapping <- "config/regionmappingH11.csv"
 cfg$low_res <- "h200"
