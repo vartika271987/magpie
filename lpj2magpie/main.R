@@ -96,6 +96,10 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
 			files2copy["indc_aff_pol_0.5.mz"]       <- "indc_aff_pol_0.5.mz"
 			files2copy["indc_emis_pol_0.5.mz"]      <- "indc_emis_pol_0.5.mz"
 		}
+    if (rev >= 29) {
+      files2copy["forestageclasses_0.5.mz"]      <- "forestageclasses_0.5.mz"
+    }
+    
     for(i in 1:length(files2copy)) file.copy(path(input2_folder,files2copy[i]),path(output_folder,names(files2copy[i])),copy.mode=FALSE)
   }
   copyOtherInputs(input2_folder, output_folder,rev)

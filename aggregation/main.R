@@ -174,7 +174,10 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
 		f["indc_aff_pol"]                 <- "sum"
 		f["indc_emis_pol"]                <- "sum"
 	}
-
+  if (rev >= 29) {
+    f["forestageclasses"]   <- "sum"
+  }
+  
 
   for(n in names(f)) {
     input_file <- path(finput,paste(n,"_",res_high,".mz",sep=""))
