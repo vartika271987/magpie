@@ -12,7 +12,7 @@ cfg$nocores <- 10
 #cellular data
 cfg$revision <- 29
 #regional data (moinput)
-cfg$revision2 <- 3.13
+cfg$revision2 <- 3.15
 
 cfg$regionmapping <- "config/regionmappingH11.csv"
 cfg$low_res <- "h200"
