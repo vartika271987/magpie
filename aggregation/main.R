@@ -200,6 +200,14 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
 
   f <- c("avl_land_0.5.mz")
   file.copy(paste(finput,f,sep="/"),paste(foutput,f,sep="/"))
+  reduce_time <- function(f,finput,foutput) {
+    x <- read.magpie(paste(finput,f,sep="/"))
+    x <- setYears(x[,1,],NULL)
+    getCells(x) <- paste("GLO",1:59199,sep=".")
+    write.magpie(x,paste(foutput,f,sep="/"))
+  }
+  reduce_time("lpj_yields_0.5.mz",finput,foutput)
+  reduce_time("lpj_carbon_stocks_0.5.mz",finput,foutput)
   cat(paste("copied required high res data\n"))
 
 
