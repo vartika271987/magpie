@@ -198,7 +198,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
 
   ################################### Copy data ######################################
 
-  f <- c("avl_land_0.5.mz","lpj_yields_0.5.mz")
+  f <- c("avl_land_0.5.mz")
   file.copy(paste(finput,f,sep="/"),paste(foutput,f,sep="/"))
   cat(paste("copied required high res data\n"))
 
