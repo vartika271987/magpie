@@ -14,15 +14,15 @@ Antarctica;ATA;RAO
 French Southern Territories;ATF;RAO
 Antigua and Barbuda;ATG;LAM
 Australia;AUS;ANZ
-Austria;AUT;E18
+Austria;AUT;E17
 Azerbaijan;AZE;FSU
 Burundi;BDI;ALD
-Belgium;BEL;E18
+Belgium;BEL;E17
 Benin;BEN;ALD
 Bonaire, Sint Eustatius and Saba;BES;LAM
 Burkina Faso;BFA;ALD
 Bangladesh;BGD;AOL
-Bulgaria;BGR;E18
+Bulgaria;BGR;E17
 Bahrain;BHR;MEE
 Bahamas;BHS;LAM
 Bosnia and Herzegovina;BIH;REU
@@ -56,29 +56,29 @@ Cuba;CUB;LAM
 Curacao;CUW;LAM
 Christmas Island;CXR;RAO
 Cayman Islands;CYM;LAM
-Cyprus;CYP;E10
-Czech Republic;CZE;E10
-Germany;DEU;E18
+Cyprus;CYP;E11
+Czech Republic;CZE;E11
+Germany;DEU;E17
 Djibouti;DJI;ALD
 Dominica;DMA;LAM
-Denmark;DNK;E18
+Denmark;DNK;E17
 Dominican Republic;DOM;LAM
 Algeria;DZA;MED
 Ecuador;ECU;LAM
 Egypt;EGY;MED
 Eritrea;ERI;ACP
 Western Sahara;ESH;ACP
-Spain;ESP;E18
-Estonia;EST;E10
+Spain;ESP;E17
+Estonia;EST;E11
 Ethiopia;ETH;ACP
-Finland;FIN;E18
+Finland;FIN;E17
 Fiji;FJI;RAO
 Falkland Islands (Malvinas);FLK;LAM
-France;FRA;E18
+France;FRA;E17
 Faroe Islands;FRO;REU
 Micronesia, Federated States of;FSM;RAO
 Gabon;GAB;ALD
-United Kingdom;GBR;E18
+United Kingdom;GBR;E17
 Georgia;GEO;FSU
 Guernsey;GGY;REU
 Ghana;GHA;ACP
@@ -88,7 +88,7 @@ Guadeloupe;GLP;LAM
 Gambia;GMB;ALD
 Guinea-Bissau;GNB;ALD
 Equatorial Guinea;GNQ;ACP
-Greece;GRC;E18
+Greece;GRC;E17
 Grenada;GRD;LAM
 Greenland;GRL;REU
 Guatemala;GTM;LAM
@@ -98,19 +98,19 @@ Guyana;GUY;LAM
 Hong Kong;HKG;TIG
 Heard Island and McDonald Islands;HMD;RAO
 Honduras;HND;LAM
-Croatia;HRV;E18
+Croatia;HRV;E11
 Haiti;HTI;LAM
-Hungary;HUN;E10
+Hungary;HUN;E11
 Indonesia;IDN;RAO
 Isle of Man;IMN;REU
 India;IND;IND
 British Indian Ocean Territory;IOT;RAO
-Ireland;IRL;E18
+Ireland;IRL;E17
 Iran, Islamic Republic of;IRN;MEE
 Iraq;IRQ;MEE
 Iceland;ISL;REU
 Israel;ISR;MED
-Italy;ITA;E18
+Italy;ITA;E17
 Jamaica;JAM;LAM
 Jersey;JEY;REU
 Jordan;JOR;MEE
@@ -131,9 +131,9 @@ Saint Lucia;LCA;LAM
 Liechtenstein;LIE;REU
 Sri Lanka;LKA;RAO
 Lesotho;LSO;ACP
-Lithuania;LTU;E10
-Luxembourg;LUX;E18
-Latvia;LVA;E10
+Lithuania;LTU;E11
+Luxembourg;LUX;E17
+Latvia;LVA;E11
 Macao;MAC;RAO
 Saint Martin (French part);MAF;LAM
 Morocco;MAR;MED
@@ -145,7 +145,7 @@ Mexico;MEX;NAF
 Marshall Islands;MHL;RAO
 Macedonia, the former Yugoslav Republic of;MKD;REU
 Mali;MLI;ALD
-Malta;MLT;E10
+Malta;MLT;E11
 Myanmar;MMR;AOL
 Montenegro;MNE;REU
 Mongolia;MNG;FSU
@@ -165,7 +165,7 @@ Norfolk Island;NFK;RAO
 Nigeria;NGA;ACP
 Nicaragua;NIC;LAM
 Niue;NIU;RAO
-Netherlands;NLD;E18
+Netherlands;NLD;E17
 Norway;NOR;REU
 Nepal;NPL;AOL
 Nauru;NRU;RAO
@@ -178,16 +178,16 @@ Peru;PER;LAM
 Philippines;PHL;LAM
 Palau;PLW;RAO
 Papua New Guinea;PNG;RAO
-Poland;POL;E10
+Poland;POL;E11
 Puerto Rico;PRI;LAM
 Korea, Democratic People's Republic of;PRK;RAO
-Portugal;PRT;E18
+Portugal;PRT;E17
 Paraguay;PRY;LAM
 Palestine, State of;PSE;MEE
 French Polynesia;PYF;RAO
 Qatar;QAT;MEE
 Reunion;REU;ACP
-Romania;ROU;E18
+Romania;ROU;E17
 Russian Federation;RUS;FSU
 Rwanda;RWA;ALD
 Saudi Arabia;SAU;MEE
@@ -207,9 +207,9 @@ Serbia;SRB;REU
 South Sudan;SSD;ALD
 Sao Tome and Principe;STP;ALD
 Suriname;SUR;LAM
-Slovakia;SVK;E10
-Slovenia;SVN;E10
-Sweden;SWE;E18
+Slovakia;SVK;E11
+Slovenia;SVN;E11
+Sweden;SWE;E17
 Swaziland;SWZ;ACP
 Sint Maarten (Dutch part);SXM;LAM
 Seychelles;SYC;ACP
