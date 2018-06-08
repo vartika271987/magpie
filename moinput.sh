@@ -4,6 +4,6 @@
 #SBATCH --job-name=moinput
 #SBATCH --output=molog-%j.out
 #SBATCH --mail-type=END
-#SBATCH --mem-per-cpu=32000
+#SBATCH --mem=32000
 
 Rscript moinput.R
