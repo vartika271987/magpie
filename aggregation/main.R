@@ -113,14 +113,22 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   tspam  <- sub("res_in",res_high,sub("res_out",res_out,path(foutput,"res_in-to-res_out_fspam.spam")))
 
   ### area_weighted_mean ###
-  x <- rowSums(read.magpie(sub("fname","avl_land",tinput)))
+  if (rev >= 31){
+    x <- rowSums(read.magpie(sub("fname","avl_land_t",tinput))[,1,])
+  } else {
+    x <- rowSums(read.magpie(sub("fname","avl_land",tinput)))
+  }
   rel <- sub("fspam","sum",tspam)
   fname <- sub("fspam","area_weighted_mean",tspam)
   create_spam(x,rel,fname=fname)
   cat("SPAM area_weighted_mean created!\n")
 
   ### crop_area_weighted_mean ###
-  x <- rowSums(read.magpie(sub("fname","avl_land",tinput))[,1,"crop"])
+  if(rev >= 31){
+    x <- rowSums(read.magpie(sub("fname","avl_land_t",tinput))[,1,"crop"])
+  } else {
+    x <- rowSums(read.magpie(sub("fname","avl_land",tinput))[,1,"crop"])
+  }
   rel <- sub("fspam","sum",tspam)
   fname <- sub("fspam","crop_area_weighted_mean",tspam)
   create_spam(x,rel,fname=fname)
@@ -145,7 +153,6 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   f["aff_noboreal"]                 <- "area_weighted_mean"
   f["aff_onlytropical"]             <- "area_weighted_mean"
   f["koeppen_geiger"]               <- "area_weighted_mean"
-  f["avl_land"]                     <- "sum"
   f["avl_land_si"]                  <- "sum"
   f["avl_irrig"]                    <- "sum"
   f["protect_area"]                 <- "sum"
@@ -177,6 +184,12 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 29) {
     f["forestageclasses"]   <- "sum"
   }
+  if (rev >= 31) {
+    f["avl_land_t"]                  <- "sum"
+  } else {
+    f["avl_land"]                     <- "sum"
+  }
+  
   
 
   for(n in names(f)) {
@@ -198,7 +211,12 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
 
   ################################### Copy data ######################################
 
-  f <- c("avl_land_0.5.mz")
+  if (rev >= 31) {
+    f <- c("avl_land_t_0.5.mz")
+  } else {
+    f <- c("avl_land_0.5.mz")
+  }
+
   file.copy(paste(finput,f,sep="/"),paste(foutput,f,sep="/"))
   reduce_time <- function(f,finput,foutput) {
     x <- read.magpie(paste(finput,f,sep="/"))
