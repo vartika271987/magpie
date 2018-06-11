@@ -71,7 +71,6 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     files2copy["avl_irrig_0.5.mz"]          <- "avl_irrig_0.5.mz"
     files2copy["transport_distance_0.5.mz"] <- "transport_distance_0.5.mz"
     files2copy["calibrated_area_0.5.mz"]    <- "calibrated_area_0.5.mz"
-    files2copy["avl_land_0.5.mz"]           <- "avl_land_0.5.mz"
     files2copy["protect_area_0.5.mz"]       <- "protect_area_0.5.mz"
     files2copy["avl_land_si_0.5.mz"]        <- "avl_land_si_0.5.mz"
     files2copy["aff_unrestricted_0.5.mz"]   <- "aff_unrestricted_0.5.mz"
@@ -97,9 +96,14 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
 			files2copy["indc_emis_pol_0.5.mz"]      <- "indc_emis_pol_0.5.mz"
 		}
     if (rev >= 29) {
-      files2copy["forestageclasses_0.5.mz"]      <- "forestageclasses_0.5.mz"
+      files2copy["forestageclasses_0.5.mz"]   <- "forestageclasses_0.5.mz"
     }
-    
+    if (rev >= 31) {
+      files2copy["avl_land_t_0.5.mz"]         <- "avl_land_t_0.5.mz"
+    } else {
+      files2copy["avl_land_0.5.mz"]           <- "avl_land_0.5.mz"
+    }
+      
     for(i in 1:length(files2copy)) file.copy(path(input2_folder,files2copy[i]),path(output_folder,names(files2copy[i])),copy.mode=FALSE)
   }
   copyOtherInputs(input2_folder, output_folder,rev)
@@ -131,10 +135,19 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
 
   cat("growing period\n")
   source("grow_period.R")
+  
+  if(rev >= 31){
+    write.magpie(setYears(read.magpie(path(output_folder,"avl_land_t_0.5.mz"))[,"y1995",],NULL),
+                 "avl_land_y1995_0.5.mz", file_folder = output_folder)
+    avl_land <- "avl_land_y1995_0.5.mz"
+  } else{
+    avl_land <- "avl_land_0.5.mz"
+  }
+  
   grow_period(sowd_file   = path(input_folder,'sdate.bin'),
               hard_file   = path(input_folder,'hdate.bin'),
               yield_file  = path(output_folder,'lpj_yields_0.5.mz'),
-              area_file   = path(output_folder,"avl_land_0.5.mz"),
+              area_file   = path(output_folder, avl_land),
               damfile     = path(input2_folder,'dams_0.5.mz'),
               yield_ratio = 0.1, # threshold for cell yield over global average. crops in cells below threshold will be ignored
               grday_file  = path(output_folder,'mean_grdays_per_month_0.5.mz'),
