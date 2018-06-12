@@ -172,15 +172,6 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 26) {
     f["f38_croparea_initialisation"]   <- "sum"
   }
-	if (rev >= 28) {
-		f["npi_ndc_ad_pol"]               <- "sum"
-		f["npi_ndc_aff_pol"]              <- "sum"
-		f["npi_ndc_emis_pol"]             <- "sum"
-	} else {
-		f["indc_ad_pol"]                  <- "sum"
-		f["indc_aff_pol"]                 <- "sum"
-		f["indc_emis_pol"]                <- "sum"
-	}
   if (rev >= 29) {
     f["forestageclasses"]   <- "sum"
   }
@@ -189,7 +180,18 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   } else {
     f["avl_land"]                     <- "sum"
   }
-  
+	if (rev >= 32){
+		f["npi_ndc_ad_aolc_pol"]          <- "sum"
+		f["npi_ndc_aff_pol"]              <- "sum"
+	} else if (rev >= 28) {
+		f["npi_ndc_ad_pol"]               <- "sum"
+		f["npi_ndc_aff_pol"]              <- "sum"
+		f["npi_ndc_emis_pol"]             <- "sum"
+	} else {
+		f["indc_ad_pol"]                  <- "sum"
+		f["indc_aff_pol"]                 <- "sum"
+		f["indc_emis_pol"]                <- "sum"
+	}
   
 
   for(n in names(f)) {
