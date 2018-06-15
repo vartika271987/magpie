@@ -96,6 +96,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     }
 		if (rev >= 32) {
 			files2copy["npi_ndc_ad_aolc_pol_0.5.mz"] <- "npi_ndc_ad_aolc_pol_0.5.mz"
+			files2copy["npi_ndc_aff_pol_0.5.mz"]       <- "npi_ndc_aff_pol_0.5.mz"
 		} else if (rev >= 28) {
 			files2copy["npi_ndc_ad_pol_0.5.mz"]        <- "npi_ndc_ad_pol_0.5.mz"
 			files2copy["npi_ndc_aff_pol_0.5.mz"]       <- "npi_ndc_aff_pol_0.5.mz"
