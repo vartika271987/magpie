@@ -6,4 +6,4 @@
 #SBATCH --mail-type=END
 #SBATCH --mem=32000
 
-Rscript testrun_preprocessing.R
+Rscript testrun_preprocessing2.R
