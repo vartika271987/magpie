@@ -4,8 +4,8 @@ Afghanistan;AFG;ROW
 Angola;AGO;ROW
 Anguilla;AIA;LAM
 Aland Islands;ALA;EUR
-Albania;ALB;ROW
-Andorra;AND;ROW
+Albania;ALB;EUR
+Andorra;AND;EUR
 United Arab Emirates;ARE;ROW
 Argentina;ARG;LAM
 Armenia;ARM;ROW
@@ -25,7 +25,7 @@ Bangladesh;BGD;ROW
 Bulgaria;BGR;EUR
 Bahrain;BHR;ROW
 Bahamas;BHS;LAM
-Bosnia and Herzegovina;BIH;ROW
+Bosnia and Herzegovina;BIH;EUR
 Saint Barthelemy;BLM;LAM
 Belarus;BLR;ROW
 Belize;BLZ;LAM
@@ -41,7 +41,7 @@ Central African Republic;CAF;ROW
 Canada;CAN;ROW
 Cocos (Keeling) Islands;CCK;ROW
 China;CHN;CHA
-Switzerland;CHE;ROW
+Switzerland;CHE;EUR
 Chile;CHL;LAM
 Cote d Ivoire;CIV;ROW
 Cameroon;CMR;ROW
@@ -90,7 +90,7 @@ Guinea-Bissau;GNB;ROW
 Equatorial Guinea;GNQ;ROW
 Greece;GRC;EUR
 Grenada;GRD;LAM
-Greenland;GRL;ROW
+Greenland;GRL;EUR
 Guatemala;GTM;LAM
 French Guiana;GUF;LAM
 Guam;GUM;ROW
@@ -108,7 +108,7 @@ British Indian Ocean Territory;IOT;ROW
 Ireland;IRL;EUR
 Iran, Islamic Republic of;IRN;ROW
 Iraq;IRQ;ROW
-Iceland;ISL;ROW
+Iceland;ISL;EUR
 Israel;ISR;ROW
 Italy;ITA;EUR
 Jamaica;JAM;LAM
@@ -128,7 +128,7 @@ Lebanon;LBN;ROW
 Liberia;LBR;ROW
 Libya;LBY;ROW
 Saint Lucia;LCA;LAM
-Liechtenstein;LIE;ROW
+Liechtenstein;LIE;EUR
 Sri Lanka;LKA;ROW
 Lesotho;LSO;ROW
 Lithuania;LTU;EUR
@@ -137,17 +137,17 @@ Latvia;LVA;EUR
 Macao;MAC;CHA
 Saint Martin (French part);MAF;LAM
 Morocco;MAR;ROW
-Monaco;MCO;ROW
+Monaco;MCO;EUR
 Moldova, Republic of;MDA;ROW
 Madagascar;MDG;ROW
 Maldives;MDV;ROW
 Mexico;MEX;LAM
 Marshall Islands;MHL;ROW
-Macedonia, the former Yugoslav Republic of;MKD;ROW
+Macedonia, the former Yugoslav Republic of;MKD;EUR
 Mali;MLI;ROW
 Malta;MLT;EUR
 Myanmar;MMR;ROW
-Montenegro;MNE;ROW
+Montenegro;MNE;EUR
 Mongolia;MNG;ROW
 Northern Mariana Islands;MNP;ROW
 Mozambique;MOZ;ROW
@@ -166,7 +166,7 @@ Nigeria;NGA;ROW
 Nicaragua;NIC;LAM
 Niue;NIU;ROW
 Netherlands;NLD;EUR
-Norway;NOR;ROW
+Norway;NOR;EUR
 Nepal;NPL;ROW
 Nauru;NRU;ROW
 New Zealand;NZL;ROW
@@ -196,14 +196,14 @@ Senegal;SEN;ROW
 Singapore;SGP;ROW
 South Georgia and the South Sandwich Islands;SGS;LAM
 Saint Helena, Ascension and Tristan da Cunha;SHN;ROW
-Svalbard and Jan Mayen;SJM;ROW
+Svalbard and Jan Mayen;SJM;EUR
 Solomon Islands;SLB;ROW
 Sierra Leone;SLE;ROW
 El Salvador;SLV;LAM
-San Marino;SMR;ROW
+San Marino;SMR;EUR
 Somalia;SOM;ROW
 Saint Pierre and Miquelon;SPM;ROW
-Serbia;SRB;ROW
+Serbia;SRB;EUR
 South Sudan;SSD;ROW
 Sao Tome and Principe;STP;ROW
 Suriname;SUR;LAM
@@ -225,7 +225,7 @@ Timor-Leste;TLS;ROW
 Tonga;TON;ROW
 Trinidad and Tobago;TTO;LAM
 Tunisia;TUN;ROW
-Turkey;TUR;ROW
+Turkey;TUR;EUR
 Tuvalu;TUV;ROW
 Taiwan, Province of China;TWN;CHA
 Tanzania, United Republic of;TZA;ROW
@@ -235,7 +235,7 @@ United States Minor Outlying Islands;UMI;ROW
 Uruguay;URY;LAM
 United States;USA;USA
 Uzbekistan;UZB;ROW
-Holy See (Vatican City State);VAT;ROW
+Holy See (Vatican City State);VAT;EUR
 Saint Vincent and the Grenadines;VCT;LAM
 Venezuela, Bolivarian Republic of;VEN;LAM
 Virgin Islands, British;VGB;LAM
