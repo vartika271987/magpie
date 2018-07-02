@@ -7,4 +7,4 @@
 #SBATCH --mem=32000
 #SBATCH --partition=standard,broadwell
 
-Rscript general_runs_preprocessing.R
+Rscript inms.R

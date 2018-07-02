@@ -9,9 +9,9 @@ source("config/default.cfg")
 
 
 #cellular data
-cfg$revision <- 30
+cfg$revision <- 29
 #regional data (moinput)
-cfg$revision2 <- 4.00
+cfg$revision2 <- 3.15
 
 
 
@@ -46,7 +46,7 @@ for (select_resolution_x in select_resolution) {
 
 #select_resolution = c("h50","h200","h300")
 select_resolution = c("h200")
-select_regionmapping = c("H11","CAPRI18", "SIM4NEXUS")
+select_regionmapping = c("INMS2")
 select_climatescen = c("rcp2p6","rcp4p5","rcp6p0","rcp8p5")
 #select_climatemodel = c("IPSL_CM5A_LR","GFDL_ESM2M","HadGEM2_ES","MIROC_ESM_CHEM","MIROC5","NorESM1_M")
 select_climatemodel = c("IPSL_CM5A_LR")

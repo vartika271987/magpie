@@ -4,6 +4,7 @@
 #SBATCH --job-name=test-prep
 #SBATCH --output=testprep-%j.out
 #SBATCH --mail-type=END
-#SBATCH --mem-per-cpu=32000
+#SBATCH --mem=32000
+#SBATCH --partition=standard,broadwell
 
 Rscript testrun_preprocessing.R

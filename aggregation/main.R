@@ -113,14 +113,22 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   tspam  <- sub("res_in",res_high,sub("res_out",res_out,path(foutput,"res_in-to-res_out_fspam.spam")))
 
   ### area_weighted_mean ###
+  if (rev >= 31){
+    x <- rowSums(read.magpie(sub("fname","avl_land_t",tinput))[,1,])
+  } else {
   x <- rowSums(read.magpie(sub("fname","avl_land",tinput)))
+  }
   rel <- sub("fspam","sum",tspam)
   fname <- sub("fspam","area_weighted_mean",tspam)
   create_spam(x,rel,fname=fname)
   cat("SPAM area_weighted_mean created!\n")
 
   ### crop_area_weighted_mean ###
+  if(rev >= 31){
+    x <- rowSums(read.magpie(sub("fname","avl_land_t",tinput))[,1,"crop"])
+  } else {
   x <- rowSums(read.magpie(sub("fname","avl_land",tinput))[,1,"crop"])
+  }
   rel <- sub("fspam","sum",tspam)
   fname <- sub("fspam","crop_area_weighted_mean",tspam)
   create_spam(x,rel,fname=fname)
@@ -145,7 +153,6 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   f["aff_noboreal"]                 <- "area_weighted_mean"
   f["aff_onlytropical"]             <- "area_weighted_mean"
   f["koeppen_geiger"]               <- "area_weighted_mean"
-  f["avl_land"]                     <- "sum"
   f["avl_land_si"]                  <- "sum"
   f["avl_irrig"]                    <- "sum"
   f["protect_area"]                 <- "sum"
@@ -156,9 +163,6 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   f["lpj_watavail_grper"]           <- "sum"
   f["lpj_envflow_grper"]            <- "sum"
   f["watdem_nonagr_grper"]          <- "sum"
-  f["indc_ad_pol"]                  <- "sum"
-  f["indc_aff_pol"]                 <- "sum"
-  f["indc_emis_pol"]                <- "sum"
   f["f59_som_initialisation_pools"]  <- "sum"
   
   if (rev >= 25) {
@@ -168,10 +172,29 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 26) {
     f["f38_croparea_initialisation"]   <- "sum"
   }
-  if (rev >= 27) {
+  if (rev >= 29) {
+    f["forestageclasses"]   <- "sum"
+  }
+  if (rev >= 31) {
+    f["avl_land_t"]                  <- "sum"
+  } else {
+    f["avl_land"]                     <- "sum"
+  }
+	if (rev >= 32){
+		f["npi_ndc_ad_aolc_pol"]          <- "sum"
+		f["npi_ndc_aff_pol"]              <- "sum"
+	} else if (rev >= 28) {
+		f["npi_ndc_ad_pol"]               <- "sum"
+		f["npi_ndc_aff_pol"]              <- "sum"
+		f["npi_ndc_emis_pol"]             <- "sum"
+	} else {
+		f["indc_ad_pol"]                  <- "sum"
+		f["indc_aff_pol"]                 <- "sum"
+		f["indc_emis_pol"]                <- "sum"
+	}
+  if (rev >= 33) {
     f["lpj_carbon_topsoil"]            <- "area_weighted_mean"
   }
-
 
   for(n in names(f)) {
     input_file <- path(finput,paste(n,"_",res_high,".mz",sep=""))
@@ -192,8 +215,21 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
 
   ################################### Copy data ######################################
 
-  f <- c("avl_land_0.5.mz","lpj_yields_0.5.mz")
+  if (rev >= 31) {
+    f <- c("avl_land_t_0.5.mz")
+  } else {
+    f <- c("avl_land_0.5.mz")
+  }
+
   file.copy(paste(finput,f,sep="/"),paste(foutput,f,sep="/"))
+  reduce_time <- function(f,finput,foutput) {
+    x <- read.magpie(paste(finput,f,sep="/"))
+    x <- setYears(x[,1,],NULL)
+    getCells(x) <- paste("GLO",1:59199,sep=".")
+    write.magpie(x,paste(foutput,f,sep="/"))
+  }
+  reduce_time("lpj_yields_0.5.mz",finput,foutput)
+  reduce_time("lpj_carbon_stocks_0.5.mz",finput,foutput)
   cat(paste("copied required high res data\n"))
 
 
@@ -203,7 +239,8 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   setwd(cwd)
   # create output folder
   if(!dir.exists(dirname(output_file))) dir.create(dirname(output_file),recursive=TRUE)
-  file.rename(paste0(foutput,"/data.tgz"),output_file)
+  file.copy(paste0(foutput,"/data.tgz"),output_file)
+  unlink(paste0(foutput,"/data.tgz"))
 
   if(!debug) {
     unlink(finput, recursive = TRUE)

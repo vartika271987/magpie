@@ -4,6 +4,7 @@
 #SBATCH --job-name=mag-preprocessing
 #SBATCH --output=log-%j.out
 #SBATCH --mail-type=END
-#SBATCH --mem-per-cpu=32000
+#SBATCH --mem=32000
+#SBATCH --partition=standard,broadwell
 
 Rscript start.R config=default.cfg

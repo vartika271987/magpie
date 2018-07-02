@@ -124,6 +124,7 @@ grow_period <- function(sowd_file  = "/iplex/01/landuse/data/input/lpj_input/GLU
   memCheck()
   cell_yield_ir<-read.magpie(yield_file)[,paste("y",years,sep=""),paste(good_crops,"irrigated",sep=".")]
   memCheck()
+  getCells(tmp) <- getCells(cell_yield_ir)
   dimnames(cell_yield_ir)[[3]] <- sub(".irrigated","",getNames(cell_yield_ir),fixed=TRUE)
   area<-cell_yield_ir
   for(t in getYears(area)){
