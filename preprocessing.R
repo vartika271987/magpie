@@ -9,6 +9,9 @@ start_preprocessing <- function(cfg){
   require(ludata)
 
   cfg <- check_config(cfg, modulepath = NULL)
+  
+  if(!grepl(".csv$",cfg$regionmapping)) cfg$regionmapping <- paste0("regionmapping", cfg$regionmapping, ".csv")
+  if(!file.exists(cfg$regionmapping)) cfg$regionmapping <- paste0("config/",cfg$regionmapping)
 
   set_folder <- paste(gsub("/","-",cfg$input),"_rev",cfg$revision,sep="")
   cat(paste0("Start preprocessing for ",set_folder))
