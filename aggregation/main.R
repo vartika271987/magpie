@@ -102,8 +102,8 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
     file.remove(path(foutput,input_spam_file))
   }
 
-  try(plotspam(sub("res_in",res_high,sub("res_out",res_out,path(foutput,"res_in-to-res_out_sum.spam"))),name=paste("spamplot",res_low,regionscode,sep="_"),folder=foutput,color="random"))
-
+  try(plotspam(sub("res_in",res_high,sub("res_out",res_out,path(foutput,"res_in-to-res_out_sum.spam"))),name=paste("spamplot",paste0(res_low,wkey),regionscode,sep="_"),folder=foutput,color="random"))
+  
 
   ################################# Create SPAM files #####################################
   f <- list()
@@ -216,7 +216,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   ################################### Copy data ######################################
 
   if (rev >= 31) {
-    f <- c("avl_land_t_0.5.mz",paste0(paste("spamplot",res_low,regionscode,sep="_"),".pdf"))
+    f <- c("avl_land_t_0.5.mz")
   } else {
     f <- c("avl_land_0.5.mz")
   }
