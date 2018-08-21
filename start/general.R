@@ -8,7 +8,7 @@ source("preprocessing.R")
 source("config/default.cfg")
 def_input <- cfg$input
 
-for (resolution in c("h200")) {
+for (resolution in c("n200","n400")) {
   for (climatescen in c("rcp2p6","rcp4p5","rcp6p0","rcp8p5")){
     for (climatemodel in c("IPSL_CM5A_LR")) {
       for (co2 in c("co2")) {
@@ -23,7 +23,7 @@ for (resolution in c("h200")) {
 
 #FABLE
 cfg$input <- def_input
-cfg$low_res       <- "h200"
+cfg$low_res       <- "n200"
 cfg$cluster_weight <- 4
 for(reg in c("AUS","BRA2","CHA","ETH","IDN","IND","USA")) {
   cfg$regionmapping <- reg
