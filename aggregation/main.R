@@ -102,7 +102,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
     file.remove(path(foutput,input_spam_file))
   }
 
-  #plotspam(sub("res_in",res_high,sub("res_out",res_out,path(foutput,"res_in-to-res_out_sum.spam"))),name="spamplot",folder=foutput)
+  try(plotspam(sub("res_in",res_high,sub("res_out",res_out,path(foutput,"res_in-to-res_out_sum.spam"))),name="spamplot",folder=foutput,color="random"))
 
 
   ################################# Create SPAM files #####################################
