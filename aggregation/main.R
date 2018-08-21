@@ -216,7 +216,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   ################################### Copy data ######################################
 
   if (rev >= 31) {
-    f <- c("avl_land_t_0.5.mz")
+    f <- c("avl_land_t_0.5.mz",paste0(paste("spamplot",res_low,regionscode,sep="_"),".pdf"))
   } else {
     f <- c("avl_land_0.5.mz")
   }
