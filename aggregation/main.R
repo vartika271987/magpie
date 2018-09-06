@@ -169,8 +169,10 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
     f["rr_layer"]                      <- "area_weighted_mean"
     f["luh2_side_layers"]              <- "area_weighted_mean"
   }
-  if (rev >= 26) {
+  if (rev >= 26 & rev < 34) {
     f["f38_croparea_initialisation"]   <- "sum"
+  } else if (rev >= 34){
+    f["f30_croparea_initialisation"]   <- "sum"
   }
   if (rev >= 29) {
     f["forestageclasses"]   <- "sum"
