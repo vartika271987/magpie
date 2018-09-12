@@ -166,8 +166,8 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   f["f59_som_initialisation_pools"]  <- "sum"
   
   if (rev >= 25) {
-    f["rr_layer"]                      <- "area_weighted_mean"
-    f["luh2_side_layers"]              <- "area_weighted_mean"
+#    f["rr_layer"]                      <- "area_weighted_mean"
+#    f["luh2_side_layers"]              <- "area_weighted_mean"
   }
   if (rev >= 26 & rev < 34) {
     f["f38_croparea_initialisation"]   <- "sum"
@@ -175,7 +175,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
     f["f30_croparea_initialisation"]   <- "sum"
   }
   if (rev >= 29) {
-    f["forestageclasses"]   <- "sum"
+#    f["forestageclasses"]   <- "sum"
   }
   if (rev >= 31) {
     f["avl_land_t"]                  <- "sum"

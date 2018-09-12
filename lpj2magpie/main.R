@@ -80,8 +80,8 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     files2copy["f59_som_initialisation_pools_0.5.mz"]      <- "f59_som_initialisation_pools_0.5.mz"
     
     if (rev >= 25) {
-      files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
-      files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
+#      files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
+#      files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
     }  
     if (rev >= 26 & rev < 34) {
       files2copy["f38_croparea_initialisation_0.5.mz"]      <- "f38_croparea_initialisation_0.5.mz"
@@ -89,7 +89,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
       files2copy["f30_croparea_initialisation_0.5.mz"]      <- "f30_croparea_initialisation_0.5.mz"
     }
     if (rev >= 29) {
-      files2copy["forestageclasses_0.5.mz"]   <- "forestageclasses_0.5.mz"
+#      files2copy["forestageclasses_0.5.mz"]   <- "forestageclasses_0.5.mz"
     }
     if (rev >= 31) {
       files2copy["avl_land_t_0.5.mz"]         <- "avl_land_t_0.5.mz"
