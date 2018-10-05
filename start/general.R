@@ -25,9 +25,9 @@ for (resolution in c("c200","c400")) {
 cfg$input <- def_input
 cfg$low_res       <- "c200"
 cfg$cluster_weight <- 4
-for(reg in c("AUS","BRA2","CHA","ETH","IDN","IND","USA")) {
-  cfg$regionmapping <- reg
-  names(cfg$cluster_weight) <- substr(reg,1,3)
+for(reg in c("CHA","IND")) {
+  #cfg$regionmapping <- reg
+  names(cfg$cluster_weight) <- reg
   start_preprocessing(cfg)
 }
 
