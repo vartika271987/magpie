@@ -9,55 +9,55 @@ Saint Pierre and Miquelon,SPM,NAO
 China,CHN,EAS
 Hong Kong,HKG,EAS
 Macao,MAC,EAS
-Aland Islands,ALA,NEU
-Albania,ALB,ENE
-Andorra,AND,SEU
-Austria,AUT,WEU
-Belgium,BEL,WEU
-Bulgaria,BGR,EEU
-Bosnia and Herzegovina,BIH,ENE
-Switzerland,CHE,WNE
-Cyprus,CYP,SEU
-Czech Republic,CZE,EEU
-Germany,DEU,WEU
-Denmark,DNK,NEU
-Spain,ESP,SEU
-Estonia,EST,NEU
-Finland,FIN,NEU
-France,FRA,WEU
-Faroe Islands,FRO,NEU
-United Kingdom,GBR,NEU
-Guernsey,GGY,NEU
-Gibraltar,GIB,SEU
-Greece,GRC,SEU
-Greenland,GRL,NEU
-Croatia,HRV,SEU
-Hungary,HUN,EEU
-Isle of Man,IMN,NEU
-Ireland,IRL,WEU
-Iceland,ISL,WNE
-Italy,ITA,SEU
-Jersey,JEY,NEU
-Liechtenstein,LIE,WNE
-Lithuania,LTU,NEU
-Luxembourg,LUX,WEU
-Latvia,LVA,NEU
-Monaco,MCO,WEU
-"Macedonia, the former Yugoslav Republic of",MKD,ENE
-Malta,MLT,SEU
-Montenegro,MNE,ENE
-Netherlands,NLD,WEU
-Norway,NOR,WNE
-Poland,POL,EEU
-Portugal,PRT,SEU
-Romania,ROU,EEU
-Svalbard and Jan Mayen,SJM,WNE
-San Marino,SMR,SEU
-Serbia,SRB,ENE
-Slovakia,SVK,EEU
-Slovenia,SVN,SEU
-Sweden,SWE,NEU
-Holy See (Vatican City State),VAT,SEU
+Aland Islands,ALA,EUN
+Albania,ALB,NEU
+Andorra,AND,EUS
+Austria,AUT,EUN
+Belgium,BEL,EUN
+Bulgaria,BGR,EUS
+Bosnia and Herzegovina,BIH,NEU
+Switzerland,CHE,NEU
+Cyprus,CYP,EUS
+Czech Republic,CZE,EUS
+Germany,DEU,EUN
+Denmark,DNK,EUN
+Spain,ESP,EUS
+Estonia,EST,EUN
+Finland,FIN,EUN
+France,FRA,EUN
+Faroe Islands,FRO,EUN
+United Kingdom,GBR,EUN
+Guernsey,GGY,EUN
+Gibraltar,GIB,EUS
+Greece,GRC,EUS
+Greenland,GRL,EUN
+Croatia,HRV,EUS
+Hungary,HUN,EUS
+Isle of Man,IMN,EUN
+Ireland,IRL,EUN
+Iceland,ISL,NEU
+Italy,ITA,EUS
+Jersey,JEY,EUN
+Liechtenstein,LIE,NEU
+Lithuania,LTU,EUN
+Luxembourg,LUX,EUN
+Latvia,LVA,EUN
+Monaco,MCO,EUN
+"Macedonia, the former Yugoslav Republic of",MKD,NEU
+Malta,MLT,EUS
+Montenegro,MNE,NEU
+Netherlands,NLD,EUN
+Norway,NOR,NEU
+Poland,POL,EUS
+Portugal,PRT,EUS
+Romania,ROU,EUS
+Svalbard and Jan Mayen,SJM,NEU
+San Marino,SMR,EUS
+Serbia,SRB,NEU
+Slovakia,SVK,EUS
+Slovenia,SVN,EUS
+Sweden,SWE,EUN
+Holy See (Vatican City State),VAT,EUS
 Armenia,ARM,FSU
 Azerbaijan,AZE,FSU
 Belarus,BLR,FSU
