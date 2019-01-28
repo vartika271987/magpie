@@ -165,7 +165,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   f["watdem_nonagr_grper"]          <- "sum"
   f["f59_som_initialisation_pools"]  <- "sum"
   
-  if (rev >= 25) {
+  if (rev >= 25 & rev < 34) {
     f["rr_layer"]                      <- "area_weighted_mean"
     f["luh2_side_layers"]              <- "area_weighted_mean"
   }
@@ -174,7 +174,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   } else if (rev >= 34){
     f["f30_croparea_initialisation"]   <- "sum"
   }
-  if (rev >= 29) {
+  if (rev >= 29 & rev < 34) {
     f["forestageclasses"]   <- "sum"
   }
   if (rev >= 31) {
