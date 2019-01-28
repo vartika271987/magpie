@@ -79,17 +79,17 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     files2copy["koeppen_geiger_0.5.mz"]     <- "koeppen_geiger_0.5.mz"
     files2copy["f59_som_initialisation_pools_0.5.mz"]      <- "f59_som_initialisation_pools_0.5.mz"
     
-    if (rev >= 25) {
-#      files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
-#      files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
+    if (rev >= 25 & rev < 34) {
+      files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
+      files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
     }  
     if (rev >= 26 & rev < 34) {
       files2copy["f38_croparea_initialisation_0.5.mz"]      <- "f38_croparea_initialisation_0.5.mz"
     } else if (rev >= 34){
       files2copy["f30_croparea_initialisation_0.5.mz"]      <- "f30_croparea_initialisation_0.5.mz"
     }
-    if (rev >= 29) {
-#      files2copy["forestageclasses_0.5.mz"]   <- "forestageclasses_0.5.mz"
+    if (rev >= 29 & rev < 34) {
+      files2copy["forestageclasses_0.5.mz"]   <- "forestageclasses_0.5.mz"
     }
     if (rev >= 31) {
       files2copy["avl_land_t_0.5.mz"]         <- "avl_land_t_0.5.mz"
@@ -108,6 +108,9 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
 			files2copy["indc_aff_pol_0.5.mz"]       <- "indc_aff_pol_0.5.mz"
 			files2copy["indc_emis_pol_0.5.mz"]      <- "indc_emis_pol_0.5.mz"
 		}
+    if (rev >= 36) {
+      files2copy["cshare_released_0.5.mz"]    <- "cshare_released_0.5.mz"
+    }
 		
     for(i in 1:length(files2copy)) file.copy(path(input2_folder,files2copy[i]),path(output_folder,names(files2copy[i])),copy.mode=FALSE)
   }
