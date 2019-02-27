@@ -200,7 +200,10 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 36) {
     f["cshare_released"]               <- "area_weighted_mean"
   }
-
+  if (rev >= 37) {
+    f["runoff"]                        <- "sum"
+  }
+  
   for(n in names(f)) {
     input_file <- path(finput,paste(n,"_",res_high,".mz",sep=""))
     spam_file <- path(foutput,paste(res_high,
@@ -226,6 +229,10 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
     f <- c("avl_land_0.5.mz")
   }
 
+  if (rev >= 37) {
+    f <- c("runoff_0.5.mz")
+  }
+  
   file.copy(paste(finput,f,sep="/"),paste(foutput,f,sep="/"))
   reduce_time <- function(f,finput,foutput) {
     x <- read.magpie(paste(finput,f,sep="/"))

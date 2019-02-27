@@ -21,6 +21,7 @@ water <- function(discharge_file  = "/iplex/01/landuse/data/input/lpj_input/GLUE
                   out_envflow_total_file ="/iplex/01/landuse/data/input/raw_data/GLUES2-sresa2-constant_co2-miub_echo_g_rev16.895/0.5_set/lpj_envflow_total_0.5.mz",
                   out_watdem_nonagr_grper_file ="/iplex/01/landuse/data/input/raw_data/GLUES2-sresa2-constant_co2-miub_echo_g_rev16.895/0.5_set/watdem_nonagr_grper_0.5.mz",
                   out_watdem_nonagr_total_file ="/iplex/01/landuse/data/input/raw_data/GLUES2-sresa2-constant_co2-miub_echo_g_rev16.895/0.5_set/watdem_nonagr_total_0.5.mz",
+                  out_runoff_file ="/iplex/01/landuse/data/input/raw_data/GLUES2-sresa2-constant_co2-miub_echo_g_rev16.895/0.5_set/runoff_0.5.mz", 
                   LFR_val     =0.1, # Strictness of flow requirements.
                   HFR_LFR_less10 = 0.2,  # High flow requirements in share of total water for cells with LFR<10% of total water
                   HFR_LFR_10_20 = 0.15,  # High flow requirements in share of total water for cells with 10% < LFR < 20 % of total water
@@ -102,6 +103,7 @@ water <- function(discharge_file  = "/iplex/01/landuse/data/input/lpj_input/GLUE
   monthly_runoff_lpj  <- readLPJ(runoff_file,wyears=years,syear=start_year,averaging_range=avg_range,monthly=TRUE,bands=nbands,soilcells=TRUE, ncells=67420)
   monthly_runoff_magpie <- as.magpie(monthly_runoff_lpj)
   getNames(monthly_runoff_magpie) <- sub("\\.data","",getNames(monthly_runoff_magpie))
+  annual_runoff_magpie <- dimSums(monthly_runoff_magpie,dim=3)
   monthly_runoff_magpie <- as.array(monthly_runoff_magpie)
   
   
@@ -202,12 +204,14 @@ water <- function(discharge_file  = "/iplex/01/landuse/data/input/lpj_input/GLUE
   comment <- c(paste("discharge_file: ", discharge_file),
                paste("runoff_file: ", runoff_file),
                paste("watdem_nonagr_file: ", watdem_nonagr_file),
+               paste("script_file (preprocessing): lpj2magpie/water.R"),
                paste("creation date:",date()))
   
   write.magpie(avl_water_grper,out_watavail_grper_file, comment=comment)
   write.magpie(avl_water_total,out_watavail_total_file, comment=comment)
   write.magpie(EFR_grper,out_envflow_grper_file, comment=comment)
   write.magpie(EFR_total,out_envflow_total_file, comment=comment)
+  write.magpie(annual_runoff_magpie,out_runoff_file, comment=comment)
   
   rm(avl_water_grper,avl_water_total,EFR_grper,EFR_total,avl_water_day,EFR_day)
   gc()

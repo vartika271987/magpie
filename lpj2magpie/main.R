@@ -177,6 +177,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
         out_envflow_total_file  = path(output_folder,'lpj_envflow_total_0.5.mz'),
         out_watdem_nonagr_grper_file = path(output_folder,'watdem_nonagr_grper_0.5.mz'),
         out_watdem_nonagr_total_file = path(output_folder,'watdem_nonagr_total_0.5.mz'),
+        out_runoff_file = path(output_folder,'runoff_0.5.mz'), 
         LFR_val        = 0.1, # Strictness of flow requirements.
         HFR_LFR_less10 = 0.2,  # High flow requirements in share of total water for cells with LFR<10% of total water
         HFR_LFR_10_20  = 0.15,  # High flow requirements in share of total water for cells with 10% < LFR < 20 % of total water
