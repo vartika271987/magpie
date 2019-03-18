@@ -242,6 +242,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   }
   reduce_time("lpj_yields_0.5.mz",finput,foutput)
   reduce_time("lpj_carbon_stocks_0.5.mz",finput,foutput)
+  if (rev >= 38) reduce_time("lpj_carbon_topsoil_0.5.mz",finput,foutput)
   cat(paste("copied required high res data\n"))
 
 
