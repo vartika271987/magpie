@@ -1,250 +1,250 @@
-X;CountryCode;RegionCode;LongRegionName
-Aruba;ABW;OLA;Other Latin America
-Afghanistan;AFG;OAO;Other Asia and Oceania
-Angola;AGO;SSA;Sub-Saharan Africa
-Anguilla;AIA;OLA;Other Latin America
-Aland Islands;ALA;OEU;Other Europe
-Albania;ALB;OEU;Other Europe
-Andorra;AND;OEU;Other Europe
-United Arab Emirates;ARE;MEA;Middle East and Northern Africa
-Argentina;ARG;XPR;INMS case study La Plata River
-Armenia;ARM;FSU;Former Soviet Union exlcuding Ukraine
-American Samoa;ASM;OAO;Other Asia and Oceania
-Antarctica;ATA;OLA;Other Latin America
-French Southern Territories;ATF;SSA;Sub-Saharan Africa
-Antigua and Barbuda;ATG;OLA;Other Latin America
-Australia;AUS;OAO;Other Asia and Oceania
-Austria;AUT;OEU;Other Europe
-Azerbaijan;AZE;FSU;Former Soviet Union exlcuding Ukraine
-Burundi;BDI;XLV;INMS case study Lake Victoria
-Belgium;BEL;OEU;Other Europe
-Benin;BEN;SSA;Sub-Saharan Africa
-Bonaire, Sint Eustatius and Saba;BES;OLA;Other Latin America
-Burkina Faso;BFA;SSA;Sub-Saharan Africa
-Bangladesh;BGD;XSA;INMS South Asia
-Bulgaria;BGR;OEU;Other Europe
-Bahrain;BHR;MEA;Middle East and Northern Africa
-Bahamas;BHS;OLA;Other Latin America
-Bosnia and Herzegovina;BIH;OEU;Other Europe
-Saint Barthelemy;BLM;OLA;Other Latin America
-Belarus;BLR;FSU;Former Soviet Union exlcuding Ukraine
-Belize;BLZ;OLA;Other Latin America
-Bermuda;BMU;OLA;Other Latin America
-Bolivia, Plurinational State of;BOL;XPR;INMS case study La Plata River
-Brazil;BRA;XPR;INMS case study La Plata River
-Barbados;BRB;OLA;Other Latin America
-Brunei Darussalam;BRN;OAO;Other Asia and Oceania
-Bhutan;BTN;OAO;Other Asia and Oceania
-Bouvet Island;BVT;SSA;Sub-Saharan Africa
-Botswana;BWA;SSA;Sub-Saharan Africa
-Central African Republic;CAF;SSA;Sub-Saharan Africa
-Canada;CAN;XNA;INMS case study Northern America
-Cocos (Keeling) Islands;CCK;OAO;Other Asia and Oceania
-Switzerland;CHE;OEU;Other Europe
-Chile;CHL;OLA;Other Latin America
-China;CHN;XEA;INMS case study Eastern Asia
-Cote d Ivoire;CIV;SSA;Sub-Saharan Africa
-Cameroon;CMR;SSA;Sub-Saharan Africa
-Congo, the Democratic Republic of the;COD;SSA;Sub-Saharan Africa
-Congo;COG;SSA;Sub-Saharan Africa
-Cook Islands;COK;OAO;Other Asia and Oceania
-Colombia;COL;OLA;Other Latin America
-Comoros;COM;SSA;Sub-Saharan Africa
-Cape Verde;CPV;SSA;Sub-Saharan Africa
-Costa Rica;CRI;OLA;Other Latin America
-Cuba;CUB;OLA;Other Latin America
-Curacao;CUW;OLA;Other Latin America
-Christmas Island;CXR;OAO;Other Asia and Oceania
-Cayman Islands;CYM;OLA;Other Latin America
-Cyprus;CYP;OEU;Other Europe
-Czech Republic;CZE;OEU;Other Europe
-Germany;DEU;OEU;Other Europe
-Djibouti;DJI;SSA;Sub-Saharan Africa
-Dominica;DMA;OLA;Other Latin America
-Denmark;DNK;OEU;Other Europe
-Dominican Republic;DOM;OLA;Other Latin America
-Algeria;DZA;MEA;Middle East and Northern Africa
-Ecuador;ECU;OLA;Other Latin America
-Egypt;EGY;MEA;Middle East and Northern Africa
-Eritrea;ERI;SSA;Sub-Saharan Africa
-Western Sahara;ESH;MEA;Middle East and Northern Africa
-Spain;ESP;XAS;INMS case study Atlantic Sea
-Estonia;EST;OEU;Other Europe
-Ethiopia;ETH;SSA;Sub-Saharan Africa
-Finland;FIN;OEU;Other Europe
-Fiji;FJI;OAO;Other Asia and Oceania
-Falkland Islands (Malvinas);FLK;OLA;Other Latin America
-France;FRA;XAS;INMS case study Atlantic Sea
-Faroe Islands;FRO;OEU;Other Europe
-Micronesia, Federated States of;FSM;OAO;Other Asia and Oceania
-Gabon;GAB;SSA;Sub-Saharan Africa
-United Kingdom;GBR;OEU;Other Europe
-Georgia;GEO;FSU;Former Soviet Union exlcuding Ukraine
-Guernsey;GGY;OEU;Other Europe
-Ghana;GHA;SSA;Sub-Saharan Africa
-Gibraltar;GIB;OEU;Other Europe
-Guinea;GIN;SSA;Sub-Saharan Africa
-Guadeloupe;GLP;OLA;Other Latin America
-Gambia;GMB;SSA;Sub-Saharan Africa
-Guinea-Bissau;GNB;SSA;Sub-Saharan Africa
-Equatorial Guinea;GNQ;SSA;Sub-Saharan Africa
-Greece;GRC;OEU;Other Europe
-Grenada;GRD;OLA;Other Latin America
-Greenland;GRL;OEU;Other Europe
-Guatemala;GTM;OLA;Other Latin America
-French Guiana;GUF;OLA;Other Latin America
-Guam;GUM;OAO;Other Asia and Oceania
-Guyana;GUY;OLA;Other Latin America
-Hong Kong;HKG;XEA;INMS case study Eastern Asia
-Heard Island and McDonald Islands;HMD;SSA;Sub-Saharan Africa
-Honduras;HND;OLA;Other Latin America
-Croatia;HRV;OEU;Other Europe
-Haiti;HTI;OLA;Other Latin America
-Hungary;HUN;OEU;Other Europe
-Indonesia;IDN;OAO;Other Asia and Oceania
-Isle of Man;IMN;OEU;Other Europe
-India;IND;XSA;INMS South Asia
-British Indian Ocean Territory;IOT;OAO;Other Asia and Oceania
-Ireland;IRL;OEU;Other Europe
-Iran, Islamic Republic of;IRN;MEA;Middle East and Northern Africa
-Iraq;IRQ;MEA;Middle East and Northern Africa
-Iceland;ISL;OEU;Other Europe
-Israel;ISR;MEA;Middle East and Northern Africa
-Italy;ITA;OEU;Other Europe
-Jamaica;JAM;OLA;Other Latin America
-Jersey;JEY;OEU;Other Europe
-Jordan;JOR;MEA;Middle East and Northern Africa
-Japan;JPN;XEA;INMS case study Eastern Asia
-Kazakhstan;KAZ;FSU;Former Soviet Union exlcuding Ukraine
-Kenya;KEN;XLV;INMS case study Lake Victoria
-Kyrgyzstan;KGZ;FSU;Former Soviet Union exlcuding Ukraine
-Cambodia;KHM;OAO;Other Asia and Oceania
-Kiribati;KIR;OAO;Other Asia and Oceania
-Saint Kitts and Nevis;KNA;OLA;Other Latin America
-Korea, Republic of;KOR;XEA;INMS case study Eastern Asia
-Kuwait;KWT;MEA;Middle East and Northern Africa
-Lao People's Democratic Republic;LAO;OAO;Other Asia and Oceania
-Lebanon;LBN;MEA;Middle East and Northern Africa
-Liberia;LBR;SSA;Sub-Saharan Africa
-Libya;LBY;MEA;Middle East and Northern Africa
-Saint Lucia;LCA;OLA;Other Latin America
-Liechtenstein;LIE;OEU;Other Europe
-Sri Lanka;LKA;XSA;INMS South Asia
-Lesotho;LSO;SSA;Sub-Saharan Africa
-Lithuania;LTU;OEU;Other Europe
-Luxembourg;LUX;OEU;Other Europe
-Latvia;LVA;OEU;Other Europe
-Macao;MAC;XEA;INMS case study Eastern Asia
-Saint Martin (French part);MAF;OLA;Other Latin America
-Morocco;MAR;MEA;Middle East and Northern Africa
-Monaco;MCO;OEU;Other Europe
-Moldova, Republic of;MDA;XEE;INMS case study Eastern Europe
-Madagascar;MDG;SSA;Sub-Saharan Africa
-Maldives;MDV;OAO;Other Asia and Oceania
-Mexico;MEX;OLA;Other Latin America
-Marshall Islands;MHL;OAO;Other Asia and Oceania
-Macedonia, the former Yugoslav Republic of;MKD;OEU;Other Europe
-Mali;MLI;SSA;Sub-Saharan Africa
-Malta;MLT;OEU;Other Europe
-Myanmar;MMR;OAO;Other Asia and Oceania
-Montenegro;MNE;OEU;Other Europe
-Mongolia;MNG;OAO;Other Asia and Oceania
-Northern Mariana Islands;MNP;OAO;Other Asia and Oceania
-Mozambique;MOZ;SSA;Sub-Saharan Africa
-Mauritania;MRT;SSA;Sub-Saharan Africa
-Montserrat;MSR;OLA;Other Latin America
-Martinique;MTQ;OLA;Other Latin America
-Mauritius;MUS;SSA;Sub-Saharan Africa
-Malawi;MWI;SSA;Sub-Saharan Africa
-Malaysia;MYS;OAO;Other Asia and Oceania
-Mayotte;MYT;SSA;Sub-Saharan Africa
-Namibia;NAM;SSA;Sub-Saharan Africa
-New Caledonia;NCL;OAO;Other Asia and Oceania
-Niger;NER;SSA;Sub-Saharan Africa
-Norfolk Island;NFK;OAO;Other Asia and Oceania
-Nigeria;NGA;SSA;Sub-Saharan Africa
-Nicaragua;NIC;OLA;Other Latin America
-Niue;NIU;OAO;Other Asia and Oceania
-Netherlands;NLD;OEU;Other Europe
-Norway;NOR;OEU;Other Europe
-Nepal;NPL;XSA;INMS South Asia
-Nauru;NRU;OAO;Other Asia and Oceania
-New Zealand;NZL;OAO;Other Asia and Oceania
-Oman;OMN;MEA;Middle East and Northern Africa
-Pakistan;PAK;OAO;Other Asia and Oceania
-Panama;PAN;OLA;Other Latin America
-Pitcairn;PCN;OAO;Other Asia and Oceania
-Peru;PER;OLA;Other Latin America
-Philippines;PHL;XEA;INMS case study Eastern Asia
-Palau;PLW;OAO;Other Asia and Oceania
-Papua New Guinea;PNG;OAO;Other Asia and Oceania
-Poland;POL;OEU;Other Europe
-Puerto Rico;PRI;OLA;Other Latin America
-Korea, Democratic People's Republic of;PRK;OAO;Other Asia and Oceania
-Portugal;PRT;XAS;INMS case study Atlantic Sea
-Paraguay;PRY;XPR;INMS case study La Plata River
-Palestine, State of;PSE;MEA;Middle East and Northern Africa
-French Polynesia;PYF;OAO;Other Asia and Oceania
-Qatar;QAT;MEA;Middle East and Northern Africa
-Reunion;REU;SSA;Sub-Saharan Africa
-Romania;ROU;OEU;Other Europe
-Russian Federation;RUS;FSU;Former Soviet Union exlcuding Ukraine
-Rwanda;RWA;XLV;INMS case study Lake Victoria
-Saudi Arabia;SAU;MEA;Middle East and Northern Africa
-Sudan;SDN;SSA;Sub-Saharan Africa
-Senegal;SEN;SSA;Sub-Saharan Africa
-Singapore;SGP;OAO;Other Asia and Oceania
-South Georgia and the South Sandwich Islands;SGS;OLA;Other Latin America
-Saint Helena, Ascension and Tristan da Cunha;SHN;SSA;Sub-Saharan Africa
-Svalbard and Jan Mayen;SJM;OEU;Other Europe
-Solomon Islands;SLB;OAO;Other Asia and Oceania
-Sierra Leone;SLE;SSA;Sub-Saharan Africa
-El Salvador;SLV;OLA;Other Latin America
-San Marino;SMR;OEU;Other Europe
-Somalia;SOM;SSA;Sub-Saharan Africa
-Saint Pierre and Miquelon;SPM;OEU;Other Europe
-Serbia;SRB;OEU;Other Europe
-South Sudan;SSD;SSA;Sub-Saharan Africa
-Sao Tome and Principe;STP;SSA;Sub-Saharan Africa
-Suriname;SUR;OLA;Other Latin America
-Slovakia;SVK;OEU;Other Europe
-Slovenia;SVN;OEU;Other Europe
-Sweden;SWE;OEU;Other Europe
-Swaziland;SWZ;SSA;Sub-Saharan Africa
-Sint Maarten (Dutch part);SXM;OLA;Other Latin America
-Seychelles;SYC;SSA;Sub-Saharan Africa
-Syrian Arab Republic;SYR;MEA;Middle East and Northern Africa
-Turks and Caicos Islands;TCA;OLA;Other Latin America
-Chad;TCD;SSA;Sub-Saharan Africa
-Togo;TGO;SSA;Sub-Saharan Africa
-Thailand;THA;OAO;Other Asia and Oceania
-Tajikistan;TJK;FSU;Former Soviet Union exlcuding Ukraine
-Tokelau;TKL;OAO;Other Asia and Oceania
-Turkmenistan;TKM;FSU;Former Soviet Union exlcuding Ukraine
-Timor-Leste;TLS;OAO;Other Asia and Oceania
-Tonga;TON;OAO;Other Asia and Oceania
-Trinidad and Tobago;TTO;OLA;Other Latin America
-Tunisia;TUN;MEA;Middle East and Northern Africa
-Turkey;TUR;MEA;Middle East and Northern Africa
-Tuvalu;TUV;OAO;Other Asia and Oceania
-Taiwan, Province of China;TWN;XEA;INMS case study Eastern Asia
-Tanzania, United Republic of;TZA;XLV;INMS case study Lake Victoria
-Uganda;UGA;XLV;INMS case study Lake Victoria
-Ukraine;UKR;XEE;INMS case study Eastern Europe
-United States Minor Outlying Islands;UMI;OEU;Other Europe
-Uruguay;URY;XPR;INMS case study La Plata River
-United States;USA;XNA;INMS case study Northern America
-Uzbekistan;UZB;FSU;Former Soviet Union exlcuding Ukraine
-Holy See (Vatican City State);VAT;OEU;Other Europe
-Saint Vincent and the Grenadines;VCT;OLA;Other Latin America
-Venezuela, Bolivarian Republic of;VEN;OLA;Other Latin America
-Virgin Islands, British;VGB;OLA;Other Latin America
-Virgin Islands, U.S.;VIR;OLA;Other Latin America
-Viet Nam;VNM;OAO;Other Asia and Oceania
-Vanuatu;VUT;OAO;Other Asia and Oceania
-Wallis and Futuna;WLF;OAO;Other Asia and Oceania
-Samoa;WSM;OAO;Other Asia and Oceania
-Yemen;YEM;MEA;Middle East and Northern Africa
-South Africa;ZAF;SSA;Sub-Saharan Africa
-Zambia;ZMB;SSA;Sub-Saharan Africa
-Zimbabwe;ZWE;SSA;Sub-Saharan Africa
+X;CountryCode;RegionCode
+Aruba;ABW;OLA
+Afghanistan;AFG;OAO
+Angola;AGO;SSA
+Anguilla;AIA;OLA
+Aland Islands;ALA;OEU
+Albania;ALB;OEU
+Andorra;AND;OEU
+United Arab Emirates;ARE;MEA
+Argentina;ARG;XPR
+Armenia;ARM;FSU
+American Samoa;ASM;OAO
+Antarctica;ATA;OLA
+French Southern Territories;ATF;SSA
+Antigua and Barbuda;ATG;OLA
+Australia;AUS;OAO
+Austria;AUT;OEU
+Azerbaijan;AZE;FSU
+Burundi;BDI;XLV
+Belgium;BEL;OEU
+Benin;BEN;SSA
+Bonaire, Sint Eustatius and Saba;BES;OLA
+Burkina Faso;BFA;SSA
+Bangladesh;BGD;XSA
+Bulgaria;BGR;OEU
+Bahrain;BHR;MEA
+Bahamas;BHS;OLA
+Bosnia and Herzegovina;BIH;OEU
+Saint Barthelemy;BLM;OLA
+Belarus;BLR;FSU
+Belize;BLZ;OLA
+Bermuda;BMU;OLA
+Bolivia, Plurinational State of;BOL;XPR
+Brazil;BRA;XPR
+Barbados;BRB;OLA
+Brunei Darussalam;BRN;OAO
+Bhutan;BTN;OAO
+Bouvet Island;BVT;SSA
+Botswana;BWA;SSA
+Central African Republic;CAF;SSA
+Canada;CAN;XNA
+Cocos (Keeling) Islands;CCK;OAO
+Switzerland;CHE;OEU
+Chile;CHL;OLA
+China;CHN;XEA
+Cote d Ivoire;CIV;SSA
+Cameroon;CMR;SSA
+Congo, the Democratic Republic of the;COD;SSA
+Congo;COG;SSA
+Cook Islands;COK;OAO
+Colombia;COL;OLA
+Comoros;COM;SSA
+Cape Verde;CPV;SSA
+Costa Rica;CRI;OLA
+Cuba;CUB;OLA
+Curacao;CUW;OLA
+Christmas Island;CXR;OAO
+Cayman Islands;CYM;OLA
+Cyprus;CYP;OEU
+Czech Republic;CZE;OEU
+Germany;DEU;OEU
+Djibouti;DJI;SSA
+Dominica;DMA;OLA
+Denmark;DNK;OEU
+Dominican Republic;DOM;OLA
+Algeria;DZA;MEA
+Ecuador;ECU;OLA
+Egypt;EGY;MEA
+Eritrea;ERI;SSA
+Western Sahara;ESH;MEA
+Spain;ESP;XAS
+Estonia;EST;OEU
+Ethiopia;ETH;SSA
+Finland;FIN;OEU
+Fiji;FJI;OAO
+Falkland Islands (Malvinas);FLK;OLA
+France;FRA;XAS
+Faroe Islands;FRO;OEU
+Micronesia, Federated States of;FSM;OAO
+Gabon;GAB;SSA
+United Kingdom;GBR;OEU
+Georgia;GEO;FSU
+Guernsey;GGY;OEU
+Ghana;GHA;SSA
+Gibraltar;GIB;OEU
+Guinea;GIN;SSA
+Guadeloupe;GLP;OLA
+Gambia;GMB;SSA
+Guinea-Bissau;GNB;SSA
+Equatorial Guinea;GNQ;SSA
+Greece;GRC;OEU
+Grenada;GRD;OLA
+Greenland;GRL;OEU
+Guatemala;GTM;OLA
+French Guiana;GUF;OLA
+Guam;GUM;OAO
+Guyana;GUY;OLA
+Hong Kong;HKG;XEA
+Heard Island and McDonald Islands;HMD;SSA
+Honduras;HND;OLA
+Croatia;HRV;OEU
+Haiti;HTI;OLA
+Hungary;HUN;OEU
+Indonesia;IDN;OAO
+Isle of Man;IMN;OEU
+India;IND;XSA
+British Indian Ocean Territory;IOT;OAO
+Ireland;IRL;OEU
+Iran, Islamic Republic of;IRN;MEA
+Iraq;IRQ;MEA
+Iceland;ISL;OEU
+Israel;ISR;MEA
+Italy;ITA;OEU
+Jamaica;JAM;OLA
+Jersey;JEY;OEU
+Jordan;JOR;MEA
+Japan;JPN;XEA
+Kazakhstan;KAZ;FSU
+Kenya;KEN;XLV
+Kyrgyzstan;KGZ;FSU
+Cambodia;KHM;OAO
+Kiribati;KIR;OAO
+Saint Kitts and Nevis;KNA;OLA
+Korea, Republic of;KOR;XEA
+Kuwait;KWT;MEA
+Lao People's Democratic Republic;LAO;OAO
+Lebanon;LBN;MEA
+Liberia;LBR;SSA
+Libya;LBY;MEA
+Saint Lucia;LCA;OLA
+Liechtenstein;LIE;OEU
+Sri Lanka;LKA;XSA
+Lesotho;LSO;SSA
+Lithuania;LTU;OEU
+Luxembourg;LUX;OEU
+Latvia;LVA;OEU
+Macao;MAC;XEA
+Saint Martin (French part);MAF;OLA
+Morocco;MAR;MEA
+Monaco;MCO;OEU
+Moldova, Republic of;MDA;XEE
+Madagascar;MDG;SSA
+Maldives;MDV;OAO
+Mexico;MEX;OLA
+Marshall Islands;MHL;OAO
+Macedonia, the former Yugoslav Republic of;MKD;OEU
+Mali;MLI;SSA
+Malta;MLT;OEU
+Myanmar;MMR;OAO
+Montenegro;MNE;OEU
+Mongolia;MNG;OAO
+Northern Mariana Islands;MNP;OAO
+Mozambique;MOZ;SSA
+Mauritania;MRT;SSA
+Montserrat;MSR;OLA
+Martinique;MTQ;OLA
+Mauritius;MUS;SSA
+Malawi;MWI;SSA
+Malaysia;MYS;OAO
+Mayotte;MYT;SSA
+Namibia;NAM;SSA
+New Caledonia;NCL;OAO
+Niger;NER;SSA
+Norfolk Island;NFK;OAO
+Nigeria;NGA;SSA
+Nicaragua;NIC;OLA
+Niue;NIU;OAO
+Netherlands;NLD;OEU
+Norway;NOR;OEU
+Nepal;NPL;XSA
+Nauru;NRU;OAO
+New Zealand;NZL;OAO
+Oman;OMN;MEA
+Pakistan;PAK;OAO
+Panama;PAN;OLA
+Pitcairn;PCN;OAO
+Peru;PER;OLA
+Philippines;PHL;XEA
+Palau;PLW;OAO
+Papua New Guinea;PNG;OAO
+Poland;POL;OEU
+Puerto Rico;PRI;OLA
+Korea, Democratic People's Republic of;PRK;OAO
+Portugal;PRT;XAS
+Paraguay;PRY;XPR
+Palestine, State of;PSE;MEA
+French Polynesia;PYF;OAO
+Qatar;QAT;MEA
+Reunion;REU;SSA
+Romania;ROU;OEU
+Russian Federation;RUS;FSU
+Rwanda;RWA;XLV
+Saudi Arabia;SAU;MEA
+Sudan;SDN;SSA
+Senegal;SEN;SSA
+Singapore;SGP;OAO
+South Georgia and the South Sandwich Islands;SGS;OLA
+Saint Helena, Ascension and Tristan da Cunha;SHN;SSA
+Svalbard and Jan Mayen;SJM;OEU
+Solomon Islands;SLB;OAO
+Sierra Leone;SLE;SSA
+El Salvador;SLV;OLA
+San Marino;SMR;OEU
+Somalia;SOM;SSA
+Saint Pierre and Miquelon;SPM;OEU
+Serbia;SRB;OEU
+South Sudan;SSD;SSA
+Sao Tome and Principe;STP;SSA
+Suriname;SUR;OLA
+Slovakia;SVK;OEU
+Slovenia;SVN;OEU
+Sweden;SWE;OEU
+Swaziland;SWZ;SSA
+Sint Maarten (Dutch part);SXM;OLA
+Seychelles;SYC;SSA
+Syrian Arab Republic;SYR;MEA
+Turks and Caicos Islands;TCA;OLA
+Chad;TCD;SSA
+Togo;TGO;SSA
+Thailand;THA;OAO
+Tajikistan;TJK;FSU
+Tokelau;TKL;OAO
+Turkmenistan;TKM;FSU
+Timor-Leste;TLS;OAO
+Tonga;TON;OAO
+Trinidad and Tobago;TTO;OLA
+Tunisia;TUN;MEA
+Turkey;TUR;MEA
+Tuvalu;TUV;OAO
+Taiwan, Province of China;TWN;XEA
+Tanzania, United Republic of;TZA;XLV
+Uganda;UGA;XLV
+Ukraine;UKR;XEE
+United States Minor Outlying Islands;UMI;OEU
+Uruguay;URY;XPR
+United States;USA;XNA
+Uzbekistan;UZB;FSU
+Holy See (Vatican City State);VAT;OEU
+Saint Vincent and the Grenadines;VCT;OLA
+Venezuela, Bolivarian Republic of;VEN;OLA
+Virgin Islands, British;VGB;OLA
+Virgin Islands, U.S.;VIR;OLA
+Viet Nam;VNM;OAO
+Vanuatu;VUT;OAO
+Wallis and Futuna;WLF;OAO
+Samoa;WSM;OAO
+Yemen;YEM;MEA
+South Africa;ZAF;SSA
+Zambia;ZMB;SSA
+Zimbabwe;ZWE;SSA
