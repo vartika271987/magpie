@@ -222,15 +222,16 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   cat(paste("aggregated", res_low, "data\n"))
 
   ################################### Copy data ######################################
-
+  f<-NULL
+  
   if (rev >= 31) {
-    f <- c("avl_land_t_0.5.mz")
+    f <- c(f,"avl_land_t_0.5.mz")
   } else {
-    f <- c("avl_land_0.5.mz")
+    f <- c(f,"avl_land_0.5.mz")
   }
 
   if (rev >= 37) {
-    f <- c("runoff_0.5.mz")
+    f <- c(f,"runoff_0.5.mz")
   }
   
   file.copy(paste(finput,f,sep="/"),paste(foutput,f,sep="/"))
