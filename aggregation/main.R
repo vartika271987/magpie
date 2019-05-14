@@ -21,7 +21,8 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
                         nrepeat       = 5,
                         nredistribute = 0,
                         sum_spam_file = NULL,
-                        debug         = FALSE) {
+                        debug         = FALSE,
+                        seed          = NULL) {
 
   require(magclass)
   require(luscale)
@@ -85,7 +86,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
 
   # Create new grid
   if(is.null(sum_spam_file)){
-    spam <- clusterspam(lr=res_low,hr=res_high,ifolder=finput,ofolder=foutput,cfiles=c("lpj_yields_0.5", "lpj_airrig", rep("transport_distance",16)),spatial_header=spatial_header, weight=weight)
+    spam <- clusterspam(lr=res_low,hr=res_high,ifolder=finput,ofolder=foutput,cfiles=c("lpj_yields_0.5", "lpj_airrig", rep("transport_distance",16)),spatial_header=spatial_header, weight=weight, seed=seed)
   } else {
     if(!file.exists(sum_spam_file)) stop("Spam file", sum_spam_file," not found")
     file.copy(sum_spam_file,sub("res_in",res_high,sub("res_out",res_low,path(foutput,"res_in-to-res_out_sum.spam"))))
