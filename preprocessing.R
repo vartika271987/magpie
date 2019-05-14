@@ -68,7 +68,7 @@ start_preprocessing <- function(cfg){
                 weight        = cfg$cluster_weight,
                 nrepeat       = cfg$nrepeat,
                 nredistribute = cfg$nredistribute,
-                sum_spam_file = NULL,
+                sum_spam_file = cfg$spamfile,
                 debug         = FALSE)
     setwd("..")
     cat("aggregated data written to ",aggregation_file,"\n")
