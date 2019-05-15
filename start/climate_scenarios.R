@@ -8,8 +8,7 @@ source("preprocessing.R")
 source("config/default.cfg")
 def_input <- cfg$input
 
-#climate scnearios cannot be c200, but have to be hX. Otherwhise, climate impacts depend on clustering.
-resolutions<- c("h200")
+resolutions<- c("c200")
 
 cfg$regionmapping <- "config/regionmappingSIM4NEXUS_reduced.csv"
 for (resolution in resolutions) {
