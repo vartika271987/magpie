@@ -1,0 +1,250 @@
+X;CountryCode;RegionCode
+Afghanistan;AFG;ODA
+Aland Islands;ALA;WEU
+Albania;ALB;EEU
+Algeria;DZA;AFR
+American Samoa;ASM;ODA
+Andorra;AND;WEU
+Angola;AGO;AFR
+Anguilla;AIA;CSA
+Antarctica;ATA;AUS
+Antigua and Barbuda;ATG;CSA
+Argentina;ARG;CSA
+Armenia;ARM;FSU
+Aruba;ABW;CSA
+Australia;AUS;AUS
+Austria;AUT;WEU
+Azerbaijan;AZE;FSU
+Bahamas;BHS;CSA
+Bahrain;BHR;MEA
+Bangladesh;BGD;ODA
+Barbados;BRB;CSA
+Belarus;BLR;FSU
+Belgium;BEL;WEU
+Belize;BLZ;CSA
+Benin;BEN;AFR
+Bermuda;BMU;CSA
+Bhutan;BTN;ODA
+Bolivia, Plurinational State of;BOL;CSA
+Bonaire, Sint Eustatius and Saba;BES;CSA
+Bosnia and Herzegovina;BIH;EEU
+Botswana;BWA;AFR
+Bouvet Island;BVT;CSA
+Brazil;BRA;BRA
+British Indian Ocean Territory;IOT;ODA
+Brunei Darussalam;BRN;ODA
+Bulgaria;BGR;EEU
+Burkina Faso;BFA;AFR
+Burundi;BDI;AFR
+Cambodia;KHM;ODA
+Cameroon;CMR;AFR
+Canada;CAN;CAN
+Cape Verde;CPV;AFR
+Cayman Islands;CYM;CSA
+Central African Republic;CAF;AFR
+Chad;TCD;AFR
+Chile;CHL;CSA
+China;CHN;CHI
+Christmas Island;CXR;ODA
+Cocos (Keeling) Islands;CCK;ODA
+Colombia;COL;CSA
+Comoros;COM;AFR
+Congo;COG;AFR
+Congo, the Democratic Republic of the;COD;AFR
+Cook Islands;COK;ODA
+Costa Rica;CRI;CSA
+Cote d Ivoire;CIV;AFR
+Croatia;HRV;EEU
+Cuba;CUB;CSA
+Curacao;CUW;CSA
+Cyprus;CYP;MEA
+Czech Republic;CZE;EEU
+Denmark;DNK;WEU
+Djibouti;DJI;AFR
+Dominica;DMA;CSA
+Dominican Republic;DOM;CSA
+Ecuador;ECU;CSA
+Egypt;EGY;AFR
+El Salvador;SLV;CSA
+Equatorial Guinea;GNQ;AFR
+Eritrea;ERI;AFR
+Estonia;EST;FSU
+Ethiopia;ETH;AFR
+Falkland Islands (Malvinas);FLK;CSA
+Faroe Islands;FRO;WEU
+Fiji;FJI;ODA
+Finland;FIN;WEU
+France;FRA;WEU
+French Guiana;GUF;CSA
+French Polynesia;PYF;ODA
+French Southern Territories;ATF;ODA
+Gabon;GAB;AFR
+Gambia;GMB;AFR
+Georgia;GEO;FSU
+Germany;DEU;WEU
+Ghana;GHA;AFR
+Gibraltar;GIB;WEU
+Greece;GRC;WEU
+Greenland;GRL;WEU
+Grenada;GRD;CSA
+Guadeloupe;GLP;CSA
+Guam;GUM;ODA
+Guatemala;GTM;CSA
+Guernsey;GGY;WEU
+Guinea;GIN;AFR
+Guinea-Bissau;GNB;AFR
+Guyana;GUY;CSA
+Haiti;HTI;CSA
+Heard Island and McDonald Islands;HMD;AUS
+Holy See (Vatican City State);VAT;WEU
+Honduras;HND;CSA
+Hong Kong;HKG;CHI
+Hungary;HUN;EEU
+Iceland;ISL;WEU
+India;IND;IND
+Indonesia;IDN;ODA
+Iran, Islamic Republic of;IRN;MEA
+Iraq;IRQ;MEA
+Ireland;IRL;WEU
+Isle of Man;IMN;WEU
+Israel;ISR;MEA
+Italy;ITA;WEU
+Jamaica;JAM;CSA
+Japan;JPN;DEA
+Jersey;JEY;WEU
+Jordan;JOR;MEA
+Kazakhstan;KAZ;FSU
+Kenya;KEN;AFR
+Kiribati;KIR;ODA
+Korea, Democratic People's Republic of;PRK;ODA
+Korea, Republic of;KOR;DEA
+Kuwait;KWT;MEA
+Kyrgyzstan;KGZ;FSU
+Lao People's Democratic Republic;LAO;ODA
+Latvia;LVA;FSU
+Lebanon;LBN;MEA
+Lesotho;LSO;AFR
+Liberia;LBR;AFR
+Libya;LBY;AFR
+Liechtenstein;LIE;WEU
+Lithuania;LTU;FSU
+Luxembourg;LUX;WEU
+Macao;MAC;CHI
+Macedonia, the former Yugoslav Republic of;MKD;EEU
+Madagascar;MDG;AFR
+Malawi;MWI;AFR
+Malaysia;MYS;ODA
+Maldives;MDV;ODA
+Mali;MLI;AFR
+Malta;MLT;WEU
+Marshall Islands;MHL;ODA
+Martinique;MTQ;CSA
+Mauritania;MRT;AFR
+Mauritius;MUS;AFR
+Mayotte;MYT;AFR
+Mexico;MEX;MEX
+Micronesia, Federated States of;FSM;ODA
+Moldova, Republic of;MDA;FSU
+Monaco;MCO;WEU
+Mongolia;MNG;ODA
+Montenegro;MNE;EEU
+Montserrat;MSR;CSA
+Morocco;MAR;AFR
+Mozambique;MOZ;AFR
+Myanmar;MMR;ODA
+Namibia;NAM;AFR
+Nauru;NRU;ODA
+Nepal;NPL;ODA
+Netherlands;NLD;WEU
+New Caledonia;NCL;ODA
+New Zealand;NZL;AUS
+Nicaragua;NIC;CSA
+Niger;NER;AFR
+Nigeria;NGA;AFR
+Niue;NIU;ODA
+Norfolk Island;NFK;ODA
+Northern Mariana Islands;MNP;ODA
+Norway;NOR;WEU
+Oman;OMN;MEA
+Pakistan;PAK;ODA
+Palau;PLW;ODA
+Palestine, State of;PSE;MEA
+Panama;PAN;CSA
+Papua New Guinea;PNG;ODA
+Paraguay;PRY;CSA
+Peru;PER;CSA
+Philippines;PHL;ODA
+Pitcairn;PCN;ODA
+Poland;POL;EEU
+Portugal;PRT;WEU
+Puerto Rico;PRI;CSA
+Qatar;QAT;MEA
+Reunion;REU;AFR
+Romania;ROU;EEU
+Russian Federation;RUS;FSU
+Rwanda;RWA;AFR
+Saint Barthelemy;BLM;CSA
+Saint Helena, Ascension and Tristan da Cunha;SHN;AFR
+Saint Kitts and Nevis;KNA;CSA
+Saint Lucia;LCA;CSA
+Saint Martin (French part);MAF;CSA
+Saint Pierre and Miquelon;SPM;CAN
+Saint Vincent and the Grenadines;VCT;CSA
+Samoa;WSM;ODA
+San Marino;SMR;WEU
+Sao Tome and Principe;STP;AFR
+Saudi Arabia;SAU;MEA
+Senegal;SEN;AFR
+Serbia;SRB;EEU
+Seychelles;SYC;AFR
+Sierra Leone;SLE;AFR
+Singapore;SGP;ODA
+Sint Maarten (Dutch part);SXM;CSA
+Slovakia;SVK;EEU
+Slovenia;SVN;EEU
+Solomon Islands;SLB;ODA
+Somalia;SOM;AFR
+South Africa;ZAF;AFR
+South Georgia and the South Sandwich Islands;SGS;CSA
+South Sudan;SSD;AFR
+Spain;ESP;WEU
+Sri Lanka;LKA;ODA
+Sudan;SDN;AFR
+Suriname;SUR;CSA
+Svalbard and Jan Mayen;SJM;WEU
+Swaziland;SWZ;AFR
+Sweden;SWE;WEU
+Switzerland;CHE;WEU
+Syrian Arab Republic;SYR;MEA
+Taiwan, Province of China;TWN;ODA
+Tajikistan;TJK;FSU
+Tanzania, United Republic of;TZA;AFR
+Thailand;THA;ODA
+Timor-Leste;TLS;ODA
+Togo;TGO;AFR
+Tokelau;TKL;ODA
+Tonga;TON;ODA
+Trinidad and Tobago;TTO;CSA
+Tunisia;TUN;AFR
+Turkey;TUR;MEA
+Turkmenistan;TKM;FSU
+Turks and Caicos Islands;TCA;CSA
+Tuvalu;TUV;ODA
+Uganda;UGA;AFR
+Ukraine;UKR;FSU
+United Arab Emirates;ARE;MEA
+United Kingdom;GBR;WEU
+United States;USA;USA
+United States Minor Outlying Islands;UMI;ODA
+Uruguay;URY;CSA
+Uzbekistan;UZB;FSU
+Vanuatu;VUT;ODA
+Venezuela, Bolivarian Republic of;VEN;CSA
+Viet Nam;VNM;ODA
+Virgin Islands, British;VGB;CSA
+Virgin Islands, U.S.;VIR;CSA
+Wallis and Futuna;WLF;ODA
+Western Sahara;ESH;AFR
+Yemen;YEM;MEA
+Zambia;ZMB;AFR
+Zimbabwe;ZWE;AFR
