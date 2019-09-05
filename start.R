@@ -52,10 +52,10 @@ runOutputs <- function(runscripts=NULL, submit=NULL) {
                "Background execution",
                "SLURM submission (standard,short)",
                "SLURM submission (standard,16GB,short)",
-               "SLURM submission (standard,32GB,short) *recommended",
+               "SLURM submission (standard,32GB,short) *recommended for few runs",
                "SLURM submission (standard,medium)",
                "SLURM submission (standard,16GB,medium)",
-               "SLURM submission (standard,32GB,medium)",
+               "SLURM submission (standard,32GB,medium) *recommended for ensemble runs",
                "SLURM submission (standard,priority)",
                "SLURM submission (standard,32GB,priority)",
                "Debug mode")
