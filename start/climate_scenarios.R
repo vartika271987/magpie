@@ -8,7 +8,7 @@ source("preprocessing.R")
 source("config/default.cfg")
 def_input <- cfg$input
 
-resolutions<- c("c200")
+resolutions<- c("c200","c400")
 
 #cfg$regionmapping <- "config/regionmappingSIM4NEXUS_reduced.csv"
 #for (resolution in resolutions) {
