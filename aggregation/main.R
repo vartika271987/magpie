@@ -204,6 +204,12 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 37) {
     f["runoff"]                        <- "sum"
   }
+  if (rev >= 39) {
+    f["f30_croparea_w_initialisation"] <- "sum"
+  }
+  if (rev >= 40) {
+    f["avl_irrig_luh_t"]               <- "sum"
+  }  
   
   for(n in names(f)) {
     input_file <- path(finput,paste(n,"_",res_high,".mz",sep=""))
