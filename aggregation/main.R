@@ -166,7 +166,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   f["watdem_nonagr_grper"]          <- "sum"
   f["f59_som_initialisation_pools"]  <- "sum"
   
-  if (rev >= 25 & rev < 34) {
+  if (rev >= 25 & rev < 34 | rev >= 38) {
     f["rr_layer"]                      <- "area_weighted_mean"
     f["luh2_side_layers"]              <- "area_weighted_mean"
   }
