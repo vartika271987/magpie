@@ -79,7 +79,7 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
     files2copy["koeppen_geiger_0.5.mz"]     <- "koeppen_geiger_0.5.mz"
     files2copy["f59_som_initialisation_pools_0.5.mz"]      <- "f59_som_initialisation_pools_0.5.mz"
     
-    if (rev >= 25 & rev < 34) {
+    if (rev >= 25 & rev < 34 | rev >= 38) {
       files2copy["rr_layer_0.5.mz"]           <- "rr_layer_0.5.mz"
       files2copy["luh2_side_layers_0.5.mz"]   <- "luh2_side_layers_0.5.mz"
     }  
