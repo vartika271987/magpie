@@ -1,4 +1,4 @@
-start_preprocessing <- function(cfg){
+start_preprocessing <- function(cfg, debug=FALSE){
 
   require(digest)
   require(lucode)
@@ -17,6 +17,7 @@ start_preprocessing <- function(cfg){
   cat(paste0("Start preprocessing for ",set_folder))
 
   madrat::setConfig(nocores=cfg$nocores)
+  madrat::setConfig(debug=debug) 
 
   retrieveData(model="MAgPIE",     regionmapping=cfg$regionmapping, rev=cfg$revision2)
   retrieveData(model="Validation", regionmapping=cfg$regionmapping, rev=cfg$revision2)
