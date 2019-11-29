@@ -19,8 +19,10 @@ start_preprocessing <- function(cfg, debug=FALSE){
   madrat::setConfig(nocores=cfg$nocores)
   madrat::setConfig(debug=debug) 
 
-  retrieveData(model="MAgPIE",     regionmapping=cfg$regionmapping, rev=cfg$revision2)
-  retrieveData(model="Validation", regionmapping=cfg$regionmapping, rev=cfg$revision2)
+  if(is.null(cfg$dev)) cfg$dev <- ""
+
+  retrieveData(model="MAgPIE",     regionmapping=cfg$regionmapping, rev=cfg$revision2, dev=cfg$dev)
+  retrieveData(model="Validation", regionmapping=cfg$regionmapping, rev=cfg$revision2, dev=cfg$dev)
 
   source_include <- TRUE
 
