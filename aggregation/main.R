@@ -210,6 +210,9 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 40) {
     f["avl_irrig_luh_t"]               <- "sum"
   }  
+  if (rev >= 42) {
+    f["f50_NitrogenFixationRateNatural"]               <- "area_weighted_mean"
+  }  
   
   for(n in names(f)) {
     input_file <- path(finput,paste(n,"_",res_high,".mz",sep=""))
@@ -240,6 +243,10 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 37) {
     f <- c(f,"runoff_0.5.mz")
   }
+  
+  if (rev >= 42) {
+    f <- c(f,"f50_NitrogenFixationRateNatural_0.5.mz")
+  }  
   
   file.copy(paste(finput,f,sep="/"),paste(foutput,f,sep="/"))
   reduce_time <- function(f,finput,foutput) {
