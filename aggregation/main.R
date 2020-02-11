@@ -212,6 +212,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   }  
   if (rev >= 42) {
     f["f50_NitrogenFixationRateNatural"]               <- "area_weighted_mean"
+    f["f50_AtmosphericDepositionRates"]               <- "area_weighted_mean"
   }  
   
   for(n in names(f)) {
@@ -246,6 +247,7 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   
   if (rev >= 42) {
     f <- c(f,"f50_NitrogenFixationRateNatural_0.5.mz")
+    f <- c(f,"f50_AtmosphericDepositionRates_0.5.mz")
   }  
   
   file.copy(paste(finput,f,sep="/"),paste(foutput,f,sep="/"))
