@@ -121,6 +121,10 @@ lpj2magpie <- function(input_folder  = "/p/projects/landuse/data/input/lpj_input
       files2copy["f50_NitrogenFixationRateNatural_0.5.mz"] <- "f50_NitrogenFixationRateNatural_0.5.mz"
       files2copy["f50_AtmosphericDepositionRates_0.5.mz"] <- "f50_AtmosphericDepositionRates_0.5.mz"
     }
+    if (rev >= 44) {
+      files2copy["f58_peatland_degrad_0.5.mz"] <- "f58_peatland_degrad_0.5.mz"
+      files2copy["f58_peatland_intact_0.5.mz"] <- "f58_peatland_intact_0.5.mz"
+    }
     
     for(i in 1:length(files2copy)) file.copy(path(input2_folder,files2copy[i]),path(output_folder,names(files2copy[i])),copy.mode=FALSE)
   }
