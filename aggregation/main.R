@@ -215,7 +215,8 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
     f["f50_AtmosphericDepositionRates"]               <- "area_weighted_mean"
   }  
   if (rev >= 44) {
-    f["f58_PeatArea"]               <- "sum"
+    f["f58_peatland_degrad"]               <- "sum"
+    f["f58_peatland_intact"]               <- "sum"
   }  
   
   for(n in names(f)) {
