@@ -214,6 +214,9 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
     f["f50_NitrogenFixationRateNatural"]               <- "area_weighted_mean"
     f["f50_AtmosphericDepositionRates"]               <- "area_weighted_mean"
   }  
+  if (rev >= 44) {
+    f["f58_PeatArea"]               <- "sum"
+  }  
   
   for(n in names(f)) {
     input_file <- path(finput,paste(n,"_",res_high,".mz",sep=""))
