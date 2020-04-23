@@ -142,7 +142,15 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   create_spam(x,rel,fname=fname)
   cat("SPAM soilc_weighted_mean created!\n")
 
-
+  ### bph_mask ###
+  if (rev >= 44){
+    x <- read.magpie(sub("fname","f32_bph_mask",tinput))
+    rel <- sub("fspam","sum",tspam)
+    fname <- sub("fspam","bph_mask",tspam)
+    create_spam(x,rel,fname=fname)
+    cat("SPAM bph_mask created!\n")
+  }
+  
 
   ################################### Aggregate data ######################################
 
@@ -217,6 +225,8 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 44) {
     f["f58_peatland_degrad"]               <- "sum"
     f["f58_peatland_intact"]               <- "sum"
+    f["f32_bph_effect"]                    <- "bph_mask"
+    f["f32_bph_mask"]                      <- "area_weighted_mean"
   }  
   
   for(n in names(f)) {
@@ -252,6 +262,11 @@ aggregation <- function(input_file    = "path/input.tgz",      # path to the dat
   if (rev >= 42) {
     f <- c(f,"f50_NitrogenFixationRateNatural_0.5.mz")
     f <- c(f,"f50_AtmosphericDepositionRates_0.5.mz")
+  }  
+
+  if (rev >= 44) {
+    f <- c(f,"f32_bph_mask_0.5.mz")
+    f <- c(f,"f32_bph_effect_0.5.mz")
   }  
   
   file.copy(paste(finput,f,sep="/"),paste(foutput,f,sep="/"))
