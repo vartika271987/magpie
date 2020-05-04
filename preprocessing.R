@@ -4,7 +4,7 @@ start_preprocessing <- function(cfg, debug=FALSE){
   require(lucode)
   require(magclass)
   require(tools)
-  require(moinput)
+  require(mrland)
   require(mrvalidation)
   require(ludata)
 
