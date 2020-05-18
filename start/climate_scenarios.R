@@ -23,7 +23,9 @@ resolutions<- c("c200","c400")
 #  }
 #}
 
+# Sim4Nexus
 cfg$regionmapping <- "config/regionmappingCOACCH.csv"
+cfg$revision2 <- 4.42
 for (resolution in resolutions) {
   for (climatescen in c("rcp2p6","rcp4p5","rcp6p0","rcp8p5")){
     for (climatemodel in c("IPSL_CM5A_LR", "GFDL_ESM2M","HadGEM2_ES","MIROC_ESM_CHEM","NorESM1_M")) {
@@ -37,7 +39,9 @@ for (resolution in resolutions) {
   }
 }
 
-cfg$regionmapping <- "config/regionmappingINMS3.csv"
+# INMS
+cfg$regionmapping <- "config/regionmappingINMS.csv"
+cfg$revision2 <- 4.47
 for (resolution in resolutions) {
   for (climatescen in c("rcp2p6","rcp4p5","rcp6p0","rcp8p5")){
     for (climatemodel in c("IPSL_CM5A_LR")) {
