@@ -42,7 +42,7 @@ Canada;CAN;XNA
 Cocos (Keeling) Islands;CCK;SEA
 Switzerland;CHE;EUR
 Chile;CHL;OSA
-China;CHN;XEA
+China;CHN;CHN
 Cote d Ivoire;CIV;SSA
 Cameroon;CMR;SSA
 Congo, the Democratic Republic of the;COD;SSA
@@ -95,7 +95,7 @@ Guatemala;GTM;OSA
 French Guiana;GUF;OSA
 Guam;GUM;SEA
 Guyana;GUY;OSA
-Hong Kong;HKG;XEA
+Hong Kong;HKG;CHN
 Heard Island and McDonald Islands;HMD;SSA
 Honduras;HND;OSA
 Croatia;HRV;EUR
@@ -103,7 +103,7 @@ Haiti;HTI;OSA
 Hungary;HUN;EUR
 Indonesia;IDN;SEA
 Isle of Man;IMN;EUR
-India;IND;XSA
+India;IND;IND
 British Indian Ocean Territory;IOT;OAS
 Ireland;IRL;EUR
 Iran, Islamic Republic of;IRN;MEN
@@ -134,7 +134,7 @@ Lesotho;LSO;SSA
 Lithuania;LTU;EUR
 Luxembourg;LUX;EUR
 Latvia;LVA;EUR
-Macao;MAC;XEA
+Macao;MAC;CHN
 Saint Martin (French part);MAF;OSA
 Morocco;MAR;MEN
 Monaco;MCO;EUR

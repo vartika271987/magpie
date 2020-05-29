@@ -24,20 +24,21 @@ resolutions<- c("c200","c400")
 #}
 
 # Sim4Nexus
-cfg$regionmapping <- "config/regionmappingCOACCH.csv"
-cfg$revision2 <- 4.42
-for (resolution in resolutions) {
-  for (climatescen in c("rcp2p6","rcp4p5","rcp6p0","rcp8p5")){
-    for (climatemodel in c("IPSL_CM5A_LR", "GFDL_ESM2M","HadGEM2_ES","MIROC_ESM_CHEM","NorESM1_M")) {
-    #for (climatemodel in c("IPSL_CM5A_LR", "GFDL_ESM2M","HadGEM2_ES","MIROC_ESM_CHEM","MIROC5","NorESM1_M")) {
-      for (co2 in c("co2","noco2")) {
-        cfg$input         <- paste("isimip_rcp", climatemodel, climatescen, co2, sep="/")
-        cfg$low_res       <- resolution
-        start_preprocessing(cfg)
-      }
-    }
-  }
-}
+#cfg$regionmapping <- "config/regionmappingCOACCH.csv"
+#cfg$revision2 <- 4.44
+#cfg$dev <- "COACCH"
+#for (resolution in resolutions) {
+ # for (climatescen in c("rcp2p6","rcp4p5","rcp6p0","rcp8p5")){
+  #  for (climatemodel in c("IPSL_CM5A_LR", "GFDL_ESM2M","HadGEM2_ES","MIROC_ESM_CHEM","NorESM1_M")) {
+#    #for (climatemodel in c("IPSL_CM5A_LR", "GFDL_ESM2M","HadGEM2_ES","MIROC_ESM_CHEM","MIROC5","NorESM1_M")) {
+   #   for (co2 in c("co2","noco2")) {
+    #    cfg$input         <- paste("isimip_rcp", climatemodel, climatescen, co2, sep="/")
+     #   cfg$low_res       <- resolution
+      #  start_preprocessing(cfg)
+     # }
+    #}
+  #}
+#}
 
 # INMS
 cfg$regionmapping <- "config/regionmappingINMS.csv"
