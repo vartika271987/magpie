@@ -1,7 +1,10 @@
 start_preprocessing <- function(cfg, debug=FALSE){
   require(gms)
   require(madrat)
-  
+  require(mrland)
+  require(mrmagpie)
+  require(mrvalidation)
+ 
   ### check and clean settings ###
   cfg <- gms::check_config(cfg, modulepath = NULL)
   if(!grepl(".csv$",cfg$regionmapping)) cfg$regionmapping <- paste0("regionmapping", cfg$regionmapping, ".csv")

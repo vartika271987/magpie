@@ -2,7 +2,7 @@
 #### Script to start a MAgPIE preprocessing  ####
 #################################################
 
-library(lucode)
+library(lucode2)
 
 source("preprocessing.R")
 
