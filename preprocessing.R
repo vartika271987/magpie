@@ -16,6 +16,7 @@ start_preprocessing <- function(cfg, debug=FALSE){
   madrat::setConfig(regionmapping=cfg$regionmapping, nocores=cfg$nocores, debug=debug) 
   madrat::retrieveData(model="MAgPIE",         rev=cfg$revision, dev=cfg$dev)
   madrat::retrieveData(model="CellularMAgPIE", rev=cfg$revision, dev=cfg$dev, 
-                                               ctype=cfg$ctype, climatetype=cfg$climatetype, clusterweight=cfg$clusterweight)
+                                               ctype=cfg$ctype, lpjml=cfg$lpjml, 
+                                               climatetype=cfg$climatetype, clusterweight=cfg$clusterweight)
   madrat::retrieveData(model="Validation",     rev=cfg$revision, dev=cfg$dev)
 }
