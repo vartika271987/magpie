@@ -44,7 +44,9 @@ vm_watdem.fx("ecosystem",j) = sum(cell(i,j), i42_env_flows_base(t,j) * (1-ic42_e
 
 * irrigation efficiency
 if((s42_irrig_eff_scenario = 1),
- v42_irrig_eff.fx(j) = s42_irrigation_efficiency;
+*Marking out the one line now to change settings for India 
+* v42_irrig_eff.fx(j) = s42_irrigation_efficiency;
+ v42_irrig_eff.fx(j) = sum(cell(i,j),i42_irrigation_efficiency(i));
 Elseif (s42_irrig_eff_scenario=2),
  v42_irrig_eff.fx(j) = 1/(1+2.718282**((-22160-sum(cell(i,j),im_gdp_pc_mer("y1995",i)))/37767));
 Elseif (s42_irrig_eff_scenario=3),
