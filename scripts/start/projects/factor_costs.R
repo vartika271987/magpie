@@ -16,7 +16,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "fc_minus80_0209"
+cfg$title <- "fc_default"
 
 # which input data sets should be used?
 
@@ -37,20 +37,12 @@ cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev44_c200_690d3718e151be1b45
 # * (FALSE): Yield calibration will not be performed
 cfg$recalibrate <- "ifneeded"     # def = "ifneeded"
 
-<<<<<<< Updated upstream
-cfg$gms$factor_costs <- "mixed_feb17"
-
-# * available for agriculture (only affects agr_sector_aug13 realization)
-# * Not changing anything in the config file because the value is directly changed for India within 42_water_demand module in "presolve"
-#cfg$gms$s42_reserved_fraction <- 0.5        # def = 0.5
-=======
 #Using sticky scenario for factor costs
 cfg$gms$factor_costs <- "sticky_feb18"
 
 # * available for agriculture (only affects agr_sector_aug13 realization)
 #Changing value to ensure 80% water is available for agriculture for India (and all regions)
 cfg$gms$s42_reserved_fraction <- 0.2        # def = 0.5
->>>>>>> Stashed changes
 
 
 #start MAgPIE run
