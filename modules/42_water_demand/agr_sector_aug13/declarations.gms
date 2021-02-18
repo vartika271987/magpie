@@ -24,6 +24,7 @@ equations
 positive variables
   vm_watdem(wat_dem,j)               Water demand from different sectors (mio. m^3 per yr)
   v42_irrig_eff(j)                   Irrigation efficiency (1)
+  s42_irrig_eff(j)                   Irrigation efficiency value for all iso
 ;
 
 *#################### R SECTION START (OUTPUT DECLARATIONS) ####################
