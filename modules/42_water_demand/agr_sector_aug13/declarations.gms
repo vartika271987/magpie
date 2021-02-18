@@ -31,6 +31,7 @@ positive variables
 parameters
  ov_watdem(t,wat_dem,j,type)         Water demand from different sectors (mio. m^3 per yr)
  ov42_irrig_eff(t,j,type)            Irrigation efficiency (1)
+ os42_irrig_eff(t,j,type)            Irrigation efficiency value for all iso
  oq42_water_demand(t,wat_dem,j,type) Water consumption in different sectors (mio. m^3 per yr)
 ;
 *##################### R SECTION END (OUTPUT DECLARATIONS) #####################
