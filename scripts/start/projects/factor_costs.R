@@ -27,7 +27,7 @@ cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_c200_690d3718e151be1b45
          "additional_data_rev3.86.tgz",
          "patch_f38_fac_req_reg.tgz")
 
-         cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,
+ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,
                                 "./patch_inputdata"=NULL),
                            getOption("magpie_repos"))
 
