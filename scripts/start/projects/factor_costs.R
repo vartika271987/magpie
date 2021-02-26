@@ -16,7 +16,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "fc_default"
+cfg$title <- "fc_mixed_default"
 
 # which input data sets should be used?
 
@@ -42,7 +42,7 @@ cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_c200_690d3718e151be1b45
 cfg$recalibrate <- "ifneeded"     # def = "ifneeded"
 
 #Using sticky scenario for factor costs
-cfg$gms$factor_costs <- "sticky_feb18"
+cfg$gms$factor_costs <- "mixed_feb17"
 
 # * available for agriculture (only affects agr_sector_aug13 realization)
 #Changing value to ensure 80% water is available for agriculture for India (and all regions)
