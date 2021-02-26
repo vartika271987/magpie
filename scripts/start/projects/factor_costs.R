@@ -24,12 +24,21 @@ cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_c200_690d3718e151be1b45
          "rev4.52_h12_magpie.tgz",
          "rev4.52_h12_validation.tgz",
          "calibration_H12_c200_26Feb20.tgz",
-         "additional_data_rev3.86.tgz",
-         "patch_f38_fac_req_reg.tgz")
+         "additional_data_rev3.86.tgz")
+      #   "patch_f38_fac_req_reg.tgz")
 
- cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,
-                                "./patch_inputdata"=NULL),
-                           getOption("magpie_repos"))
+
+  cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
+                                 getOption("magpie_repos"))
+
+
+  # cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,
+  #                              "./patch_inputdata"=NULL),
+  #                         getOption("magpie_repos"))
+
+
+# Should input data be downloaded from source even if cfg$input did not change?
+cfg$force_download <- "ifneeded"
 
 # Should an existing output folder be replaced if a new run with the same name is started?
 #cfg$force_replace <- TRUE

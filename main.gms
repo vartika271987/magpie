@@ -227,7 +227,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  fc_default
+$setglobal c_title  fc_mixed_default
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
@@ -260,7 +260,7 @@ $setglobal forestry  dynamic_may20
 $setglobal urban  static
 $setglobal natveg  dynamic_may20
 
-$setglobal factor_costs  sticky_feb18
+$setglobal factor_costs  mixed_feb17
 $setglobal landconversion  global_static_aug18
 
 $setglobal transport  gtap_nov12
