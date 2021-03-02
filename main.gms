@@ -166,10 +166,6 @@ $title magpie
 * md5sum: NA
 * Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
-* Used data set: patch_f38_fac_req_reg.tgz
-* md5sum: e7028e942a17a0680a91c11c00b9e9c0
-* Repository: ./patch_inputdata
-* 
 * Low resolution: c200
 * High resolution: 0.5
 * 
@@ -201,7 +197,7 @@ $title magpie
 * 
 * 
 * 
-* Last modification (input data): Mon Feb 22 12:53:31 2021
+* Last modification (input data): Tue Mar 02 10:37:51 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
