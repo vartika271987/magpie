@@ -147,24 +147,28 @@ $title magpie
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
 * Used data set: isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_c200_690d3718e151be1b450b394c1064b1c5.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* md5sum: 9e9294567ded19da35917d7dc9fc58b7
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: rev4.52_h12_magpie.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* md5sum: ce9bbfce986710544de877569f8d0303
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: rev4.52_h12_validation.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* md5sum: c60823c216ad4500568b83c1ef6fc006
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: calibration_H12_c200_26Feb20.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* md5sum: 0fc75955deb5916d4ac078e8d817feda
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
 * Used data set: additional_data_rev3.86.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* md5sum: 38c9de23c5d1d22d8b99caee92b25342
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* 
+* Used data set: patch_f38_fac_req_reg.tgz
+* md5sum: 355edc1e0d21045d635d752ceaeab410
+* Repository: ./patch_inputdata
 * 
 * Low resolution: c200
 * High resolution: 0.5
@@ -197,7 +201,7 @@ $title magpie
 * 
 * 
 * 
-* Last modification (input data): Tue Mar  2 13:55:02 2021
+* Last modification (input data): Wed Mar 10 12:50:11 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -223,7 +227,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  fc_mixed_default
+$setglobal c_title  fc_mixed_default_plus150
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
