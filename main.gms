@@ -167,7 +167,7 @@ $title magpie
 * Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: patch_f38_fac_req_reg.tgz
-* md5sum: 355edc1e0d21045d635d752ceaeab410
+* md5sum: 018708f74404ae4c1a637f4471b3d0d4
 * Repository: ./patch_inputdata
 * 
 * Low resolution: c200
@@ -201,7 +201,7 @@ $title magpie
 * 
 * 
 * 
-* Last modification (input data): Wed Mar 10 12:50:11 2021
+* Last modification (input data): Fri Mar 12 11:28:13 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -227,7 +227,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  fc_mixed_default_plus150
+$setglobal c_title  fc_mixed_default_plus300
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /

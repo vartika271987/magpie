@@ -16,7 +16,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "fc_mixed_default_plus150"
+cfg$title <- "fc_mixed_default_plus300"
 
 # which input data sets should be used?
 
