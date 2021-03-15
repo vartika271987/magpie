@@ -49,6 +49,9 @@ cfg$force_download <- TRUE
 # * (FALSE): Yield calibration will not be performed
 cfg$recalibrate <- "ifneeded"     # def = "ifneeded"
 
+#Selection of QOS to be used for submitted runs on cluster.
+cfg$qos <- "priority"
+
 #Using sticky scenario for factor costs
 cfg$gms$factor_costs <- "mixed_feb17"
 
