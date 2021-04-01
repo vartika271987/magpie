@@ -30,4 +30,4 @@ cfg$input <- c("rev4.59vartika_preprocessing_magpie.tgz_h12_024608f1_cellularmag
 
 
 #start MAgPIE run
-start_run(cfg="default.cfg")
+start_run(cfg=cfg)
