@@ -10,17 +10,20 @@
 # position: 1
 # ------------------------------------------------
 
+
+
 # Load start_run(cfg) function which is needed to start MAgPIE runs
 source("scripts/start_functions.R")
-
-# Sources the default configuration file
 source("config/default.cfg")
+
+# short description of the actual run
+cfg$title <- "lpjml5_test0104"
 
 # which input data sets should be used?
 
 cfg$input <- c("rev4.59vartika_preprocessing_magpie.tgz_h12_024608f1_cellularmagpie.tgz",
                "rev4.59vartika_preprocessing_magpie.tgz_h12_magpie.tgz",
-               "rev4.59vartika_preprocessing_magpie.tgz_h12_validation.tgz"
+               "rev4.59vartika_preprocessing_magpie.tgz_h12_validation.tgz",
                "calibration_H12_c200_23Feb21.tgz",
                "additional_data_rev3.99.tgz")
 
