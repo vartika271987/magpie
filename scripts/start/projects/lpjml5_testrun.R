@@ -11,23 +11,33 @@
 # ------------------------------------------------
 
 
+library(gms)
 
 # Load start_run(cfg) function which is needed to start MAgPIE runs
 source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "lpjml5_test0104"
+cfg$title <- "newlpjtest"
 
 # which input data sets should be used?
 
-cfg$input <- c("rev4.59vartika_preprocessing_magpie.tgz_h12_024608f1_cellularmagpie.tgz",
-               "rev4.59vartika_preprocessing_magpie.tgz_h12_magpie.tgz",
-               "rev4.59vartika_preprocessing_magpie.tgz_h12_validation.tgz",
+cfg$input <- c("rev4.58+mrmagpie_LPJmL_new_h12_ee4336a969c590c612a80f2a9db04bdc_cellularmagpie_debug.tgz",
+               "rev4.58+mrmagpie_LPJmL_new_h12_magpie_debug.tgz",
+               "rev4.58_h12_validation.tgz",
                "calibration_H12_c200_23Feb21.tgz",
                "additional_data_rev3.99.tgz")
 
+#cfg$recalibrate <- TRUE
+cfg$force_download <- TRUE
+
+cfg$recalc_npi_ndc <- FALSE
+
+
+#priority
+cfg$qos <- "priority"
+cfg$output <- c("rds_report")
 
 
 #start MAgPIE run
-start_run(cfg=cfg)
+start_run(cfg)
