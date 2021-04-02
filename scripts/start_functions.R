@@ -398,6 +398,7 @@ start_run <- function(cfg,scenario=NULL,codeCheck=TRUE,
                      calibrate_pasture = (cfg$gms$past!="static"),
                      calibrate_cropland = (cfg$calib_cropland),
                      damping_factor = cfg$damping_factor,
+                     crop_max = cfg$crop_calib_max,
                      calib_file = calib_file,
                      data_workspace = cfg$val_workspace,
                      logoption = 3,
@@ -409,13 +410,6 @@ start_run <- function(cfg,scenario=NULL,codeCheck=TRUE,
   # copy important files into output_folder (before MAgPIE execution)
   for(file in cfg$files2export$start) {
     try(file.copy(Sys.glob(file), cfg$results_folder, overwrite=TRUE))
-  }
-
-  # copy spam files to output folder
-  cfg$files2export$spam <- list.files(path="input/cellular", pattern = "*.spam",
-                                      full.names=TRUE)
-  for(file in cfg$files2export$spam) {
-    file.copy(file, cfg$results_folder, overwrite=TRUE)
   }
 
   cfg$magpie_folder <- getwd()
