@@ -18,20 +18,27 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "newlpjtest"
+cfg$title <- "default_lpjtest"
 
 # which input data sets should be used?
 
+
+#Input files from Edna's script
 cfg$input <- c("rev4.58+mrmagpie_LPJmL_new_h12_ee4336a969c590c612a80f2a9db04bdc_cellularmagpie_debug.tgz",
                "rev4.58+mrmagpie_LPJmL_new_h12_magpie_debug.tgz",
                "rev4.58_h12_validation.tgz",
-               "calibration_H12_c200_23Feb21.tgz",
                "additional_data_rev3.99.tgz")
+
+#Input files from Kristine's script
+ #cfg$input <- c("rev4.47+mrmagpie7_h12_magpie_debug.tgz",
+#                              "rev4.47+mrmagpie7_h12_238dd4e69b15586dde74376b6b84cdec_cellularmagpie_debug.tgz",
+#                              "rev4.47+mrmagpie7_h12_validation_debug.tgz",
+#                              "additional_data_rev3.85.tgz")
 
 #cfg$recalibrate <- TRUE
 cfg$force_download <- TRUE
 
-cfg$recalc_npi_ndc <- FALSE
+#cfg$recalc_npi_ndc <- FALSE
 
 
 #priority

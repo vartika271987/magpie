@@ -145,7 +145,6 @@ $title magpie
 *'  * Always try to access model outputs through the corresponding magpie package instead of accessing them directly with readGDX. It cannot be guaranteed that your script will work in the future if you do otherwise (as only the corresponding magpie package will be continuously adapted to changes in the GAMS code).
 
 *##################### R SECTION START (VERSION INFO) ##########################
-<<<<<<< HEAD
 * 
 * Used data set: rev4.58+mrmagpie_LPJmL_new_h12_ee4336a969c590c612a80f2a9db04bdc_cellularmagpie_debug.tgz
 * md5sum: 68443a2c12e8683dacaad93ede57847f
@@ -156,33 +155,12 @@ $title magpie
 * Repository: /p/projects/rd3mod/inputdata/output
 * 
 * Used data set: rev4.58_h12_validation.tgz
-* md5sum: c47c243394e9430bba92aebce37ed652
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
-* Used data set: calibration_H12_c200_23Feb21.tgz
-* md5sum: 8c013375008a959aaa0023030f53c2c2
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
-=======
-* 
-* Used data set: rev4.58_h12_validation.tgz
-* md5sum: ab0b7f801add92bd959184e6ba12bd56
-* Repository: /p/projects/rd3mod/inputdata/output
->>>>>>> 1b539a5834ab9e7c4b3dceba24b8d85c8437c1d4
-* 
-* Used data set: additional_data_rev3.98.tgz
-* md5sum: 9c99aec425d4774a1ff7a853cd1ae495
-* Repository: /p/projects/landuse/data/input/archive
-<<<<<<< HEAD
-=======
-* 
-* Used data set: rev4.58+mrmagpie_LPJmL_new_h12_ee4336a969c590c612a80f2a9db04bdc_cellularmagpie_debug.tgz
-* md5sum: ed48337c75e764cb67ed85b0b064a13a
-* Repository: /p/projects/rd3mod/inputdata/output
-* 
-* Used data set: rev4.58+mrmagpie_LPJmL_new_h12_magpie_debug.tgz
-* md5sum: 5de7e0b72f1dac60d82a67bad0d1f540
-* Repository: /p/projects/rd3mod/inputdata/output
->>>>>>> 1b539a5834ab9e7c4b3dceba24b8d85c8437c1d4
+* Used data set: additional_data_rev3.99.tgz
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Low resolution: c200
 * High resolution: 0.5
@@ -208,11 +186,7 @@ $title magpie
 * * Call: do.call(functiononly, args)
 * 
 * 
-<<<<<<< HEAD
-* Last modification (input data): Thu Apr  1 14:14:40 2021
-=======
-* Last modification (input data): Fri Mar  5 19:31:40 2021
->>>>>>> 1b539a5834ab9e7c4b3dceba24b8d85c8437c1d4
+* Last modification (input data): Fri Apr  2 07:17:35 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -238,7 +212,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  newlpjtest
+$setglobal c_title  default_lpjtest
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
