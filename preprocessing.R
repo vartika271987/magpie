@@ -11,7 +11,10 @@ start_preprocessing <- function(cfg, debug=FALSE){
   if(!file.exists(cfg$regionmapping))   cfg$regionmapping <- paste0("config/",cfg$regionmapping)
   if(is.null(cfg$dev)) cfg$dev <- ""
   
-  message(paste0("Start preprocessing for ",cfg$climatetype," | rev",cfg$revision," | ",cfg$regionmapping," | ",cfg$ctype))
+  message(paste0("Start preprocessing for \n climatescenario: ",cfg$climatetype, "\n rev: ",cfg$revision,
+                 "\n regionmapping: ", cfg$regionmapping, "\n clustertype: ",cfg$ctype,
+                 "\n LPJmL-Versions: ", paste(names(cfg$lpjml), cfg$lpjml, sep = "->", collapse = ", "),
+                 "\n clusterweight: ", paste(names(cfg$clusterweight), cfg$clusterweight, sep = ":", collapse = ", ")))
 
   madrat::setConfig(regionmapping=cfg$regionmapping, nocores=cfg$nocores, debug=debug) 
   madrat::retrieveData(model="MAgPIE",         rev=cfg$revision, dev=cfg$dev)
