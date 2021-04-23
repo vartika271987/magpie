@@ -16,7 +16,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "fc_mixed_default_plus300"
+cfg$title <- "2304_fc_mixed_default_plus300_exotc"
 
 # which input data sets should be used?
 
@@ -50,7 +50,7 @@ cfg$force_download <- TRUE
 cfg$recalibrate <- "ifneeded"     # def = "ifneeded"
 
 #Selection of QOS to be used for submitted runs on cluster.
-cfg$qos <- "priority"
+cfg$qos <- NULL
 
 #Using sticky scenario for factor costs
 cfg$gms$factor_costs <- "mixed_feb17"

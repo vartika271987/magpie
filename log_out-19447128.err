@@ -1,0 +1,88 @@
+Global .Rprofile loaded!
+
+Attaching package: 'gms'
+
+The following objects are masked from 'package:lucode2':
+
+    get_info, getfiledestinations
+
+ -> rds_report.R
+
+Attaching package: 'magclass'
+
+The following object is masked from 'package:grid':
+
+    getNames
+
+Loading required package: gdx
+Loading required package: gdxrrw
+Start getReport(gdx)...
+   reportPopulation(gdx)                                     success 1.00s
+   reportIncome(gdx)                                         success 0.41s
+   reportPriceGHG(gdx)                                       success 0.50s
+   reportFoodExpenditure(gdx)                                success 3.15s
+   reportKcal(gdx,detail=detail)                             success 0.79s
+   reportProtein(gdx,detail=detail)                          success 0.84s
+   reportIntakeDetailed(gdx,detail=detail)                   success 4.93s
+   reportLivestockShare(gdx)                                 success 0.50s
+   reportLivestockDemStructure(gdx)                          success 0.53s
+   reportVegfruitShare(gdx)                                  success 0.69s
+   reportPriceShock(gdx)                                     no return value 0.003s
+   reportPriceElasticities(gdx)                              success 4.01s
+   reportDemand(gdx,detail=detail)                           success 4.38s
+   reportDemandBioenergy(gdx,detail=detail)                  success 2.70s
+   reportFeed(gdx,detail=detail)                             success 2.47s
+   reportProduction(gdx,detail=detail)                       success 0.48s
+   reportProductionBioenergy(gdx,detail=detail)              success 0.38s
+   reportTrade(gdx,detail=detail)                            success 3.06s
+   reportLandUse(gdx)                                        success 0.32s
+   reportLandUseChange(gdx)                                  success 0.26s
+   reportPeatland(gdx)                                       no return value 0.004s
+   reportProtectedArea(gdx)                                  success 0.15s
+   reportCroparea(gdx,detail=detail)                         success 0.87s
+   reportNitrogenBudgetCropland(gdx)                         ERROR 1.46s
+   reportNitrogenBudgetPasture(gdx)                          success 0.31s
+   reportManure(gdx)                                         success 0.20s
+   reportYields(gdx,detail=detail)                           success 2.27s
+   reportTau(gdx)                                            success 0.30s
+   reportTc(gdx)                                             success 0.36s
+   reportEmissions(gdx)                                      success 18.20s
+   reportEmissionsBeforeTechnicalMitigation(gdx)             success 0.44s
+   reportCosts(gdx)                                          success 2.20s
+   reportCostsPresolve(gdx)                                  no return value 0.004s
+   reportCostTransport(gdx)                                  success 0.38s
+   reportPriceFoodIndex(gdx)                                 success 2.11s
+   reportExpenditureFoodIndex(gdx)                           success 1.44s
+   reportPriceAgriculture(gdx)                               success 0.10s
+   reportPriceBioenergy(gdx)                                 success 0.11s
+   reportPriceLand(gdx)                                      success 0.20s
+   reportPriceWater(gdx)                                     success 0.22s
+   reportValueTrade(gdx)                                     success 4.27s
+   reportProcessing(gdx, indicator='primary_to_process')     success 0.34s
+   reportProcessing(gdx, indicator='secondary_from_primary') success 0.70s
+   reportAEI(gdx)                                            success 0.087s
+   reportWaterUsage(gdx)                                     success 0.30s
+   reportWaterAvailability(gdx)                              success 0.091s
+   reportAAI(gdx)                                            success 0.20s
+   reportSOM(gdx)                                            success 1.57s
+   reportGrowingStock(gdx, indicator='relative')             success 1.81s
+   reportGrowingStock(gdx, indicator='absolute')             success 0.84s
+   reportSDG1(gdx)                                           success 0.76s
+   reportSDG2(gdx)                                           success 7.80s
+   reportSDG3(gdx)                                           success 3.48s
+   reportSDG6(gdx)                                           ERROR 1.20s
+   reportSDG12(gdx)                                          success 6.19s
+   reportSDG15(gdx)                                          ERROR 2.52s
+   reportForestYield(gdx)                                    no return value 0.38s
+   reportharvested_area_timber(gdx)                          ERROR 0.20s
+   reportPlantationEstablishment(gdx)                        success 0.31s
+   reportRotationLength(gdx)                                 success 0.11s
+   reportTimber(gdx)                                         success 0.28s
+   reportBII(gdx)                                            success 0.87s
+   reportPriceWoodyBiomass(gdx)                              no return value 0.19s
+   reportCarbonstock(gdx)                                    success 1.12s
+Total runtime:  112.66s
+No id found in runstatistics.rda. Calling lucode2::runstatistics() to create one.
+Created the id 161710001255092
+sh: files: Permission denied
+There were 15 warnings (use warnings() to see them)
