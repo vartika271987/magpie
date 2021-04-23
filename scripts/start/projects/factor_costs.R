@@ -59,6 +59,9 @@ cfg$gms$factor_costs <- "mixed_feb17"
 #Changing value to ensure 80% water is available for agriculture for India (and all regions)
 cfg$gms$s42_reserved_fraction <- 0.2        # def = 0.5
 
+#Changing tc scenario to exogenous
+cfg$gms$tc <- "exo"              # def = endo_jun18
+
 
 #start MAgPIE run
 start_run(cfg)
