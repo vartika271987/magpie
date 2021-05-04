@@ -16,7 +16,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "2304_fc_mixed_default_plus300_exotc"
+cfg$title <- "2704_fc_mixed_default_plus300_exotc"
 
 # which input data sets should be used?
 
@@ -47,7 +47,7 @@ cfg$force_download <- TRUE
 # * (ifneeded): Yield calibration will only be executed if input data is
 # *             downloaded from repository
 # * (FALSE): Yield calibration will not be performed
-cfg$recalibrate <- "ifneeded"     # def = "ifneeded"
+cfg$recalibrate <- "TRUE"     # def = "ifneeded"
 
 #Selection of QOS to be used for submitted runs on cluster.
 cfg$qos <- NULL
