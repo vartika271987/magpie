@@ -91,7 +91,7 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 #         "rev4.58_h12_validation.tgz",
 #         "calibration_H12_c200_23Feb21.tgz",
 #         "additional_data_rev4.04.tgz",
-         "patch_f38_fac_req_reg.tgz")
+#         "patch_f38_fac_req_reg.tgz")
 #
 
   # cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
