@@ -18,13 +18,12 @@ source("config/default.cfg")
 # short description of the actual run
 cfg$title <- "BAU_lesswater_nosticky"
 
-cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
-         "rev4.58_h12_magpie.tgz",
-         "rev4.58_h12_validation.tgz",
-         "calibration_H12_c200_23Feb21.tgz",
-         "additional_data_rev4.04.tgz",
-         "patch_land_iso.tgz",
-         "patch_f38_fac_req_reg.tgz")
+#New input files from lpjml_addon used
+cfg$input <- c(cfg$input[grep("additional_data", cfg$input)],
+               "rev4.61_h12_magpie.tgz",
+               "rev4.61_h12_42b44dcd_cellularmagpie_c200_GFDL-ESM4-ssp370_lpjml-ab83aee4.tgz",
+               "rev4.61_h12_validation.tgz",
+               "calibration_H12_newlpjml_bestcalib_fc-sticky-dynamic_crop-endoApr21-allM_20May21.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
                                   getOption("magpie_repos"))
@@ -49,13 +48,12 @@ source("config/default.cfg")
 # short description of the actual run
 cfg$title <- "BAU_lesswater_sticky"
 
-cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
-         "rev4.58_h12_magpie.tgz",
-         "rev4.58_h12_validation.tgz",
-         "calibration_H12_c200_23Feb21.tgz",
-         "additional_data_rev4.04.tgz",
-         "patch_land_iso.tgz",
-         "patch_f38_fac_req_reg.tgz")
+#New input files from lpjml_addon used
+cfg$input <- c(cfg$input[grep("additional_data", cfg$input)],
+               "rev4.61_h12_magpie.tgz",
+               "rev4.61_h12_42b44dcd_cellularmagpie_c200_GFDL-ESM4-ssp370_lpjml-ab83aee4.tgz",
+               "rev4.61_h12_validation.tgz",
+               "calibration_H12_newlpjml_bestcalib_fc-sticky-dynamic_crop-endoApr21-allM_20May21.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
                                   getOption("magpie_repos"))
@@ -84,14 +82,21 @@ source("config/default.cfg")
 
 
 # which input data sets should be used?
+#New input files from lpjml_addon used
+cfg$input <- c(cfg$input[grep("additional_data", cfg$input)],
+               "rev4.61_h12_magpie.tgz",
+               "rev4.61_h12_42b44dcd_cellularmagpie_c200_GFDL-ESM4-ssp370_lpjml-ab83aee4.tgz",
+               "rev4.61_h12_validation.tgz",
+               "calibration_H12_newlpjml_bestcalib_fc-sticky-dynamic_crop-endoApr21-allM_20May21.tgz")
 
-  cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
-                 "rev4.58_h12_magpie.tgz",
-                 "rev4.58_h12_validation.tgz",
-                 "calibration_H12_c200_23Feb21.tgz",
-                 "additional_data_rev4.04.tgz",
-                 "patch_land_iso.tgz",
-                 "patch_f38_fac_req_reg.tgz")
+
+#  cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
+#                 "rev4.61_h12_magpie.tgz",
+#                 "rev4.61_h12_validation.tgz",
+#                 "calibration_H12_c200_23Feb21.tgz",
+#                 "additional_data_rev4.04.tgz",
+#                 "patch_land_iso.tgz",
+#                 "patch_f38_fac_req_reg.tgz")
 
   cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
                              getOption("magpie_repos"))
@@ -105,8 +110,10 @@ cfg$gms$factor_costs <- "mixed_feb17"
 
 #Creating a loop to include various iterations of the factor costs increase for all crops
 
+
 for(i in 1:3) {
-  s38_factor <- i
-  cfg$title <- "BAU_[i]_mixedfc"
+  cfg$gms$s38_factor <- i
+  cfg$title <- paste0("factor",i,"_","BAU_mixed_fc")
+  cfg$results_folder = "output/:title:"
   start_run(cfg)
 }
