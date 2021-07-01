@@ -23,6 +23,7 @@ cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b45
          "rev4.58_h12_validation.tgz",
          "calibration_H12_c200_23Feb21.tgz",
          "additional_data_rev4.04.tgz",
+         "patch_land_iso.tgz",
          "patch_f38_fac_req_reg.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
@@ -53,6 +54,7 @@ cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b45
          "rev4.58_h12_validation.tgz",
          "calibration_H12_c200_23Feb21.tgz",
          "additional_data_rev4.04.tgz",
+         "patch_land_iso.tgz",
          "patch_f38_fac_req_reg.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
@@ -74,7 +76,7 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 
 ##########################################################################################
 ####################################
-###Factor cost runs with updated irrigation costs 
+###Factor cost runs with updated irrigation costs
 
 # Load start_run(cfg) function which is needed to start MAgPIE runs
 source("scripts/start_functions.R")
@@ -88,24 +90,23 @@ source("config/default.cfg")
                  "rev4.58_h12_validation.tgz",
                  "calibration_H12_c200_23Feb21.tgz",
                  "additional_data_rev4.04.tgz",
+                 "patch_land_iso.tgz",
                  "patch_f38_fac_req_reg.tgz")
-  
+
   cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
-                             getOption("magpie_repos"))                             
+                             getOption("magpie_repos"))
 
   # Should input data be downloaded from source even if cfg$input did not change?
   cfg$force_download <- TRUE
-  
+
 
 #Using sticky scenario for factor costs
 cfg$gms$factor_costs <- "mixed_feb17"
 
-#Creating a loop to include various iterations of the factor costs increase for all crops 
+#Creating a loop to include various iterations of the factor costs increase for all crops
 
 for(i in 1:3) {
-  s38_factor <- i 
+  s38_factor <- i
   cfg$title <- "BAU_[i]_mixedfc"
   start_run(cfg)
 }
-
-
