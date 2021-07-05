@@ -15,10 +15,6 @@ $ondelim
 $include "./modules/38_factor_costs/input/f38_fac_req_reg.csv"
 $offdelim;
 
-table p38_fac_req(i,kcr,w) Factor requirement costs (USD05MER per tDM)
-$ondelim
-$include "./modules/38_factor_costs/input/f38_fac_req_reg.csv"
-$offdelim;
 
 table f38_region_yield(i,kcr) Regional crop yields (tDM per ha)
 $ondelim
