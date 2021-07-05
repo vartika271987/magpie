@@ -19,11 +19,12 @@ source("config/default.cfg")
 cfg$title <- "BAU_lesswater_nosticky"
 
 #New input files from lpjml_addon used
-cfg$input <- c(cfg$input[grep("additional_data", cfg$input)],
-               "rev4.61_h12_magpie.tgz",
-               "rev4.61_h12_42b44dcd_cellularmagpie_c200_GFDL-ESM4-ssp370_lpjml-ab83aee4.tgz",
-               "rev4.61_h12_validation.tgz",
-               "calibration_H12_newlpjml_bestcalib_fc-sticky-dynamic_crop-endoApr21-allM_20May21.tgz")
+cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
+         regional = "rev4.58_h12_magpie.tgz",
+         validation = "rev4.58_h12_validation.tgz",
+         calibration = "calibration_H12_c200_23Feb21.tgz",
+         additional = "additional_data_rev4.04.tgz",
+         patch = "patch_land_iso.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
                                   getOption("magpie_repos"))
@@ -49,11 +50,12 @@ source("config/default.cfg")
 cfg$title <- "BAU_lesswater_sticky"
 
 #New input files from lpjml_addon used
-cfg$input <- c(cfg$input[grep("additional_data", cfg$input)],
-               "rev4.61_h12_magpie.tgz",
-               "rev4.61_h12_42b44dcd_cellularmagpie_c200_GFDL-ESM4-ssp370_lpjml-ab83aee4.tgz",
-               "rev4.61_h12_validation.tgz",
-               "calibration_H12_newlpjml_bestcalib_fc-sticky-dynamic_crop-endoApr21-allM_20May21.tgz")
+cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
+         regional = "rev4.58_h12_magpie.tgz",
+         validation = "rev4.58_h12_validation.tgz",
+         calibration = "calibration_H12_c200_23Feb21.tgz",
+         additional = "additional_data_rev4.04.tgz",
+         patch = "patch_land_iso.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
                                   getOption("magpie_repos"))
@@ -83,11 +85,12 @@ source("config/default.cfg")
 
 # which input data sets should be used?
 #New input files from lpjml_addon used
-cfg$input <- c(cfg$input[grep("additional_data", cfg$input)],
-               "rev4.61_h12_magpie.tgz",
-               "rev4.61_h12_42b44dcd_cellularmagpie_c200_GFDL-ESM4-ssp370_lpjml-ab83aee4.tgz",
-               "rev4.61_h12_validation.tgz",
-               "calibration_H12_newlpjml_bestcalib_fc-sticky-dynamic_crop-endoApr21-allM_20May21.tgz")
+cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
+         regional = "rev4.58_h12_magpie.tgz",
+         validation = "rev4.58_h12_validation.tgz",
+         calibration = "calibration_H12_c200_23Feb21.tgz",
+         additional = "additional_data_rev4.04.tgz",
+         patch = "patch_land_iso.tgz")
 
 
 #  cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
