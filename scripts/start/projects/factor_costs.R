@@ -10,7 +10,6 @@
 #### Script to start a MAgPIE run ####
 ######################################
 
-
 ##Adding a run to restrict water availability in the model for India overall (not including sticky now)
 source("scripts/start_functions.R")
 source("config/default.cfg")
@@ -84,6 +83,7 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 ##########################################################################################
 ####################################
 ###Factor cost runs with updated irrigation costs
+
 
 # Load start_run(cfg) function which is needed to start MAgPIE runs
 source("scripts/start_functions.R")

@@ -12,7 +12,7 @@ s38_factor Factor to increase irrigation costs / 1 /
 
 table f38_fac_req(i,kcr,w) Factor requirement costs (USD05MER per tDM)
 $ondelim
-$include "./modules/38_factor_costs/input/f38_fac_req_reg.csv"
+$include "./modules/38_factor_costs/mixed_reg_feb17/input/f38_fac_req_reg.csv"
 $offdelim;
 
 

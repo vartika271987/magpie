@@ -147,19 +147,19 @@ $title magpie
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
 * Used data set: isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz
-* md5sum: NA
+* md5sum: b115c870fd204b86d32b5ed664c2d00f
 * Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
-* Used data set: rev4.58_h12_magpie.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: rev4.61_h12_magpie.tgz
+* md5sum: 24f7851723e8d981faa4ccf739e62c8b
+* Repository: /p/projects/rd3mod/inputdata/output
 * 
-* Used data set: rev4.58_h12_validation.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: rev4.61_h12_validation.tgz
+* md5sum: fab55126457f9d71295556721d4b5d69
+* Repository: /p/projects/rd3mod/inputdata/output
 * 
 * Used data set: calibration_H12_c200_23Feb21.tgz
-* md5sum: NA
+* md5sum: 8c013375008a959aaa0023030f53c2c2
 * Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: additional_data_rev4.04.tgz
@@ -170,6 +170,10 @@ $title magpie
 * md5sum: 2f1e74178a8a5f6d2c54b5d19abfd590
 * Repository: /p/projects/landuse/data/input/archive
 * 
+* Used data set: patch_f38_fac_req_reg.tgz
+* md5sum: 27b0d278b062bf482c3ba9c6470e6aaa
+* Repository: ./patch_inputdata
+* 
 * Low resolution: c200
 * High resolution: 0.5
 * 
@@ -179,9 +183,9 @@ $title magpie
 *   CAZ  CHA  EUR  IND  JPN  LAM  MEA  NEU  OAS  REF  SSA  USA
 *    28   24   10    7    3   53   17    8   22    7   11   10
 * 
-* Regionscode: 690d3718e151be1b450b394c1064b1c5
+* Regionscode: 62eff8f7
 * 
-* Regions data revision: 4.58
+* Regions data revision: 4.61
 * 
 * lpj2magpie settings:
 * * LPJmL data folder: /p/projects/landuse/data/input/lpj_input/isimip_rcp/IPSL_CM5A_LR/rcp2p6/co2
@@ -201,7 +205,7 @@ $title magpie
 * 
 * 
 * 
-* Last modification (input data): Tue Jul  6 11:54:20 2021
+* Last modification (input data): Tue Jul  6 14:04:08 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -227,7 +231,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  0607_BAU_lesswater_nosticky
+$setglobal c_title  0607_BAU_lesswater_sticky
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
@@ -262,7 +266,7 @@ $setglobal forestry  dynamic_feb21
 $setglobal urban  static
 $setglobal natveg  dynamic_feb21
 
-$setglobal factor_costs  mixed_feb17
+$setglobal factor_costs  sticky_feb18
 $setglobal landconversion  global_static_aug18
 
 $setglobal transport  gtap_nov12
