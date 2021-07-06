@@ -147,20 +147,20 @@ $title magpie
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
 * Used data set: isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz
-* md5sum: b115c870fd204b86d32b5ed664c2d00f
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
-* Used data set: rev4.61_h12_magpie.tgz
-* md5sum: 24f7851723e8d981faa4ccf739e62c8b
-* Repository: /p/projects/rd3mod/inputdata/output
+* Used data set: rev4.58_h12_magpie.tgz
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
-* Used data set: rev4.61_h12_validation.tgz
-* md5sum: fab55126457f9d71295556721d4b5d69
-* Repository: /p/projects/rd3mod/inputdata/output
+* Used data set: rev4.58_h12_validation.tgz
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: calibration_H12_c200_23Feb21.tgz
-* md5sum: 8c013375008a959aaa0023030f53c2c2
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: additional_data_rev4.04.tgz
 * md5sum: 13ae67d3b398f4bef001e24fb878b7f3
@@ -179,9 +179,9 @@ $title magpie
 *   CAZ  CHA  EUR  IND  JPN  LAM  MEA  NEU  OAS  REF  SSA  USA
 *    28   24   10    7    3   53   17    8   22    7   11   10
 * 
-* Regionscode: 62eff8f7
+* Regionscode: 690d3718e151be1b450b394c1064b1c5
 * 
-* Regions data revision: 4.61
+* Regions data revision: 4.58
 * 
 * lpj2magpie settings:
 * * LPJmL data folder: /p/projects/landuse/data/input/lpj_input/isimip_rcp/IPSL_CM5A_LR/rcp2p6/co2
@@ -201,7 +201,7 @@ $title magpie
 * 
 * 
 * 
-* Last modification (input data): Tue Jul  6 09:20:16 2021
+* Last modification (input data): Tue Jul  6 11:54:20 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
