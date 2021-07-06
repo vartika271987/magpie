@@ -16,7 +16,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "BAU_lesswater_nosticky"
+cfg$title <- "0607_BAU_lesswater_nosticky"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -47,7 +47,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "BAU_lesswater_sticky"
+cfg$title <- "0607_BAU_lesswater_sticky"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -116,7 +116,7 @@ cfg$gms$factor_costs <- "mixed_feb17"
 
 for(i in 1:3) {
   cfg$gms$s38_factor <- i
-  cfg$title <- paste0("factor",i,"_","BAU_mixed_fc")
+  cfg$title <- paste0("0607","factor",i,"_","BAU_mixed_fc")
   cfg$results_folder = "output/:title:"
   start_run(cfg)
 }
