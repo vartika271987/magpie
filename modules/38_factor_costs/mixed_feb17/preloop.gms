@@ -6,5 +6,3 @@
 *** |  Contact: magpie@pik-potsdam.de
 
 vm_cost_inv.fx(i)=0;
-
-p38_fac_req("IND",kcr,"irrigated") = f38_fac_req("IND",kcr,"irrigated") * s38_factor; 

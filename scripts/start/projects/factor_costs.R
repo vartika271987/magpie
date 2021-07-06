@@ -24,13 +24,19 @@ cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d371
          validation = "rev4.61_h12_validation.tgz",
          calibration = "calibration_H12_c200_23Feb21.tgz",
          additional = "additional_data_rev4.04.tgz",
-         patch = "patch_land_iso.tgz")
+         patch = "patch_land_iso.tgz",
+          patch = "patch_f38_fac_req_reg.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
                                   getOption("magpie_repos"))
 
 # Should input data be downloaded from source even if cfg$input did not change?
   cfg$force_download <- TRUE
+
+  #Using mixed regional scenario for factor costs
+  cfg$gms$factor_costs <- "mixed_reg_feb17"
+
+
 
   # * available for agriculture (only affects agr_sector_aug13 realization)
   #Changing value to ensure 80% water is available for agriculture for India (and all regions)
@@ -55,7 +61,8 @@ cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d371
          validation = "rev4.61_h12_validation.tgz",
          calibration = "calibration_H12_c200_23Feb21.tgz",
          additional = "additional_data_rev4.04.tgz",
-         patch = "patch_land_iso.tgz")
+         patch = "patch_land_iso.tgz",
+          patch = "patch_f38_fac_req_reg.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
                                   getOption("magpie_repos"))
@@ -90,7 +97,8 @@ cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d371
          validation = "rev4.61_h12_validation.tgz",
          calibration = "calibration_H12_c200_23Feb21.tgz",
          additional = "additional_data_rev4.04.tgz",
-         patch = "patch_land_iso.tgz")
+         patch = "patch_land_iso.tgz",
+          patch = "patch_f38_fac_req_reg.tgz")
 
 
 #  cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -109,7 +117,7 @@ cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d371
 
 
 #Using sticky scenario for factor costs
-cfg$gms$factor_costs <- "mixed_feb17"
+cfg$gms$factor_costs <- "mixed_reg_feb17"
 
 #Creating a loop to include various iterations of the factor costs increase for all crops
 

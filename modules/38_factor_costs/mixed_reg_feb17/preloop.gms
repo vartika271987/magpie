@@ -5,14 +5,6 @@
 *** |  MAgPIE License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: magpie@pik-potsdam.de
 
+vm_cost_inv.fx(i)=0;
 
-
-table f38_fac_req(kcr,w) Factor requirement costs (USD05MER per tDM)
-$ondelim
-$include "./modules/38_factor_costs/input/f38_fac_req.csv"
-$offdelim;
-
-table f38_region_yield(i,kcr) Regional crop yields (tDM per ha)
-$ondelim
-$include "./modules/38_factor_costs/mixed_feb17/input/f38_region_yield.csv"
-$offdelim;
+p38_fac_req("IND",kcr,"irrigated") = f38_fac_req("IND",kcr,"irrigated") * s38_factor; 
