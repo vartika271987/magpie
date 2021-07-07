@@ -30,8 +30,14 @@ ic42_wat_req_k(j,k) = i42_wat_req_k(t,j,k);
 ic42_env_flow_policy(i) = i42_env_flow_policy(t,i);
 
 * water consumption in industry, sanitation, ecosystem
+
+
+* Assigning separate value for India to ensure sufficient water is available
+p42_reserved_fraction(i) = s42_reserved_fraction;
+p42_reserved_fraction("IND") = 0.2;
+
 * (assign s42_reserved_fraction to industry for simplicity)
-vm_watdem.fx("industry",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * s42_reserved_fraction;
+vm_watdem.fx("industry",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * sum(cell(i,j),p42_reserved_fraction(i));
 vm_watdem.fx("electricity",j) = 0;
 vm_watdem.fx("domestic",j) = 0;
 
