@@ -15,7 +15,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "0607_BAU_lesswater_nosticky"
+cfg$title <- "0807_BAU_lesswater_nosticky"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -39,7 +39,7 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 
   # * available for agriculture (only affects agr_sector_aug13 realization)
   #Changing value to ensure 80% water is available for agriculture for India (and all regions)
-  cfg$gms$s42_reserved_fraction <- 0.3        # def = 0.5
+  cfg$gms$p42_reserved_fraction("IND") <- 0.3        # def = 0.5
 
   #start MAgPIE run
   start_run(cfg)
@@ -52,7 +52,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "0607_BAU_lesswater_sticky"
+cfg$title <- "0807_BAU_lesswater_sticky"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -75,7 +75,7 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 
   # * available for agriculture (only affects agr_sector_aug13 realization)
   #Changing value to ensure 80% water is available for agriculture for India (and all regions)
-  cfg$gms$s42_reserved_fraction <- 0.3        # def = 0.5
+  cfg$gms$p42_reserved_fraction("IND") <- 0.3        # def = 0.5
 
   #start MAgPIE run
   start_run(cfg)
@@ -124,7 +124,7 @@ cfg$gms$factor_costs <- "mixed_reg_feb17"
 
 for(i in 1:3) {
   cfg$gms$s38_factor <- i
-  cfg$title <- paste0("0607","factor",i,"_","BAU_mixed_fc")
+  cfg$title <- paste0("0807","factor",i,"_","BAU_mixed_fc")
   cfg$results_folder = "output/:title:"
   start_run(cfg)
 }
