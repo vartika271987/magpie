@@ -35,6 +35,10 @@ ic42_env_flow_policy(i) = i42_env_flow_policy(t,i);
 * Assigning separate value for India to ensure sufficient water is available
 p42_reserved_fraction(i) = s42_reserved_fraction;
 
+* Regional level differentiation of reserved fraction
+  p42_reserved_fraction("IND") = 0.2;        # def = 0.5
+
+
 * (assign s42_reserved_fraction to industry for simplicity)
 vm_watdem.fx("industry",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * sum(cell(i,j),p42_reserved_fraction(i));
 vm_watdem.fx("electricity",j) = 0;
