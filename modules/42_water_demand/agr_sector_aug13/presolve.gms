@@ -32,11 +32,24 @@ ic42_env_flow_policy(i) = i42_env_flow_policy(t,i);
 * water consumption in industry, sanitation, ecosystem
 
 
-* Assigning separate value for India to ensure sufficient water is available
+* Parameter to capture regional values for reserved fraction
 p42_reserved_fraction(i) = s42_reserved_fraction;
 
-* Regional level differentiation of reserved fraction
-  p42_reserved_fraction("IND") = 0.2;        # def = 0.5
+* Setting default value for regional levels
+
+if ((reg_water_switch = 0),
+*this sets the default water reserved for industry to 20% in India
+  p42_reserved_fraction("IND") = s42_reserved_fraction*0.4;
+Elseif (reg_water_switch = 1),
+*this will increase the water reserved for industry to 30% in India
+  p42_reserved_fraction("IND") = s42_reserved_fraction*0.6;
+Elseif (reg_water_switch = 2),
+*this will increase the water reserved for industry to 40% in India
+    p42_reserved_fraction("IND") = s42_reserved_fraction*0.8;
+);
+
+
+vm_watdem.fx("industry",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * sum(cell(i,j),p42_reserved_fraction(i));
 
 
 * (assign s42_reserved_fraction to industry for simplicity)
