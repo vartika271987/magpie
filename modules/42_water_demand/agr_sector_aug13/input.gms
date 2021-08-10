@@ -31,7 +31,7 @@ s42_env_flow_scenario              EFP scenario.     (1)          / 2 /
 s42_env_flow_base_fraction         Fraction of available water that is reserved for the environment where no EFP policy is implemented (1) / 0.05 /
 * 									(determined in the file EFR_protection_policy.csv)
 s42_env_flow_fraction              Fraction of available water that is reserved for under protection policies (1) / 0.2 /
-reg_water_switch                   Separate values for reserved fraction at regional level can be used (1)  / 0 /
+reg_water_switch                   Separate values for reserved fraction at regional level can be used (1)  / 2 /
 ;
 
 $setglobal c42_watdem_scenario  nocc

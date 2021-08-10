@@ -146,16 +146,16 @@ $title magpie
 
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
-* Used data set: isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz
-* md5sum: b115c870fd204b86d32b5ed664c2d00f
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
-* 
-* Used data set: rev4.61_h12_magpie.tgz
-* md5sum: 24f7851723e8d981faa4ccf739e62c8b
+* Used data set: rev4.590806india_test400_4_h12_e9ca3869_cellularmagpie_c400_GFDL-ESM4-ssp370_lpjml-994edd25.tgz
+* md5sum: 4c43099cf69072552e6befe414eb028f
 * Repository: /p/projects/rd3mod/inputdata/output
 * 
-* Used data set: rev4.61_h12_validation.tgz
-* md5sum: fab55126457f9d71295556721d4b5d69
+* Used data set: rev4.590806india_test400_4_h12_magpie.tgz
+* md5sum: 427e8abaedfaefa4752296cb64a3b651
+* Repository: /p/projects/rd3mod/inputdata/output
+* 
+* Used data set: rev4.590806india_test400_4_h12_validation.tgz
+* md5sum: ac6a6b22b4ebc2291d0bd5e7aeb716f0
 * Repository: /p/projects/rd3mod/inputdata/output
 * 
 * Used data set: calibration_H12_c200_23Feb21.tgz
@@ -164,48 +164,41 @@ $title magpie
 * 
 * Used data set: additional_data_rev4.04.tgz
 * md5sum: 13ae67d3b398f4bef001e24fb878b7f3
-* Repository: /p/projects/landuse/data/input/archive
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: patch_land_iso.tgz
 * md5sum: 2f1e74178a8a5f6d2c54b5d19abfd590
-* Repository: /p/projects/landuse/data/input/archive
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: patch_f38_fac_req_reg.tgz
 * md5sum: 27b0d278b062bf482c3ba9c6470e6aaa
 * Repository: ./patch_inputdata
 * 
-* Low resolution: c200
+* Low resolution: c400
 * High resolution: 0.5
 * 
-* Total number of cells: 200
+* Total number of cells: 400
 * 
 * Number of cells per region:
 *   CAZ  CHA  EUR  IND  JPN  LAM  MEA  NEU  OAS  REF  SSA  USA
-*    28   24   10    7    3   53   17    8   22    7   11   10
+*     3   55    6   13    1  121   17    1   17    6  141   19
 * 
 * Regionscode: 62eff8f7
 * 
-* Regions data revision: 4.61
+* Regions data revision: 4.59
 * 
 * lpj2magpie settings:
-* * LPJmL data folder: /p/projects/landuse/data/input/lpj_input/isimip_rcp/IPSL_CM5A_LR/rcp2p6/co2
-* * Additional input folder: /p/projects/landuse/data/input/other/rev52
-* * Revision: 52
-* * Call: lpj2magpie(input_folder = path(cfg$lpj_input_folder, gsub("-",     "/", cfg$input)), input2_folder = path(cfg$additional_input_folder,     paste("rev", floor(cfg$revision), sep = "")), output_file = lpj2magpie_file,     rev = cfg$revision)
+* * LPJmL data: GFDL-ESM4:ssp370
+* * Revision: 4.59
 * 
 * aggregation settings:
 * * Input resolution: 0.5
-* * Output resolution: c200
-* * Input file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_0.5.tgz
-* * Output file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz
-* * Regionscode: 690d3718e151be1b450b394c1064b1c5
-* * (clustering) n-repeat: 5
-* * (clustering) n-redistribute: 0
-* * Call: aggregation(input_file = lpj2magpie_file, regionmapping = paste0("../",     cfg$regionmapping), output_file = aggregation_file, rev = cfg$revision,     res_high = cfg$high_res, res_low = cfg$low_res, hcells = cfg$highres_cells,     weight = cfg$cluster_weight, nrepeat = cfg$nrepeat, nredistribute = cfg$nredistribute,     sum_spam_file = cfg$spamfile, debug = FALSE, seed = cfg$seed)
+* * Output resolution: c400
+* * Regionscode: 62eff8f7
+* * Call: do.call(functiononly, args)
 * 
 * 
-* 
-* Last modification (input data): Tue Jul  6 14:04:08 2021
+* Last modification (input data): Fri Jul  9 13:13:05 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -231,7 +224,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  0607_BAU_lesswater_sticky
+$setglobal c_title  0907_newpreprocessed_data
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
@@ -266,7 +259,7 @@ $setglobal forestry  dynamic_feb21
 $setglobal urban  static
 $setglobal natveg  dynamic_feb21
 
-$setglobal factor_costs  sticky_feb18
+$setglobal factor_costs  mixed_reg_feb17
 $setglobal landconversion  global_static_aug18
 
 $setglobal transport  gtap_nov12

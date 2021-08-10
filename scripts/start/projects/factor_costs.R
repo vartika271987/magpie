@@ -15,7 +15,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "0907_BAU_70%water_nosticky"
+cfg$title <- "0907_BAU_70_water_nosticky"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -52,7 +52,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "0907_BAU_70%water_sticky"
+cfg$title <- "0907_BAU_70_water_sticky"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -86,7 +86,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "0907_BAU_60%water_nosticky"
+cfg$title <- "0907_BAU_60_water_nosticky"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -123,7 +123,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "0907_BAU_60%water_sticky"
+cfg$title <- "0907_BAU_60_water_sticky"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
