@@ -7,4 +7,9 @@
 
 vm_cost_inv.fx(i)=0;
 
-p38_fac_req("IND",kcr,"irrigated") = f38_fac_req("IND",kcr,"irrigated") * s38_factor; 
+*p38_fac_req("IND",kcr,"irrigated") = f38_fac_req("IND",kcr,"irrigated") * s38_factor; 
+
+if (m_year(t)>2000,
+    p38_fac_req("IND",kcr,"irrigated") = f38_fac_req("IND",kcr,"irrigated") * s38_factor; 
+endif
+);
