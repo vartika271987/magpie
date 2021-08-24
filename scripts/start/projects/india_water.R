@@ -16,7 +16,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1008_BAU_80_water_baseline"
+cfg$title <- "2408_BAU_80_water_baseline"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -50,7 +50,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1008_BAU_70_water"
+cfg$title <- "2408_BAU_70_water"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -86,7 +86,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "0907_BAU_60_water"
+cfg$title <- "2408_BAU_60_water"
 
 #New input files from lpjml_addon used
 cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
@@ -162,7 +162,7 @@ cfg$gms$reg_water_switch <- 0        # def = 0 where it will take 0.8 for India
 #Creating a loop to include various iterations of the factor costs increase for all crops
 for(i in 1:3) {
   cfg$gms$s38_factor <- i
-  cfg$title <- paste0("1008","factor",i,"_","BAU_mixed_fc")
+  cfg$title <- paste0("2408","factor",i,"_","BAU_mixed_fc")
   cfg$results_folder = "output/:title:"
   start_run(cfg)
 }

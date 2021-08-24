@@ -354,7 +354,7 @@ $title magpie
 * Use 'file.path' instead.
 * See help("Deprecated")
 * 
-* Last modification (input data): Wed Aug 18 07:46:27 2021
+* Last modification (input data): Tue Aug 24 11:44:16 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -380,7 +380,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  0907_BAU_60_water
+$setglobal c_title  2408factor3_BAU_mixed_fc
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
