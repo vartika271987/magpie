@@ -35,19 +35,22 @@ ic42_env_flow_policy(i) = i42_env_flow_policy(t,i);
 * Parameter to capture regional values for reserved fraction
 p42_reserved_fraction(i) = s42_reserved_fraction;
 
-* Setting default value for regional levels
+* Setting default value for India to be applied after 2010
 
-if ((reg_water_switch = 0),
-*this sets the default water reserved for industry to 20% in India
-  p42_reserved_fraction("IND") = s42_reserved_fraction*0.4;
-Elseif (reg_water_switch = 1),
-*this will increase the water reserved for industry to 30% in India
-  p42_reserved_fraction("IND") = s42_reserved_fraction*0.6;
-Elseif (reg_water_switch = 2),
-*this will increase the water reserved for industry to 40% in India
-    p42_reserved_fraction("IND") = s42_reserved_fraction*0.8;
+if (m_year(t)>2010,
+	if ((reg_water_switch = 0),
+	*this sets the default water reserved for industry to 20% in India
+ 	 p42_reserved_fraction("IND") = s42_reserved_fraction*0.4;
+	Elseif (reg_water_switch = 1),
+	*this will increase the water reserved for industry to 30% in India
+ 	 p42_reserved_fraction("IND") = s42_reserved_fraction*0.6;
+	Elseif (reg_water_switch = 2),
+	*this will increase the water reserved for industry to 40% in India
+    	p42_reserved_fraction("IND") = s42_reserved_fraction*0.8;
+	);
+Elseif (m_year(t)<2010,
+	p42_reserved_fraction("IND") = s42_reserved_fraction*0.4;
 );
-
 
 vm_watdem.fx("industry",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * sum(cell(i,j),p42_reserved_fraction(i));
 
