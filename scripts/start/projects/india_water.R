@@ -36,84 +36,25 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
   #Using mixed regional scenario for factor costs
   cfg$gms$factor_costs <- "mixed_reg_feb17"
 
-  # * available for agriculture (only affects agr_sector_aug13 realization)
-  #Changing value to ensure 70% water is available for agriculture for India (and all regions)
-  cfg$gms$reg_water_switch <- 0        # def = 0
+#Creating a loop in which 3 different runs for water settings can be done
+  for (i in 0:2) {
+    cfg$gms$reg_water_switch <- i
 
-  #start MAgPIE run
-  start_run(cfg)
+    if i ==0 {
+      cfg$title <- "2408_BAU_80_water_baseline0_water"
+    }
 
-##########################################################################################
+    else if i ==1 {
+    cfg$title <- "2408_BAU_70_water"
+    }
 
-##Adding a run to restrict water availability in the model for India overall (not including sticky now)
-source("scripts/start_functions.R")
-source("config/default.cfg")
-
-# short description of the actual run
-cfg$title <- "2408_BAU_70_water"
-
-#New input files from lpjml_addon used
-cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
-         regional = "rev4.61_h12_magpie.tgz",
-         validation = "rev4.61_h12_validation.tgz",
-         calibration = "calibration_H12_c200_23Feb21.tgz",
-         additional = "additional_data_rev4.04.tgz",
-         patch = "patch_land_iso.tgz",
-          patch = "patch_f38_fac_req_reg.tgz")
-
-cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
-                                  getOption("magpie_repos"))
-
-# Should input data be downloaded from source even if cfg$input did not change?
-  cfg$force_download <- TRUE
-
-  #Using mixed regional scenario for factor costs
-  cfg$gms$factor_costs <- "mixed_reg_feb17"
+    else if i == 2 {
+    cfg$title <- "2408_BAU_60_water"
+    }
+    start_run(cfg)
+  }
 
 
-  # * available for agriculture (only affects agr_sector_aug13 realization)
-  #Changing value to ensure 70% water is available for agriculture for India (and all regions)
-  cfg$gms$reg_water_switch <- 1        # def = 0
-
-  #start MAgPIE run
-  start_run(cfg)
-
-##########################################################################################
-
-
-##Adding a run to restrict water availability in the model for India overall (not including sticky now)
-source("scripts/start_functions.R")
-source("config/default.cfg")
-
-# short description of the actual run
-cfg$title <- "2408_BAU_60_water"
-
-#New input files from lpjml_addon used
-cfg$input <- c(cellular = "isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
-         regional = "rev4.61_h12_magpie.tgz",
-         validation = "rev4.61_h12_validation.tgz",
-         calibration = "calibration_H12_c200_23Feb21.tgz",
-         additional = "additional_data_rev4.04.tgz",
-         patch = "patch_land_iso.tgz",
-          patch = "patch_f38_fac_req_reg.tgz")
-
-cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
-                                  getOption("magpie_repos"))
-
-# Should input data be downloaded from source even if cfg$input did not change?
-  cfg$force_download <- TRUE
-
-  #Using mixed regional scenario for factor costs
-  cfg$gms$factor_costs <- "mixed_reg_feb17"
-
-  # * available for agriculture (only affects agr_sector_aug13 realization)
-  #Changing value to ensure 60% water is available for agriculture for India (and all regions)
-  cfg$gms$reg_water_switch <- 2        # def = 0
-
-  #start MAgPIE run
-  start_run(cfg)
-
-##########################################################################################
 
 
 ####################################
