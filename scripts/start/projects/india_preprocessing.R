@@ -20,9 +20,9 @@ cfg$title <- "1009_200_default"
 
 #Using new preprocessed data with higher number of cells for India
 
-cfg$input <- c("rev4.590806india_test400_4_h12_e9ca3869_cellularmagpie_c400_GFDL-ESM4-ssp370_lpjml-994edd25.tgz",
-               "rev4.590806india_test400_4_h12_magpie.tgz",
-               "rev4.590806india_test400_4_h12_validation.tgz",
+cfg$input <- c("rev4.63_1009_200_default__h12_12ceb32a_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-066f36d1.tgz",
+               "rev4.63_1009_200_default__h12_magpie.tgz",
+               "rev4.63_1009_200_default__h12_validation.tgz",
                "calibration_H12_c200_23Feb21.tgz",
                "additional_data_rev4.04.tgz",
                "patch_cropland.tgz")
@@ -48,9 +48,9 @@ cfg$title <- "1009_200_high_india"
 
 #UDefault input files
 
-cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
-               "rev4.58_h12_magpie.tgz",
-               "rev4.58_h12_validation.tgz",
+cfg$input <- c("rev4.63_1009_200_high_india__h12_0e72ea18_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-066f36d1_clusterweight-6ac3af3e.tgz",
+               "rev4.63_1009_200_high_india__h12_magpie.tgz",
+               "rev4.63_1009_200_high_india__h12_validation.tgz",
                "calibration_H12_c200_23Feb21.tgz",
                "additional_data_rev4.04.tgz",
                "patch_cropland.tgz")
@@ -75,9 +75,9 @@ cfg$title <- "1009_400_high_india"
 
 #UDefault input files
 
-cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
-               "rev4.58_h12_magpie.tgz",
-               "rev4.58_h12_validation.tgz",
+cfg$input <- c("rev4.63_1009_400_high_india__h12_93032442_cellularmagpie_c400_MRI-ESM2-0-ssp370_lpjml-066f36d1_clusterweight-d8a42720.tgz",
+               "rev4.63_1009_400_high_india__h12_magpie.tgz",
+               "rev4.63_1009_400_high_india__h12_validation.tgz",
                "calibration_H12_c200_23Feb21.tgz",
                "additional_data_rev4.04.tgz",
                "patch_cropland.tgz")
@@ -102,9 +102,9 @@ cfg$title <- "1009_400_higher_india"
 
 #UDefault input files
 
-cfg$input <- c("isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev52_c200_690d3718e151be1b450b394c1064b1c5.tgz",
-               "rev4.58_h12_magpie.tgz",
-               "rev4.58_h12_validation.tgz",
+cfg$input <- c("rev4.63_1009_400_higher_india__h12_dfbc392d_cellularmagpie_c400_MRI-ESM2-0-ssp370_lpjml-066f36d1_clusterweight-0d277f49.tgz",
+               "rev4.63_1009_400_higher_india__h12_magpie.tgz",
+               "ev4.63_1009_400_higher_india__h12_validation.tgz",
                "calibration_H12_c200_23Feb21.tgz",
                "additional_data_rev4.04.tgz",
                "patch_cropland.tgz")
