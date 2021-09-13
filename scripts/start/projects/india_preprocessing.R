@@ -16,7 +16,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1009_200_default"
+cfg$title <- "1309_200_default"
 
 #Using new preprocessed data with higher number of cells for India
 
@@ -44,7 +44,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1009_200_high_india"
+cfg$title <- "1309_200_high_india"
 
 #UDefault input files
 
@@ -71,7 +71,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1009_400_high_india"
+cfg$title <- "1309_400_high_india"
 
 #UDefault input files
 
@@ -98,7 +98,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1009_400_higher_india"
+cfg$title <- "1309_400_higher_india"
 
 #UDefault input files
 
