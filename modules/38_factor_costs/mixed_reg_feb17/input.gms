@@ -6,7 +6,7 @@
 *** |  Contact: magpie@pik-potsdam.de
 
 scalar
-s38_factor Factor to increase irrigation costs / 3 /
+s38_factor Factor to increase irrigation costs / 2 /
 ;
 
 
