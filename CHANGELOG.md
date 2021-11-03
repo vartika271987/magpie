@@ -13,24 +13,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **51_nitrogen** parameter change in rescaled_jan21, now including regionalized climate-dependent leaching factors
 - **config** Update default configuration to new input data (especially cellular inputs) including all module realization updates (14_yield, 22_processing, 30_crop, 38_factor_costs, 39_landconversion). Moreover, climate impatcs (cc options for biophysical inputs) are activiated as default. New best_calib calibration routine is activated as default.
 - **config** peatland module on by default (cfg$gms$peatland <- "on")
+- **config** update default setting for 2nd generation bioenergy demand and GHG prices
 - **scripts** output/extra/disaggregation.R updated to account for country-specific set-aside shares in post-processing
+- **scripts** output/extra/disaggregation.R updated to account for sub-categories of "forestry"
+- **scripts** Default recalibration routine does not read in previous calibration factors anymore
 - **09_drivers** Update sets in drivers to include new SDP and Ariadne GDP and Pop scenarios
-- **21_trade** In the exo and off realization, equations corrected to be consistent with the mapping between supreg h and regions i.
-
+- **21_trade** In the exo and off realization, equations corrected to be consistent with the mapping between supreg h and regions i. Bugfixes in trade exo and off realizations.
+- **inputs** Update of GDP and population scenarios based upon recent historic data from WDI (complemented with growth rates given by the James2019 dataset), short term projections until 2025 from IMF (for GDPpc) and WB (for pop) and reconverge to the original SSP GDPpc levels by 2100.
+- **inputs** Update of all input data that are based on FAO, using the most up-to-date version of FAOSTAT datasets available at the date of input calculations via automated download.
+- **scripts** scripts/start/projects/project_LAMACLIMA.R -> scripts/start/projects/project_LAMACLIMA_WP4.R
 
 ### added
 - **21_trade** Missing interface parameter for failing exo realization runs
 - **59_som** exogenous pathway for vm_nr_som via f59_som_exogenous
+- **config** Addition of a new scenario column (Tland) in scenario_config.csv
+- **14_yield** parameter created to save historical cellular yields and to be used in the sticky realization of 38_factor_costs and in the 17_production module
+- **17_production** switch added to decide if initialization of cellular crop production is needed or not. Also, a parameter to calculate initial production based on input cellular crop patterns and semicalibrated yields (potential yields calibrated to FAO values).
+- **scripts** Added calibration script to generate default calibration for different factor costs realization
+- **scripts** scripts/output/extra/disaggregation_LUH2.R script for exporting spatial output in LUH2 format (NetCDF)
+- **37_labor_prod** labor productivity module with two realizations: off and exo
+- **38_factor_costs** new realization "sticky_labor", based on "sticky_feb18" but accounting for changes in labor productivity
 
 ### removed
 - **32_foresty** Removed static realization
 - **35_natveg** Removed static realization
 - **scripts** lpjml_addon script is removed and all calls within dependend starting scripts
+- **scripts** output/extra/disaggregation_transitions_.R moved to deprecated folder
+- **scripts** output/extra/disaggregation_cropsplit.R moved to deprecated folder
+- **14_yield** Removed `biocorrect` and `dynamic_aug18` realizations
+- **20_processing** Removed `substitution_dec18` realization
+- **30_crop** Removed `endo_jun13` realization
+- **scripts** scripts/start/extra/highres.R
 
 ### fixed
 - **80_optimization** fixed compilation error in "nlp_par" realization
-
-
+- **58_peatland** fixed rare infeasibility in "on" realization
+- **10_land** fixed rare infeasibility in "landmatrix_dec18" realization
+- **38_factor_costs** For the sticky_feb18 realization correction in initial capital stocks, use of production initial values, and 05USDppp units changed to 05USDMER for sticky so it matches the units of the other realizations
+- **80_optimization** Bug fixes in the nlp_par (parallel optimization) and improved code to collect failing handles.
+- **35_natveg** fixed land protection to SSP2 default (WDPA) for historic period
+- **15_food** New iteration needs to be started before setting food prices for curr_iter15
+- **scripts** scripts/output/extra/highres.R bugfixes
+- **38_factor_costs** units in sticky_feb18
 
 ## [4.3.5] - 2021-09-02
 
