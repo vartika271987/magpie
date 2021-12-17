@@ -6,10 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [4.4.0] - 2021-xx-xx
+## [Unreleased]
 
 ### changed
 
+### added
+
+### removed
+
+### fixed
+
+
+## [4.4.0] - 2021-12-13
+
+### changed
 - **inputs** new default LPJmL version with growing season adaptation (gsadapt) on 
 - **51_nitrogen** parameter change in rescaled_jan21, now including regionalized climate-dependent leaching factors
 - **config** Update default configuration to new input data (especially cellular inputs) including all module realization updates (14_yield, 22_processing, 30_crop, 38_factor_costs, 39_landconversion). Moreover, climate impatcs (cc options for biophysical inputs) are activiated as default. New best_calib calibration routine is activated as default.
@@ -36,6 +46,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **14_yield** read-in file f14_yld_calib.csv if exists. Set default calibration factors to 1 in case f14_yld_calib.csv does not exist
 - **13_tc** different educated guess for vm_tau in 1995
 - **scaling** Update of scaling factors. removed duplicates
+- **32_foresty** Avoid division by zero (observed under higher regional resolutions)
+- **35_natveg** Avoid division by zero (observed under higher regional resolutions)
+- **70_livestock** Avoid division by zero (observed under higher regional resolutions)
+- **60_bioenergy** Minimum dedicated 2nd generation bioenergy demand assumed in each region raised from 0.01 to 1 mio. GJ per yr, and added as option in the config file (s60_2ndgen_bioenergy_dem_min)
+- **config** Remove elements from the parameter list of start_run(), instead include them as regular settings in the default.cfg.
+- **scripts** Add option to take ghg prices from different file than the regular reporting file (used in the REMIND coupling)
+- **60_bioenergy** Switch off fixing the bioenergy demand to SSP2 until 2020 if MAgPIE runs coupled (to REMIND) or for emulator runs (to derive biomass supply crurves).
+- **56_ghg_policy** Switch off fixing the GHG prices to SSP2 until 2020 if MAgPIE runs coupled (to REMIND) or for emulator runs (to derive biomass supply crurves).
+- **scripts** start/test_runs.R added SSP1, SSP2 and SSP5 as default test runs
 
 ### added
 - **34_urban** New exo_nov21 exogenous realization of urban land expansion 
@@ -56,6 +75,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **scripts** added script validation_short.R with aggregated crop types (cutting the PDF size in half) -> replaces validation.R in default.cfg
 - **scripts** added start script "scripts/start/Rprofile.R" for adding a R snapshot to the ".Rprofile" file
 - **config** file "land_carbon_sink_adjust_grassi.mz" added to cfg$files2export$start
+- **config** Inclusion of LAMACLIMA scenarios in scenario_config.csv
+- **output.R** added SLURM standby maxMem and SLURM priority maxMem; needed for some output scripts (e.g. disaggregation_LUH2.R)
 
 ### removed
 - **32_foresty** Removed static realization
@@ -82,6 +103,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **38_factor_costs** units in sticky_feb18
 - **32_foresty** Global afforestation limit s32_max_aff_area was not effective in case of parallel optimization -> added option c32_max_aff_area, which allows to provide a file with regional limits for afforestation; 
 - **73_timber** plausible cost for balance variable in case of s73_timber_demand_switch = 0 to avoid cost distortion
+- **56_ghg_policy** choose the correct scenario for fixing the GHG prices until sm_fix_SSP2 
 
 ## [4.3.5] - 2021-09-02
 

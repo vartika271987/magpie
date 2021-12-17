@@ -55,6 +55,7 @@ sets
       VEN, VGB, VIR, VNM, VUT, WLF, WSM, YEM, ZAF, ZMB, ZWE /
 
   j number of LPJ cells
+
     / CAZ_1*CAZ_7,
       CHA_8*CHA_30,
       EUR_31*EUR_38,
@@ -81,6 +82,7 @@ sets
       REF . (REF_133*REF_146)
       SSA . (SSA_147*SSA_181)
       USA . (USA_182*USA_200) /
+
 
   i_to_iso(i,iso) mapping regions to iso countries
     / CAZ . (AUS, CAN, HMD, NZL, SPM)
