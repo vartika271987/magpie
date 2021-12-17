@@ -152,7 +152,7 @@ $title magpie
 * 
 * Used data set: rev4.65_h12_1998ea10_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz
 * md5sum: NA
-* Repository: scp://cluster.pik-potsdam.de/p/projects/rd3mod/inputdata/output
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: rev4.65_h12_validation.tgz
 * md5sum: NA
@@ -162,7 +162,7 @@ $title magpie
 * md5sum: NA
 * Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
-* Used data set: calibration_H12_sticky_feb18_free_12Nov21.tgz
+* Used data set: calibration_H12_sticky_feb18_free_30Nov21.tgz
 * md5sum: NA
 * Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
@@ -190,7 +190,7 @@ $title magpie
 * * Call: do.call(functiononly, args)
 * 
 * 
-* Last modification (input data): Mon Nov 29 20:49:27 2021
+* Last modification (input data): Fri Dec 17 13:25:21 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
