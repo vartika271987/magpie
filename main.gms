@@ -160,13 +160,14 @@ $title magpie
 * Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 *
 * Used data set: additional_data_rev4.07.tgz
+<<<<<<< HEAD
 * md5sum: accf653e73cbfd02354158d3b99b046f
 * Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 *
 * Used data set: calibration_H12_sticky_feb18_free_12Nov21.tgz
 * md5sum: 9c819b5c41616510839ec6119b186025
 * Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
-*
+
 * Low resolution: c200
 * High resolution: 0.5
 *
@@ -192,8 +193,8 @@ $title magpie
 * * Call: do.call(functiononly, args)
 *
 *
-* Last modification (input data): Thu Dec  9 11:11:36 2021
-* 
+* Last modification (input data): Fri Dec 17 13:25:21 2021
+*
 *###################### R SECTION END (VERSION INFO) ###########################
 
 $offupper

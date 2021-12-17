@@ -29,9 +29,23 @@ $endif
 ic42_wat_req_k(j,k) = i42_wat_req_k(t,j,k);
 ic42_env_flow_policy(i) = i42_env_flow_policy(t,i);
 
+* Parameter to capture regional values for reserved fraction
+
+$ifthen "%c42_rf_policy%" == "mixed"
+  p42_reserved_fraction("RF_countries") = s42_reserved_fraction*0.4;
+$else
+  p42_reserved_fraction(i) = s42_reserved_fraction;
+$endif
+
+if (m_year(t)<s42_shock_year,
+  p42_reserved_fraction(i) = s42_reserved_fraction;
+);
+
+
+
 * water consumption in industry, sanitation, ecosystem
-* (assign s42_reserved_fraction to industry for simplicity)
-vm_watdem.fx("industry",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * s42_reserved_fraction;
+* (assign p42_reserved_fraction which is equalt to s42_reserved_fraction to industry for simplicity)
+vm_watdem.fx("industry",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * sum(cell(i,j),p42_reserved_fraction(i));
 vm_watdem.fx("electricity",j) = 0;
 vm_watdem.fx("domestic",j) = 0;
 
@@ -52,7 +66,7 @@ vm_watdem.fx("ecosystem",j) = sum(cell(i,j), i42_env_flows_base(t,j) * (1-ic42_e
 * irrigation efficiency
 if(m_year(t) <= sm_fix_SSP2,
  v42_irrig_eff.fx(j) = 1/(1+2.718282**((-22160-sum(cell(i,j),im_gdp_pc_mer("y1995",i)))/37767));
-else 
+else
  if((s42_irrig_eff_scenario = 1),
  	v42_irrig_eff.fx(j) = s42_irrigation_efficiency;
  Elseif (s42_irrig_eff_scenario=2),
