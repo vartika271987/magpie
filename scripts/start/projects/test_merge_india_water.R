@@ -19,13 +19,13 @@ source("config/default.cfg")
 #cfg$title <- "2408_BAU_80_water_baseline"
 
 #New input data as of 8th October used
-cfg$input <- c(cellular = "rev4.63_h12_a3fb0fc7_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-066f36d1.tgz",
-         regional = "rev4.63_h12_magpie.tgz",
-         validation = "rev4.63_h12_validation.tgz",
-         calibration = "calibration_H12_sticky_feb18_free_31Aug21.tgz",
-         additional = "additional_data_rev4.04.tgz",
-         patch = "patch_land_iso.tgz",
-          patch = "patch_f38_fac_req_reg.tgz")
+cfg$input <- c(regional    = "rev4.65_h12_magpie.tgz",
+               cellular    = "rev4.65_h12_1998ea10_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+               validation  = "rev4.65_h12_validation.tgz",
+               additional  = "additional_data_rev4.07.tgz",
+               calibration = "calibration_H12_sticky_feb18_free_30Nov21.tgz",
+                patch = "patch_land_iso.tgz",
+                patch = "patch_f38_fac_req_reg.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
                                   getOption("magpie_repos"))
@@ -36,7 +36,7 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
   #Using mixed regional scenario for factor costs
   cfg$gms$factor_costs <- "mixed_reg_feb17"
 
-# Test if irrigation settings are applied for India, before and after shock year 
+# Test if irrigation settings are applied for India, before and after shock year
   cfg$gms$s42_shock_year <- 2020
 
 #Test for scalar factor for factor costs if it is applied for India
