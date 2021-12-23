@@ -50,4 +50,4 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
                 c("p38_fac_req(i,kcr,w) = f38_fac_req(i,kcr,w) * s38_factor;" , "p38_fac_req(\"IND\",kcr,w) = f38_fac_req(\"IND\",kcr,w) * s38_factor;"), fixed=T)
 
 
-start_run(cfg)
+start_run(cfg, codeCheck=F)
