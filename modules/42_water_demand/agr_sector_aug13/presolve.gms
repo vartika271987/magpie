@@ -29,19 +29,20 @@ $endif
 ic42_wat_req_k(j,k) = i42_wat_req_k(t,j,k);
 ic42_env_flow_policy(i) = i42_env_flow_policy(t,i);
 
-* Parameter to capture regional values for reserved fraction
+* If regional reserved fraction policy is selected (default), it applies the default reserved fraction
+* for year less than s42_shock_year (1995 by default) and for
 
 $ifthen "%c42_rf_policy%" == "mixed"
+  if (m_year(t)<s42_shock_year,
+  p42_reserved_fraction("RF_countries") = s42_reserved_fraction;
+    Elseif (m_year(t)>s42_shock_year,
   p42_reserved_fraction("RF_countries") = s42_reserved_fraction*0.4;
+    );
+  );
 $else
   p42_reserved_fraction(i) = s42_reserved_fraction;
 $endif
-
-if (m_year(t)<s42_shock_year,
-  p42_reserved_fraction(i) = s42_reserved_fraction;
 );
-
-
 
 * water consumption in industry, sanitation, ecosystem
 * (assign p42_reserved_fraction which is equalt to s42_reserved_fraction to industry for simplicity)
