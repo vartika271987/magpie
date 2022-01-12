@@ -37,15 +37,18 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 # Should input data be downloaded from source even if cfg$input did not change?
   cfg$force_download <- TRUE
 
+# Agr sector realization for water demand
+  cfg$gms$water_demand<- "agr_sector_aug13"            # def = all_sectors_aug13
+
   #Using mixed regional scenario for factor costs
-  cfg$gms$factor_costs <- "mixed_reg_feb17"
+  #cfg$gms$factor_costs <- "mixed_reg_feb17"
 
 # Test if irrigation settings are applied for India, before and after shock year
   cfg$gms$s42_shock_year <- 2020
 
 #Test for scalar factor for factor costs if it is applied for India
-  cfg$gms$s38_shock_year <- 2020
-  cfg$gms$s38_factor <- 2
+#  cfg$gms$s38_shock_year <- 2020
+#  cfg$gms$s38_factor <- 2
 
   #loading libraries to run manipulate file function
 
