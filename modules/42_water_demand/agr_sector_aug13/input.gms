@@ -7,8 +7,12 @@
 
 scalars
 
+
 s42_reserved_fraction  Fraction of available water that is reserved for industry electricity and domestic use (1) / 0.5 /
 s42_shock_year         Year from which policy shock will be implemented /1995/
+
+s42_reserved_fraction  Fraction of available water that is reserved for manufacturing electricity and domestic use (1) / 0.5 /
+
 
 s42_irrig_eff_scenario     Scenario for irrigation efficiency     (1)       / 2 /
 *                                      1: global static value

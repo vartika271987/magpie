@@ -29,6 +29,7 @@ $endif
 ic42_wat_req_k(j,k) = i42_wat_req_k(t,j,k);
 ic42_env_flow_policy(i) = i42_env_flow_policy(t,i);
 
+
 * If regional reserved fraction policy is selected (default), it applies the default reserved fraction
 * for year less than s42_shock_year (1995 by default) and for
 
@@ -46,7 +47,11 @@ $endif
 
 * water consumption in industry, sanitation, ecosystem
 * (assign p42_reserved_fraction which is equalt to s42_reserved_fraction to industry for simplicity)
-vm_watdem.fx("industry",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * sum(cell(i,j),p42_reserved_fraction(i));
+
+* water withdrawals in other sectors (manufacturing, electricity, domestic, ecosystem)
+* (assign s42_reserved_fraction to manufacturing for simplicity)
+vm_watdem.fx("manufacturing",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * sum(cell(i,j),p42_reserved_fraction(i));
+
 vm_watdem.fx("electricity",j) = 0;
 vm_watdem.fx("domestic",j) = 0;
 
