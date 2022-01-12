@@ -16,18 +16,23 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "2312_testrun_indiawater"
+
+cfg$title <- "1201_test"
 
 #New input data as of 8th October used
-cfg$input <- c(regional    = "rev4.65_h12_magpie.tgz",
-               cellular    = "rev4.65_h12_1998ea10_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
-               validation  = "rev4.65_h12_validation.tgz",
+cfg$input <- c(regional    = "rev4.66_h12_magpie.tgz",
+               cellular    = "rev4.66_h12_1998ea10_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+               validation  = "rev4.66_h12_validation.tgz",
                additional  = "additional_data_rev4.08.tgz",
-               calibration = "calibration_H12_sticky_feb18_free_30Nov21.tgz",
-                patch = "patch_land_iso.tgz")
+               calibration = "calibration_H12_sticky_feb18_free_30Nov21.tgz")
+
+#         patch = "patch_land_iso.tgz",
+#          patch = "patch_f38_fac_req_reg.tgz")
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
-                                           getOption("magpie_repos"))
+                           getOption("magpie_repos"))
+
+#cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL,"./patch_inputdata"=NULL),
 
 # Should input data be downloaded from source even if cfg$input did not change?
   cfg$force_download <- TRUE
@@ -43,10 +48,16 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
   cfg$gms$s38_factor <- 2
 
   #loading libraries to run manipulate file function
-  library('magpie4')
-  library('lucode2')
-  manipulateFile("/p/projects/landuse/users/vasingh/develop/magpie/modules/38_factor_costs/mixed_reg_feb17/presolve.gms",
-                c("p38_fac_req(i,kcr,w) = f38_fac_req(i,kcr,w) * s38_factor;" , "p38_fac_req(\"IND\",kcr,\"irrigated\") = f38_fac_req(\"IND\",kcr,\"irrigated\") * s38_factor;"), fixed=T)
+
+#  library('magpie4')
+#  library('lucode2')
+#  manipulateFile("/p/projects/landuse/users/vasingh/develop/magpie/modules/38_factor_costs/mixed_reg_feb17/presolve.gms",
+#                c("p38_fac_req(i,kcr,w) = f38_fac_req(i,kcr,w) * s38_factor;" , "p38_fac_req(\"IND\",kcr,\"irrigated\") = f38_fac_req(\"IND\",kcr,\"irrigated\") * s38_factor;"), fixed=T)
 
 
 start_run(cfg, codeCheck=F)
+
+#  library('magpie4')
+#  library('lucode2')
+#  manipulateFile("/p/projects/landuse/users/vasingh/develop/magpie/modules/38_factor_costs/mixed_reg_feb17/presolve.gms",
+#                c("p38_fac_req(i,kcr,w) = f38_fac_req(i,kcr,w) * s38_factor;" , "p38_fac_req(\"IND\",kcr,w) = f38_fac_req(\"IND\",kcr,w) * s38_factor;"), fixed=T)

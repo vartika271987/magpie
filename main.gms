@@ -147,24 +147,24 @@ $title magpie
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
 * Used data set: rev4.65_h12_magpie.tgz
-* md5sum: c5b6fc48cc6b11bdd880da591730ee6c
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: rev4.65_h12_1998ea10_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz
-* md5sum: 2e2d577b24aabf2788b04cf19993ac0d
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: rev4.65_h12_validation.tgz
-* md5sum: c02e51aa10caa48b4835b3228c7a0986
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: additional_data_rev4.07.tgz
-* md5sum: accf653e73cbfd02354158d3b99b046f
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: calibration_H12_sticky_feb18_free_30Nov21.tgz
-* md5sum: f9ee7b8955713d8bd860cb65374d1958
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
 * Low resolution: c200
 * High resolution: 0.5
@@ -190,7 +190,7 @@ $title magpie
 * * Call: do.call(functiononly, args)
 * 
 * 
-* Last modification (input data): Thu Dec 23 06:17:40 2021
+* Last modification (input data): Wed Jan 12 12:02:27 2022
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
