@@ -6,8 +6,8 @@
 *** |  Contact: magpie@pik-potsdam.de
 
 scalar
-s38_factor      Factor to increase irrigation costs / 2 /
-s38_shock_year  Year from which policy shock will be implemented /1995/
+s38_factor      Factor to increase irrigation costs / 1 /
+s38_shock_year  Year from which policy shock will be implemented / 1995 /
 ;
 
 

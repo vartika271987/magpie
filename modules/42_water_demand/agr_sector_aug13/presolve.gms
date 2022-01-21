@@ -35,9 +35,9 @@ ic42_env_flow_policy(i) = i42_env_flow_policy(t,i);
 
 $ifthen "%c42_rf_policy%" == "mixed"
   if (m_year(t)<s42_shock_year,
-  p42_reserved_fraction("RF_countries") = s42_reserved_fraction;
+  p42_reserved_fraction(RF_countries) = s42_reserved_fraction;
     Elseif (m_year(t)>s42_shock_year,
-  p42_reserved_fraction("RF_countries") = s42_reserved_fraction*0.4;
+  p42_reserved_fraction(RF_countries;;) = s42_reserved_fraction*0.4;
     );
   );
 $else
