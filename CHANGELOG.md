@@ -9,20 +9,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### changed
+ - **scripts** added new disaggregation script to provide grid cell level BII
  - **inputs** updated non-agricultural water use scenarios (watdem_nonagr_grper.cs3)
+ - **config** included switch for non-agricultural water demand (s42_watdem_nonagr_scenario) in scenario_config.csv
+ - **config** included SHAPE SDP scenarios in scenario_config.csv
+ - **34_urban** added set urban_scen34 and the switch c34_urban_scenario
  - **35_natveg** corrected naming of Frontier Forests (FF) to Intact Forest Landscapes (IFL) and changed input data for BH_IFL implementation.
+ - **scripts** replaced redundant files config.log and config.Rdata with a config.yml
+
 ### added
+- **scripts** output/projects/FSEC_dietaryIndicators.R to create output datasets for the FSEC project
 
 ### removed
 
 ### fixed
 - **inputs** included data for Sudan
 - **18_residues** off realization; missing variable declarations
+- **34_urban** exo_nov21 realization; bugfix in calculation of biodiversity value
 - **50_nr_soil_budget** off realization; missing variable declarations
 - **59_som** static realization; avoid division by zero
 - **62_material** exo_flexreg_apr16 realization; avoid division by zero
 - **80_optimization** nlp_par realization; bugfix i2 in submission loop
 - **scripts** calibration; set NA values to 1
+- **scripts** fixed misleading warning in check_config
 
 ## [4.4.0] - 2021-12-13
 
