@@ -7,5 +7,5 @@
 
 
   if (m_year(t)>s38_shock_year,
-    p38_fac_req(i,kcr,w) = f38_fac_req(i,kcr,w) * s38_factor;
+    p38_fac_req("IND",kcr,"irrigated") = f38_fac_req("IND",kcr,"irrigated") * s38_factor;
 );
