@@ -33,24 +33,22 @@ ic42_env_flow_policy(i) = i42_env_flow_policy(t,i);
 * If regional reserved fraction policy is selected (default), it applies the default reserved fraction
 * for year less than s42_shock_year (1995 by default) and for
 
+
 $ifthen "%c42_rf_policy%" == "mixed"
-  if (m_year(t)<s42_shock_year,
+  if ((m_year(t)<s42_shock_year),
   p42_reserved_fraction(RF_countries) = s42_reserved_fraction;
-    Elseif (m_year(t)>s42_shock_year,
+Elseif (m_year(t)>s42_shock_year),
   p42_reserved_fraction(RF_countries) = s42_reserved_fraction*0.4;
     );
-  );
-$else
-  p42_reserved_fraction(i) = s42_reserved_fraction;
 $endif
-);
+
 
 * water consumption in industry, sanitation, ecosystem
 * (assign p42_reserved_fraction which is equalt to s42_reserved_fraction to industry for simplicity)
 
 * water withdrawals in other sectors (manufacturing, electricity, domestic, ecosystem)
 * (assign s42_reserved_fraction to manufacturing for simplicity)
-vm_watdem.fx("manufacturing",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * sum(cell(i,j),p42_reserved_fraction(i));
+vm_watdem.fx("manufacturing",j) = sum(wat_src, im_wat_avail(t,wat_src,j)) * sum(cell(i,j), sum(i_to_iso(i,iso), p42_reserved_fraction(iso)));
 
 vm_watdem.fx("electricity",j) = 0;
 vm_watdem.fx("domestic",j) = 0;

@@ -9,4 +9,5 @@ i42_wat_req_k(t,j,kve) = f42_wat_req_kve(t,j,kve);
 i42_env_flows(t,j) = f42_env_flows(t,j);
 
 i42_wat_req_k(t,j,kli) = f42_wat_req_kli(kli);
-*p42_reserved_fraction(i) = s42_reserved_fraction;
+
+p42_reserved_fraction(iso) = s42_reserved_fraction;
