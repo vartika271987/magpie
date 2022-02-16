@@ -35,7 +35,7 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 # Should input data be downloaded from source even if cfg$input did not change?
   cfg$force_download <- TRUE
 
-start_run(cfg)
+start_run(cfg, codeCheck=F)
 
 ####Test run with new input data
 
@@ -58,7 +58,7 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 # Should input data be downloaded from source even if cfg$input did not change?
   cfg$force_download <- TRUE
 
-start_run(cfg)
+start_run(cfg, codeCheck=F)
 
 ##Test run with new input data and new water setting for India
 ####Test run with new input data
@@ -87,4 +87,4 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
   cfg$gms$c42_rf_policy <- "mixed"             # def = "off"
   cfg$gms$s42_shock_year <- 2020                #def = 1995
 
-start_run(cfg)
+start_run(cfg, codeCheck=F)

@@ -146,25 +146,25 @@ $title magpie
 
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
-* Used data set: rev4.67_h12_magpie.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: rev4.67_1602_indiaYields__h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz
+* md5sum: ca5ed642df22409f0888154ca12d2b85
+* Repository: /p/projects/rd3mod/inputdata/output
 * 
-* Used data set: rev4.67_h12_1998ea10_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: rev4.67_1602_indiaYields__h12_magpie.tgz
+* md5sum: 31cfc118e7aa66bb3f6fe49749dfd272
+* Repository: /p/projects/rd3mod/inputdata/output
 * 
-* Used data set: rev4.67_h12_validation.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: rev4.67_1602_indiaYields__h12_validation.tgz
+* md5sum: 0f2f31d2dead68f18d0382649a6dae95
+* Repository: /p/projects/rd3mod/inputdata/output
+* 
+* Used data set: calibration_H12_mixed_feb17_18Jan22.tgz
+* md5sum: 8b2d32a6d452db5c98791d3c63a4685c
+* Repository: /p/projects/landuse/data/input/calibration
 * 
 * Used data set: additional_data_rev4.08.tgz
 * md5sum: d5ef6b0e76748e9347361f5d87a4cba6
 * Repository: /p/projects/landuse/data/input/archive
-* 
-* Used data set: calibration_H12_sticky_feb18_free_18Jan22.tgz
-* md5sum: 32def190ea1b517a1ff160b6c5c55bd4
-* Repository: /p/projects/landuse/data/input/calibration
 * 
 * Low resolution: c200
 * High resolution: 0.5
@@ -187,10 +187,10 @@ $title magpie
 * * Input resolution: 0.5
 * * Output resolution: c200
 * * Regionscode: 62eff8f7
-* * Call: do.call(functiononly, args)
+* * Call: force(code)
 * 
 * 
-* Last modification (input data): Wed Feb 16 08:47:36 2022
+* Last modification (input data): Wed Feb 16 11:24:42 2022
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -214,9 +214,9 @@ $offlisting
 **************************MODEL SPECIFIC SCALARS********************************
 *                    Key parameters during model runs
 
-$setglobal c_timesteps  2
+$setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  1201_test
+$setglobal c_title  1602_newinputdata_water
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
