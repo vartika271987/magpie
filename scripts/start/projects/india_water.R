@@ -6,6 +6,10 @@
 # |  Contact: magpie@pik-potsdam.de
 
 
+# ------------------------------------------------
+# description: India tests with input data and water scenarios
+# ------------------------------------------------
+
 ######################################
 #### Script to start a MAgPIE run ####
 ######################################
