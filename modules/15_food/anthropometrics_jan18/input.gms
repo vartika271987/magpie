@@ -226,6 +226,11 @@ $ondelim
 $include "./modules/15_food/input/f15_intake_EATLancet.cs3"
 $offdelim;
 
+table f15_intake_NIN(t_scen15,i,kcal_scen15,EAT_scen15,kfo)   NIN scenarios for food-specific intake (kcal per capita per day)
+$ondelim
+$include "./modules/15_food/input/f15_intake_NIN.cs3"
+$offdelim;
+
 table f15_overcons_FAOwaste(i,kfo)   Ratio between food calorie supply and food intake based on FAO food waste shares (1)
 $ondelim
 $include "./modules/15_food/input/f15_supply2intake_ratio_bottomup.cs3"

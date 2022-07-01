@@ -560,6 +560,8 @@ if(s15_exo_diet = 1,
 
 $ifthen "%c15_exo_foodscen%" == "lin_zero_20_30"
   i15_intake_EATLancet_all(i,kcal_scen15,EAT_scen15,kfo) = f15_intake_EATLancet("y2030",i,kcal_scen15,EAT_scen15,kfo);
+$else if "%c15_exo_foodscen%" == "zero"
+  i15_intake_NIN_all(i,kcal_scen15,EAT_scen15,kfo) = f15_intake_NIN("y2010",i,kcal_scen15,EAT_scen15,kfo);
 $else
   i15_intake_EATLancet_all(i,kcal_scen15,EAT_scen15,kfo) = f15_intake_EATLancet("y2050",i,kcal_scen15,EAT_scen15,kfo);
 $endif
