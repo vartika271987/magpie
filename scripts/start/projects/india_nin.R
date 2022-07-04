@@ -9,12 +9,12 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 
-cfg$title <- "India_nin"
+cfg$title <- "0407_india_nin"
 
 ##Input data that contain NIN input files for India
-cfg$input <- c(regional    = "rev4.73_3006_indiafood_h12_magpie.tgz",
-               cellular    = "rev4.73_3006_indiafood_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
-               validation  = "rev4.73_3006_indiafood_h12_validation.tgz",
+cfg$input <- c(regional    = "rev4.73_0407_indiafood_h12_magpie.tgz",
+               cellular    = "rev4.73_0407_indiafood_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+               validation  = "rev4.73_0407_indiafood_h12_validation.tgz",
                additional  = "additional_data_rev4.25.tgz",
                calibration = "calibration_H12_per_ton_fao_may22_28May22.tgz")
 #Download input data
