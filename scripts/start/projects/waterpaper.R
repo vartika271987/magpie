@@ -23,7 +23,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "_0707_default"
+cfg$title <- "0707_default"
 
 #Input data files to be used for India-specific analysis
 cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
