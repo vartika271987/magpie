@@ -21,7 +21,7 @@ cfg$input <- c(regional    = "rev4.73_0407_indiafood_h12_magpie.tgz",
 cfg$force_download <- TRUE
 
 #setting exogenous food demand scenario to zero
-cfg$gms$c15_exo_foodscen <- "zero"                    # def = lin_zero_20_50
+cfg$gms$c15_exo_foodscen <- "lin_zero_10_50"                    # def = lin_zero_20_50
 #switch towards exogenous diet scenario
 cfg$gms$s15_exo_diet <- 1               # def = 0
 
