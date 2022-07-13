@@ -145,20 +145,22 @@ $title magpie
 *'  * Always try to access model outputs through the corresponding magpie package instead of accessing them directly with readGDX. It cannot be guaranteed that your script will work in the future if you do otherwise (as only the corresponding magpie package will be continuously adapted to changes in the GAMS code).
 
 *##################### R SECTION START (VERSION INFO) ##########################
-* md5sum: NA
-* Repository: scp://cluster.pik-potsdam.de/p/projects/rd3mod/inputdata/output
 * 
-* Used data set: rev4.73_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz
-* md5sum: NA
-* Repository: scp://cluster.pik-potsdam.de/p/projects/rd3mod/inputdata/output
+* Used data set: rev4.73_0407_indiafood_h12_magpie.tgz
+* md5sum: e5205989a076b384115c0a8fab888506
+* Repository: /p/projects/rd3mod/inputdata/output
 * 
-* Used data set: rev4.73_h12_validation.tgz
-* md5sum: NA
-* Repository: scp://cluster.pik-potsdam.de/p/projects/rd3mod/inputdata/output
+* Used data set: rev4.73_0407_indiafood_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz
+* md5sum: b359afd5432f65e988e7bc1ef4b4798f
+* Repository: /p/projects/rd3mod/inputdata/output
 * 
-* Used data set: additional_data_rev4.26.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: rev4.73_0407_indiafood_h12_validation.tgz
+* md5sum: 036d2006d2ee7af5bd92acd3428d11ca
+* Repository: /p/projects/rd3mod/inputdata/output
+* 
+* Used data set: additional_data_rev4.25.tgz
+* md5sum: 48980b0ba9cba11f6feec64cbcdb3652
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: calibration_H12_per_ton_fao_may22_28May22.tgz
 * md5sum: f6bf26be99c5dbd29e13a38af38c0d31
@@ -187,10 +189,8 @@ $title magpie
 * * Regionscode: 62eff8f7
 * * Call: withCallingHandlers(expr, message = messageHandler, warning = warningHandler,     error = errorHandler)
 * 
-* Warning message:
-* package 'lucode2' was built under R version 4.2.1
 * 
-* Last modification (input data): Tue Jul  5 14:20:37 2022
+* Last modification (input data): Wed Jul 13 11:22:13 2022
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -216,7 +216,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  default
+$setglobal c_title  1307_india_nin
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
