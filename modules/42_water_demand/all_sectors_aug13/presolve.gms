@@ -45,9 +45,13 @@ i42_env_flows_base(t,j) = s42_env_flow_base_fraction * sum(wat_src, im_wat_avail
 if((s42_env_flow_scenario=0),
  i42_env_flows_base(t,j) = 0;
  i42_env_flows(t,j) = 0;
-Elseif(s42_env_flow_scenario=1),
-  i42_env_flows(t,j) = s42_env_flow_fraction * sum(wat_src, im_wat_avail(t,wat_src,j));
-);
+ Elseif(s42_env_flow_scenario=1),
+* adding the constraint of start year to start efp from a specific year
+   if(m_year(t) > s42_efp_startyear,
+   i42_env_flows(t,j) = s42_env_flow_fraction_new * sum(wat_src, im_wat_avail(t,wat_src,j));
+   );
+   i42_env_flows(t,j) = s42_env_flow_fraction * sum(wat_src, im_wat_avail(t,wat_src,j));
+ );
 
 vm_watdem.fx("ecosystem",j) = sum(cell(i,j), i42_env_flows_base(t,j) * (1-ic42_env_flow_policy(i)) +
                                                           i42_env_flows(t,j) * ic42_env_flow_policy(i));
@@ -74,7 +78,7 @@ else
 if ((s42_pumping = 1),
 ic42_pumping_cost(i) = f42_pumping_cost(t,i);
 *Pumping cost sensitivity test implmentation
-  if(m_year(t) > s42_multiplier_startyear,
+  if(m_year(t) > s42_start_multiplier,
   ic42_pumping_cost(i) = f42_pumping_cost(t,i)*s42_multiplier;
   );
 );
