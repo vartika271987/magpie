@@ -23,12 +23,13 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1307_default_1"
+
+cfg$title <- "2807_default"
 
 #Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres1_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres1_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres1_h12_validation.tgz",
+cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+        regional = "rev4.732706_indiaYields_h12_magpie.tgz",
+        validation = "rev4.732706_indiaYields_h12_validation.tgz",
         calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
         additional = "additional_data_rev4.26.tgz")
 
@@ -54,15 +55,15 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1307_cost1cent_1"
+
+cfg$title <- "2807_cost1cent"
 
 #Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres1_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres1_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres1_h12_validation.tgz",
+cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+        regional = "rev4.732706_indiaYields_h12_magpie.tgz",
+        validation = "rev4.732706_indiaYields_h12_validation.tgz",
         calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
         additional = "additional_data_rev4.26.tgz")
-
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
                            getOption("magpie_repos"))
@@ -84,12 +85,13 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1307_cost2cent_1"
+
+cfg$title <- "2807_cost2cent"
 
 #Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres1_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres1_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres1_h12_validation.tgz",
+cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+        regional = "rev4.732706_indiaYields_h12_magpie.tgz",
+        validation = "rev4.732706_indiaYields_h12_validation.tgz",
         calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
         additional = "additional_data_rev4.26.tgz")
 
@@ -113,7 +115,8 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1307_efp20_costhalfcent_1"
+
+cfg$title <- "2807_efp20_costhalfcent_altdefault"
 
 cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
 cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
@@ -130,9 +133,9 @@ cfg$gms$s42_start_multiplier <- 1995
 cfg$gms$s42_multiplier <- 1
 
 #Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres1_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres1_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres1_h12_validation.tgz",
+cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+        regional = "rev4.732706_indiaYields_h12_magpie.tgz",
+        validation = "rev4.732706_indiaYields_h12_validation.tgz",
         calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
         additional = "additional_data_rev4.26.tgz")
 
@@ -142,181 +145,14 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 start_run(cfg, codeCheck=FALSE)
 
 ####################################################################333
-##EFP 50%
 
-source("scripts/start_functions.R")
-source("config/default.cfg")
-
-# short description of the actual run
-cfg$title <- "1307_efp_50_1"
-
-cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
-cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
-cfg$gms$s42_env_flow_scenario <- 1            # def = 2
-cfg$gms$s42_env_flow_fraction_new <- 0.5           # def = 0.2
-cfg$gms$s42_efp_startyear <- 2020
-
-##India default cost half cent
-#Setting pumping to 1
-cfg$gms$s42_pumping <- 1
-#Setting start year as 1995 in default so that the values are set for India
-cfg$gms$s42_start_multiplier <- 1995
-##Pumping cost value to  0.005
-cfg$gms$s42_multiplier <- 1
-
-#Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres1_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres1_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres1_h12_validation.tgz",
-        calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
-        additional = "additional_data_rev4.26.tgz")
-
-cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
-                           getOption("magpie_repos"))
-
-start_run(cfg, codeCheck=FALSE)
 
 ####################################################################333
-##EFP 60%
-
-source("scripts/start_functions.R")
-source("config/default.cfg")
-
-# short description of the actual run
-cfg$title <- "1307_efp_60_1"
-
-cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
-cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
-cfg$gms$s42_env_flow_scenario <- 1            # def = 2
-cfg$gms$s42_env_flow_fraction_new <- 0.6           # def = 0.2
-
-##India default cost half cent
-#Setting pumping to 1
-cfg$gms$s42_pumping <- 1
-#Setting start year as 1995 in default so that the values are set for India
-cfg$gms$s42_start_multiplier <- 1995
-##Pumping cost value to  0.005
-cfg$gms$s42_multiplier <- 1
-
-
-#Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres1_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres1_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres1_h12_validation.tgz",
-        calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
-        additional = "additional_data_rev4.26.tgz")
-
-cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
-                           getOption("magpie_repos"))
-
-start_run(cfg, codeCheck=FALSE)
-
-
-########################################################################
-
-######################################
-#### Script to start a MAgPIE run ####
-######################################
-
-##Tests as of 13 July with two sets of high res data
-
-####################################################################333
-##Default India data run
-
-source("scripts/start_functions.R")
-source("config/default.cfg")
-
-# short description of the actual run
-cfg$title <- "1307_default_2"
-
-#Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres2_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres2_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres2_h12_validation.tgz",
-        calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
-        additional = "additional_data_rev4.26.tgz")
-
-cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
-                           getOption("magpie_repos"))
-
-#Download input data
-cfg$force_download <- TRUE
-
-#Setting pumping to 1
-cfg$gms$s42_pumping <- 1
-#Setting start year as 1995 in default so that the values are set for India
-cfg$gms$s42_start_multiplier <- 1995
-##Pumping cost value to  0.005
-cfg$gms$s42_multiplier <- 1
-
-start_run(cfg, codeCheck=FALSE)
-
-
 ##iCOST 1 CENT
 source("scripts/start_functions.R")
 source("config/default.cfg")
 
-# short description of the actual run
-cfg$title <- "1307_cost1cent_2"
-
-#Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres2_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres2_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres2_h12_validation.tgz",
-        calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
-        additional = "additional_data_rev4.26.tgz")
-
-
-cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
-                           getOption("magpie_repos"))
-
-
-#Setting pumping to 1
-cfg$gms$s42_pumping <- 1
-#Setting shock years from when policy shocks will be implemented
- cfg$gms$s42_start_multiplier <- 2020
-##Pumping cost value to  1 cent
-cfg$gms$s42_multiplier <- 2
-
-start_run(cfg, codeCheck=FALSE)
-
-
-####################################################################333
-##iCOST 2 CENT
-source("scripts/start_functions.R")
-source("config/default.cfg")
-
-# short description of the actual run
-cfg$title <- "1307_cost2cent_2"
-
-#Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres2_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres2_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres2_h12_validation.tgz",
-        calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
-        additional = "additional_data_rev4.26.tgz")
-
-cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
-                           getOption("magpie_repos"))
-
-
-#Setting pumping to 2
-cfg$gms$s42_pumping <- 1
-#Setting shock years from when policy shocks will be implemented
- cfg$gms$s42_start_multiplier <- 2020
-##Pumping cost value to  1 cent
-cfg$gms$s42_multiplier <- 4
-
-start_run(cfg, codeCheck=FALSE)
-
-####################################################################333
-##EFP 20% with pumping cost to check if this can be made default
-
-source("scripts/start_functions.R")
-source("config/default.cfg")
-
-# short description of the actual run
-cfg$title <- "1307_efp20_costhalfcent_2"
+cfg$title <- "2807_efp20_cost1cent"
 
 cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
 cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
@@ -328,14 +164,51 @@ cfg$gms$s42_efp_startyear <- 1995
 #Setting pumping to 1
 cfg$gms$s42_pumping <- 1
 #Setting start year as 1995 in default so that the values are set for India
-cfg$gms$s42_start_multiplier <- 1995
+cfg$gms$s42_start_multiplier <- 2020
 ##Pumping cost value to  0.005
-cfg$gms$s42_multiplier <- 1
+cfg$gms$s42_multiplier <- 2
 
 #Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres2_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres2_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres2_h12_validation.tgz",
+cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+        regional = "rev4.732706_indiaYields_h12_magpie.tgz",
+        validation = "rev4.732706_indiaYields_h12_validation.tgz",
+        calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
+        additional = "additional_data_rev4.26.tgz")
+
+
+cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
+                           getOption("magpie_repos"))
+
+start_run(cfg, codeCheck=FALSE)
+
+####################################################################333
+##EFP 20% with pumping cost to check if this can be made default
+
+source("scripts/start_functions.R")
+source("config/default.cfg")
+
+# short description of the actual run
+
+cfg$title <- "2807_efp20_cost2cent"
+
+cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
+cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
+cfg$gms$s42_env_flow_scenario <- 1            # def = 2
+cfg$gms$s42_env_flow_fraction_new <- 0.2           # def = 0.2
+cfg$gms$s42_efp_startyear <- 1995
+
+##India default cost half cent
+#Setting pumping to 1
+cfg$gms$s42_pumping <- 1
+#Setting start year as 1995 in default so that the values are set for India
+cfg$gms$s42_start_multiplier <- 2020
+##Pumping cost value to  0.005
+cfg$gms$s42_multiplier <- 4
+
+#Input data files to be used for India-specific analysis
+cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+        regional = "rev4.732706_indiaYields_h12_magpie.tgz",
+        validation = "rev4.732706_indiaYields_h12_validation.tgz",
         calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
         additional = "additional_data_rev4.26.tgz")
 
@@ -344,6 +217,7 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
 
 start_run(cfg, codeCheck=FALSE)
 
+
 ####################################################################333
 ##EFP 50%
 
@@ -351,7 +225,8 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1307_efp_50_2"
+
+cfg$title <- "2807_efp_50"
 
 cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
 cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
@@ -368,9 +243,9 @@ cfg$gms$s42_start_multiplier <- 1995
 cfg$gms$s42_multiplier <- 1
 
 #Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres2_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres2_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres2_h12_validation.tgz",
+cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+        regional = "rev4.732706_indiaYields_h12_magpie.tgz",
+        validation = "rev4.732706_indiaYields_h12_validation.tgz",
         calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
         additional = "additional_data_rev4.26.tgz")
 
@@ -386,7 +261,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "1307_efp_60_2"
+cfg$title <- "2807_efp_60"
 
 cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
 cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
@@ -403,11 +278,12 @@ cfg$gms$s42_start_multiplier <- 1995
 cfg$gms$s42_multiplier <- 1
 
 #Input data files to be used for India-specific analysis
-cfg$input <- c(cellular = "rev4.73_1207_india_highres2_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz",
-        regional = "rev4.73_1207_india_highres2_h12_magpie.tgz",
-        validation = "rev4.73_1207_india_highres2_h12_validation.tgz",
+cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
+        regional = "rev4.732706_indiaYields_h12_magpie.tgz",
+        validation = "rev4.732706_indiaYields_h12_validation.tgz",
         calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
         additional = "additional_data_rev4.26.tgz")
+
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
                            getOption("magpie_repos"))
