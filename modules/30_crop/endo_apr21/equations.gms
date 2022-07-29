@@ -65,4 +65,4 @@
 
 *' Constraint on rice production that does not allow rainfed rice to exceed the climate share of non-dry climates
 q30_rice_constraint ..
-  vm_area(j,"rice_pro","rainfed") =l= vm_land(j,"crop") * pm_climate_class(j,"BSh");
+  vm_area(j,"rice_pro","rainfed") =l= vm_land(j,"crop") * sum(clcl, (pm_climate_class(j,"BSh"));
