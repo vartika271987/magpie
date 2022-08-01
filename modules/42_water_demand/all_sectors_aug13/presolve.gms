@@ -49,9 +49,9 @@ if((s42_env_flow_scenario=0),
 * adding the constraint of start year to start efp from a specific year
    if(m_year(t) > s42_efp_startyear,
    i42_env_flows(t,j) = s42_env_flow_fraction_new * sum(wat_src, im_wat_avail(t,wat_src,j));
-   );
+   else
    i42_env_flows(t,j) = s42_env_flow_fraction * sum(wat_src, im_wat_avail(t,wat_src,j));
- );
+   );
 
 vm_watdem.fx("ecosystem",j) = sum(cell(i,j), i42_env_flows_base(t,j) * (1-ic42_env_flow_policy(i)) +
                                                           i42_env_flows(t,j) * ic42_env_flow_policy(i));

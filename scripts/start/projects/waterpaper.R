@@ -14,7 +14,7 @@
 #### Script to start a MAgPIE run ####
 ######################################
 
-##Tests as of 13 July with two sets of high res data
+##2807 runs are with EFP phasing out. 0108 runs are with immediate 2020 effects on EFP
 
 ####################################################################333
 ##Default India data run
@@ -24,7 +24,7 @@ source("config/default.cfg")
 
 # short description of the actual run
 
-cfg$title <- "2807_default"
+cfg$title <- "0108_default"
 
 #Input data files to be used for India-specific analysis
 cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
@@ -38,7 +38,9 @@ cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=
                            getOption("magpie_repos"))
 
 #Download input data
-cfg$force_download <- TRUE
+cfg$force_download <- FALSE
+cfg$gms$crop    <- "penalty_apr22"               # def = endo_apr21
+
 
 #Setting pumping to 1
 cfg$gms$s42_pumping <- 1
@@ -56,7 +58,7 @@ source("config/default.cfg")
 
 # short description of the actual run
 
-cfg$title <- "2807_cost1cent"
+cfg$title <- "0108_cost1cent"
 
 #Input data files to be used for India-specific analysis
 cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
@@ -68,6 +70,7 @@ cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
                            getOption("magpie_repos"))
 
+cfg$gms$crop    <- "penalty_apr22"               # def = endo_apr21
 
 #Setting pumping to 1
 cfg$gms$s42_pumping <- 1
@@ -86,7 +89,7 @@ source("config/default.cfg")
 
 # short description of the actual run
 
-cfg$title <- "2807_cost2cent"
+cfg$title <- "0108_cost2cent"
 
 #Input data files to be used for India-specific analysis
 cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
@@ -97,6 +100,8 @@ cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
                            getOption("magpie_repos"))
+
+cfg$gms$crop    <- "penalty_apr22"               # def = endo_apr21
 
 
 #Setting pumping to 2
@@ -116,7 +121,7 @@ source("config/default.cfg")
 
 # short description of the actual run
 
-cfg$title <- "2807_efp20_costhalfcent_altdefault"
+cfg$title <- "0108_efp20_costhalfcent_altdefault"
 
 cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
 cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
@@ -132,6 +137,10 @@ cfg$gms$s42_start_multiplier <- 1995
 ##Pumping cost value to  0.005
 cfg$gms$s42_multiplier <- 1
 
+cfg$gms$crop    <- "penalty_apr22"               # def = endo_apr21
+
+
+
 #Input data files to be used for India-specific analysis
 cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
         regional = "rev4.732706_indiaYields_h12_magpie.tgz",
@@ -141,6 +150,8 @@ cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c
 
 cfg$repositories <- append(list("https://rse.pik-potsdam.de/data/magpie/public"=NULL),
                            getOption("magpie_repos"))
+
+
 
 start_run(cfg, codeCheck=FALSE)
 
@@ -152,7 +163,7 @@ start_run(cfg, codeCheck=FALSE)
 source("scripts/start_functions.R")
 source("config/default.cfg")
 
-cfg$title <- "2807_efp20_cost1cent"
+cfg$title <- "0108_efp20_cost1cent"
 
 cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
 cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
@@ -167,6 +178,10 @@ cfg$gms$s42_pumping <- 1
 cfg$gms$s42_start_multiplier <- 2020
 ##Pumping cost value to  0.005
 cfg$gms$s42_multiplier <- 2
+
+cfg$gms$crop    <- "penalty_apr22"               # def = endo_apr21
+
+
 
 #Input data files to be used for India-specific analysis
 cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
@@ -189,7 +204,7 @@ source("config/default.cfg")
 
 # short description of the actual run
 
-cfg$title <- "2807_efp20_cost2cent"
+cfg$title <- "0108_efp20_cost2cent"
 
 cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
 cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
@@ -204,6 +219,10 @@ cfg$gms$s42_pumping <- 1
 cfg$gms$s42_start_multiplier <- 2020
 ##Pumping cost value to  0.005
 cfg$gms$s42_multiplier <- 4
+
+cfg$gms$crop    <- "penalty_apr22"               # def = endo_apr21
+
+
 
 #Input data files to be used for India-specific analysis
 cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
@@ -226,7 +245,7 @@ source("config/default.cfg")
 
 # short description of the actual run
 
-cfg$title <- "2807_efp_50"
+cfg$title <- "0108_efp_50"
 
 cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
 cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
@@ -241,6 +260,10 @@ cfg$gms$s42_pumping <- 1
 cfg$gms$s42_start_multiplier <- 1995
 ##Pumping cost value to  0.005
 cfg$gms$s42_multiplier <- 1
+
+cfg$gms$crop    <- "penalty_apr22"               # def = endo_apr21
+
+
 
 #Input data files to be used for India-specific analysis
 cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
@@ -261,7 +284,7 @@ source("scripts/start_functions.R")
 source("config/default.cfg")
 
 # short description of the actual run
-cfg$title <- "2807_efp_60"
+cfg$title <- "0108_efp_60"
 
 cfg$gms$c42_env_flow_policy <- "mixed"             # def = "off"
 cfg$gms$EFP_countries <- "IND" # def = all_iso_countries
@@ -276,6 +299,10 @@ cfg$gms$s42_pumping <- 1
 cfg$gms$s42_start_multiplier <- 1995
 ##Pumping cost value to  0.005
 cfg$gms$s42_multiplier <- 1
+
+cfg$gms$crop    <- "penalty_apr22"               # def = endo_apr21
+
+
 
 #Input data files to be used for India-specific analysis
 cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz",
