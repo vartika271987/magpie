@@ -62,7 +62,3 @@
  					=e=
           (vm_land(j2,"crop") - sum((crop_ann30,w), vm_area(j2,crop_ann30,w)))
           * fm_bii_coeff("crop_per",potnatveg) * fm_luh2_side_layers(j2,potnatveg);
-
-*' Constraint on rice production that does not allow rainfed rice to exceed the climate share of non-dry climates
-q30_rice_constraint(j2) ..
-  vm_area(j2,"rice_pro","rainfed") =l= vm_land(j2,"crop") * (1- pm_climate_class(j2,"BSh"));

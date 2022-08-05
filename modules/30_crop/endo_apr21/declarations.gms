@@ -28,7 +28,6 @@ equations
  q30_carbon(j,ag_pools,stockType) Cropland above ground carbon content calculation (mio. tC)
  q30_bv_ann(j,potnatveg)         Biodiversity value of annual cropland (Mha)
  q30_bv_per(j,potnatveg)         Biodiversity value of perennial cropland (Mha)
- q30_rice_constraint(j)           Rainfed rice constraint to disallow cultivation in dry areas (Mha)
 ;
 
 *#################### R SECTION START (OUTPUT DECLARATIONS) ####################
