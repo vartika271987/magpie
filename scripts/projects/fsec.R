@@ -140,5 +140,14 @@ fsecScenario <- function(scenario) {
                        )
   cfg$force_download    <- TRUE
 
+
+  #India specific settings
+  #Setting pumping to 1
+  cfg$gms$s42_pumping <- 1
+  #Setting year from which pumping costs will be implemented
+   cfg$gms$s42_multiplier_startyear <- 1995
+  ##Pumping cost value to  default value for India
+  cfg$gms$s42_multiplier <- 1
+
   return(cfg)
 }
