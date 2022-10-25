@@ -17,21 +17,9 @@ codeCheck <- FALSE
 
 
 for (scenarioName in c(
-  # Single transformation runs
-  "a_Population", "a_SocioEconDevelop", "a_EnergyTrans",
-  "a_NoUnderweight", "a_NoOverweight", "a_DietVegFruitsNutsSeeds", "a_DietLegumes", "a_DietMonogastrics", "a_DietRuminants", "a_DietEmptyCals", "a_DietFish", "a_LessFoodWaste",
-  "a_AnimalWasteMngmt", "a_LivestockMngmt", "a_NitrogenUptakeEff", "a_LandUseDiversity",
-  # still missing: Bioeconomy
-  "a_FairTrade", "a_TimberCities", "a_REDDaff", "a_REDD", "a_CropRotations",
-  "a_LandSparing", "a_WaterSparing", "a_PeatlandSparing", "a_AirPollution", "a_SoilCarbon",
   # Scenario combination runs
-  "c_BAU", "d_SSP1", "d_SSP3", "d_SSP4", "d_SSP5",
-  "e_FSDP",
-  "b_ExternalPressures", "b_WaterSoil", "b_REDDaffDietRuminants", "b_DietRotations",
-  "b_SoilMonogastric", "b_SoilRotations",
-  "b_AllClimate", "b_FullBiodiv", "b_AllEnvironment", "b_AllHealth", "b_AllInclusion",
-  # still missing: Bioeconomy + energy + timber
-  "b_Efficiency", "b_Sufficiency", "b_Protection")) {
+  "c_BAU",   "e_FSDP", "b_WaterSoil",  "b_AllClimate",  "b_AllEnvironment", "b_AllHealth", "b_AllInclusion",
+  "b_Efficiency")) {
 
     # Start runs
     cfg <- fsecScenario(scenario = scenarioName)
