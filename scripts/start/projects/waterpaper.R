@@ -21,18 +21,18 @@ cfg$input <- c(cellular = "rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c
         regional = "rev4.732706_indiaYields_h12_magpie.tgz",
         validation = "rev4.732706_indiaYields_h12_validation.tgz",
         calibration = "calibration_Indiacalibration_473_27Jun22.tgz",
-        additional = "additional_data_rev4.26.tgz")
+        additional = "additional_data_rev4.28.tgz")
 
 # General settings:
 general_settings <- function(title) {
 
   source("config/default.cfg")
 
-  cfg$info$flag <- "0508"
+  cfg$info$flag <- "1708"
   cfg$title       <- paste(cfg$info$flag,title,sep="_")
   cfg$results_folder <- "output/:title:"
   cfg$recalibrate <- FALSE
-  cfg$qos         <- "priority_"
+#  cfg$qos         <- "priority_"
 
 #Download input data
 cfg$force_download <- FALSE

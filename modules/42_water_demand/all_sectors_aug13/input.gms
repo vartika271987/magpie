@@ -117,7 +117,7 @@ $setglobal c42_env_flow_policy  off
 
 table f42_env_flow_policy(t_all,scen42) EFP policies (1)
 $ondelim
-$include "./modules/42_water_demand/input/f42_env_flow_policy.cs3"
+$include "./modules/42_water_demand/input/f42_env_flow_policy_india.cs3"
 $offdelim
 ;
 

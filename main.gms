@@ -146,34 +146,34 @@ $title magpie
 
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
-* Used data set: rev4.732706_indiaYields_h12_fd712c0b_cellularmagpie_c200_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1.tgz
-* md5sum: 8c238218ffa18c62d67e7c9cb7c626f6
+* Used data set: rev4.73_1207_india_highres1_h12_9a668025_cellularmagpie_c500_MRI-ESM2-0-ssp370_lpjml-8e6c5eb1_clusterweight-8e5891af.tgz
+* md5sum: bac90ba8c8818c88bf8027315c685cd7
 * Repository: /p/projects/rd3mod/inputdata/output
 * 
-* Used data set: rev4.732706_indiaYields_h12_magpie.tgz
-* md5sum: 8a0c229b906835ef237db782b3d97380
+* Used data set: rev4.73_1207_india_highres1_h12_magpie.tgz
+* md5sum: 6a37a589afa9f98df9495700ff82ff0c
 * Repository: /p/projects/rd3mod/inputdata/output
 * 
-* Used data set: rev4.732706_indiaYields_h12_validation.tgz
-* md5sum: fc521c8ba5b0839089538ad5a139b496
+* Used data set: rev4.73_1207_india_highres1_h12_validation.tgz
+* md5sum: ded803ae633204ffde8e4c7e5aeac14f
 * Repository: /p/projects/rd3mod/inputdata/output
 * 
 * Used data set: calibration_Indiacalibration_473_27Jun22.tgz
 * md5sum: 54e9de37bf21122c18215ce4369deaae
 * Repository: /p/projects/landuse/data/input/calibration
 * 
-* Used data set: additional_data_rev4.26.tgz
-* md5sum: f3c348b7428faae898b7e10ec9a89e41
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
+* Used data set: additional_data_rev4.28.tgz
+* md5sum: 02f96eb303cc71f2851584a03f82830f
+* Repository: /p/projects/landuse/data/input/archive
 * 
-* Low resolution: c200
+* Low resolution: c500
 * High resolution: 0.5
 * 
-* Total number of cells: 200
+* Total number of cells: 500
 * 
 * Number of cells per region:
 *   CAZ  CHA  EUR  IND  JPN  LAM  MEA  NEU  OAS  REF  SSA  USA
-*     6   23    7    6    1   43   27    7   11   12   37   20
+*     6   24    8  292    1   48   29    7   11   12   40   22
 * 
 * Regionscode: 62eff8f7
 * 
@@ -185,12 +185,27 @@ $title magpie
 * 
 * aggregation settings:
 * * Input resolution: 0.5
-* * Output resolution: c200
+* * Output resolution: c500
 * * Regionscode: 62eff8f7
+* * Cluster distribution: CAZ (6)
+* * Cluster distribution: CHA (24)
+* * Cluster distribution: EUR (8)
+* * Cluster distribution: IND (292)
+* * Cluster distribution: JPN (1)
+* * Cluster distribution: LAM (48)
+* * Cluster distribution: MEA (29)
+* * Cluster distribution: NEU (7)
+* * Cluster distribution: OAS (11)
+* * Cluster distribution: REF (12)
+* * Cluster distribution: SSA (40)
+* * Cluster distribution: USA (22)
 * * Call: withCallingHandlers(expr, message = messageHandler, warning = warningHandler,     error = errorHandler)
 * 
+* Warning message:
+* In file.copy("calibration_results.pdf", cfg$results_folder,  ... :
+*   problem copying ./calibration_results.pdf to output/2208_lowres/calibration_results.pdf: No such file or directory
 * 
-* Last modification (input data): Thu Jul  7 13:33:31 2022
+* Last modification (input data): Mon Aug 22 11:19:20 2022
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -216,7 +231,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  0707_cost1cent
+$setglobal c_title  2208_highres
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
