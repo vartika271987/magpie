@@ -1,4 +1,4 @@
-*** |  (C) 2008-2021 Potsdam Institute for Climate Impact Research (PIK)
+*** |  (C) 2008-2023 Potsdam Institute for Climate Impact Research (PIK)
 *** |  authors, and contributors see CITATION.cff file. This file is part
 *** |  of MAgPIE and licensed under AGPL-3.0-or-later. Under Section 7 of
 *** |  AGPL-3.0, you are granted additional permissions described in the
@@ -9,34 +9,34 @@
 * Default: all iso countries selected
 sets
   policy_countries56(iso) countries to be affected by ghg policy / ABW,AFG,AGO,AIA,ALA,ALB,AND,ARE,ARG,ARM,
-                          ASM,ATA,ATF,ATG,AUS,AUT,AZE,BDI,BEL,BEN,
-                          BES,BFA,BGD,BGR,BHR,BHS,BIH,BLM,BLR,BLZ,
-                          BMU,BOL,BRA,BRB,BRN,BTN,BVT,BWA,CAF,CAN,
-                          CCK,CHN,CHE,CHL,CIV,CMR,COD,COG,COK,COL,
-                          COM,CPV,CRI,CUB,CUW,CXR,CYM,CYP,CZE,DEU,
-                          DJI,DMA,DNK,DOM,DZA,ECU,EGY,ERI,ESH,ESP,
-                          EST,ETH,FIN,FJI,FLK,FRA,FRO,FSM,GAB,GBR,
-                          GEO,GGY,GHA,GIB,GIN,GLP,GMB,GNB,GNQ,GRC,
-                          GRD,GRL,GTM,GUF,GUM,GUY,HKG,HMD,HND,HRV,
-                          HTI,HUN,IDN,IMN,IND,IOT,IRL,IRN,IRQ,ISL,
-                          ISR,ITA,JAM,JEY,JOR,JPN,KAZ,KEN,KGZ,KHM,
-                          KIR,KNA,KOR,KWT,LAO,LBN,LBR,LBY,LCA,LIE,
-                          LKA,LSO,LTU,LUX,LVA,MAC,MAF,MAR,MCO,MDA,
-                          MDG,MDV,MEX,MHL,MKD,MLI,MLT,MMR,MNE,MNG,
-                          MNP,MOZ,MRT,MSR,MTQ,MUS,MWI,MYS,MYT,NAM,
-                          NCL,NER,NFK,NGA,NIC,NIU,NLD,NOR,NPL,NRU,
-                          NZL,OMN,PAK,PAN,PCN,PER,PHL,PLW,PNG,POL,
-                          PRI,PRK,PRT,PRY,PSE,PYF,QAT,REU,ROU,RUS,
-                          RWA,SAU,SDN,SEN,SGP,SGS,SHN,SJM,SLB,SLE,
-                          SLV,SMR,SOM,SPM,SRB,SSD,STP,SUR,SVK,SVN,
-                          SWE,SWZ,SXM,SYC,SYR,TCA,TCD,TGO,THA,TJK,
-                          TKL,TKM,TLS,TON,TTO,TUN,TUR,TUV,TWN,TZA,
-                          UGA,UKR,UMI,URY,USA,UZB,VAT,VCT,VEN,VGB,
-                          VIR,VNM,VUT,WLF,WSM,YEM,ZAF,ZMB,ZWE /
+                      ASM,ATA,ATF,ATG,AUS,AUT,AZE,BDI,BEL,BEN,
+                      BES,BFA,BGD,BGR,BHR,BHS,BIH,BLM,BLR,BLZ,
+                      BMU,BOL,BRA,BRB,BRN,BTN,BVT,BWA,CAF,CAN,
+                      CCK,CHN,CHE,CHL,CIV,CMR,COD,COG,COK,COL,
+                      COM,CPV,CRI,CUB,CUW,CXR,CYM,CYP,CZE,DEU,
+                      DJI,DMA,DNK,DOM,DZA,ECU,EGY,ERI,ESH,ESP,
+                      EST,ETH,FIN,FJI,FLK,FRA,FRO,FSM,GAB,GBR,
+                      GEO,GGY,GHA,GIB,GIN,GLP,GMB,GNB,GNQ,GRC,
+                      GRD,GRL,GTM,GUF,GUM,GUY,HKG,HMD,HND,HRV,
+                      HTI,HUN,IDN,IMN,IND,IOT,IRL,IRN,IRQ,ISL,
+                      ISR,ITA,JAM,JEY,JOR,JPN,KAZ,KEN,KGZ,KHM,
+                      KIR,KNA,KOR,KWT,LAO,LBN,LBR,LBY,LCA,LIE,
+                      LKA,LSO,LTU,LUX,LVA,MAC,MAF,MAR,MCO,MDA,
+                      MDG,MDV,MEX,MHL,MKD,MLI,MLT,MMR,MNE,MNG,
+                      MNP,MOZ,MRT,MSR,MTQ,MUS,MWI,MYS,MYT,NAM,
+                      NCL,NER,NFK,NGA,NIC,NIU,NLD,NOR,NPL,NRU,
+                      NZL,OMN,PAK,PAN,PCN,PER,PHL,PLW,PNG,POL,
+                      PRI,PRK,PRT,PRY,PSE,PYF,QAT,REU,ROU,RUS,
+                      RWA,SAU,SDN,SEN,SGP,SGS,SHN,SJM,SLB,SLE,
+                      SLV,SMR,SOM,SPM,SRB,SSD,STP,SUR,SVK,SVN,
+                      SWE,SWZ,SXM,SYC,SYR,TCA,TCD,TGO,THA,TJK,
+                      TKL,TKM,TLS,TON,TTO,TUN,TUR,TUV,TWN,TZA,
+                      UGA,UKR,UMI,URY,USA,UZB,VAT,VCT,VEN,VGB,
+                      VIR,VNM,VUT,WLF,WSM,YEM,ZAF,ZMB,ZWE /
 ;
 
 scalars
-  s56_limit_ch4_n2o_price upper limit for CH4 and N2O GHG prices (USD05MER per tC) / 1000 /
+  s56_limit_ch4_n2o_price upper limit for CH4 and N2O GHG prices (USD05MER per tC) / 4000 /
   s56_cprice_red_factor reduction factor for CO2 price (-) / 1 /
   s56_ghgprice_start start year for ghg price phase-in (year) / 2025 /
   s56_ghgprice_phase_in  Switch for phasing-in GHG price over a 20 year period  (1=on 0=off) / 0 /
@@ -52,6 +52,7 @@ scalars
 $setglobal c56_pollutant_prices  R21M42-SSP2-NPi
 $setglobal c56_pollutant_prices_noselect  R21M42-SSP2-NPi
 $setglobal c56_emis_policy  redd+natveg_nosoil
+$setglobal c56_cprice_aff  forestry_vegc
 
 $setglobal c56_carbon_stock_pricing  actualNoAcEst
 *   options:  actual, actualNoAcEst
