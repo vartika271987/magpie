@@ -23,6 +23,7 @@ for (scenarioName in c(
   "a_ManureMngmt", "a_LivestockMngmt", 
   #"a_BiodivSparing",
   "a_NitrogenEff", "a_RiceMit", "a_CropeffTax",
+<<<<<<< HEAD
   "a_CapitalSubst", "a_MinWage",
   "a_LiberalizedTrade",  
   #"a_REDDaff", "a_REDD", 
@@ -30,6 +31,11 @@ for (scenarioName in c(
   #"a_PeatlandSparing", 
   
   #"a_SoilCarbon",
+=======
+  "a_CapitalSubst", "a_MinWage", "a_Bioplastics", "a_LandscapeElements",
+  "a_LiberalizedTrade", "a_TimberCities", "a_REDDaff", "a_REDD", "a_CropRotations",
+  "a_LandSparing", "a_WaterSparing", "a_PeatlandSparing", "a_SoilCarbon",
+>>>>>>> 03d729ff14d21c6d43e12196fba32ae8b5b3799d
   # Scenario combination runs
   "c_BAU", 
   #"d_SSP1bau", "d_SSP1PLUSbau", "d_SSP2bau", "d_SSP3bau", "d_SSP4bau", "d_SSP5bau",
