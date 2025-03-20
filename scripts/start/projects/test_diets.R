@@ -79,7 +79,7 @@ cfg$gms$s15_exo_waste <- 0
 cfg$gms$s15_exo_diet <- 1
 cfg$gms$c15_kcal_scen <- "no_underweight_half_overweight"
 cfg$gms$c15_EAT_scen <- "FLX"
-cfg$gms$s15_exo_monogastric <- 0
+cfg$gms$s15_exo_monogastric <- 1
 cfg$gms$s15_exo_ruminant    <- 0
 cfg$gms$s15_exo_fish        <- 0
 cfg$gms$s15_exo_fruitvegnut <- 0
